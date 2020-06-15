@@ -1,6 +1,6 @@
 # Proyecto Final
 
-CMS (parecido a Wordpress)
+## CMS (parecido a Wordpress)
     - Entradas (titulo, contenido, categorías, comentarios)
     - Páginas (titulo, contenido)
     - Usuarios
