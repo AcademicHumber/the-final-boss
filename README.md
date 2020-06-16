@@ -9,3 +9,10 @@
     - CodeIgniter (version 3 o 4)
     - Se aceptan CRUD generators (pero se tienen que hacer las modificaciones correspondientes)
     - Envíos de correos electrónicos (Por ejemplo en el uso de un formulario de contacto)
+
+### Integrantes del grupo
+
+    -Enrique Pedriel
+    -Dariana Martinez
+    -Jeniffer Balcazar
+    -Adrian Fernandez
