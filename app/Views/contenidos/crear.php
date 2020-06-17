@@ -14,7 +14,7 @@
             echo form_open_multipart("Content/crear");
             
             // Comprobamos errores o exito en la consulta, luego de ejecutarla
-            echo $exito;
+            print_r($exito);
             ?>            
             <table>              
                 <tbody>                    
@@ -24,6 +24,7 @@
                             <?php
                             // input de texto, sus atributos son (nombre, valor, [atributos del input])
                             echo form_input("cont[titulo]", "", ["required" => 1]);
+
                             
                             // equivalente a <input type="text" name="cont[titulo]" value="" required="1">
                             ?> 

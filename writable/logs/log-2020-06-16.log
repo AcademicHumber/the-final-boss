@@ -1,0 +1,93 @@
+CRITICAL - 2020-06-16 17:21:43 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:26:35 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:26:47 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:26:50 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:27:01 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:27:19 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:28:40 --> Invalid file: {0}
+#0 C:\xampp\htdocs\parcial\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_contacto.p...')
+#1 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('form_contacto', Array, true)
+#2 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('form_contacto')
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-16 17:30:58 --> Undefined variable: enviado
+#0 C:\xampp\htdocs\parcial\app\Views\contacto\form_contacto.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\parcial\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('contacto/form_c...', Array, true)
+#3 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('contacto/form_c...')
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#6 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-16 17:31:03 --> Undefined variable: enviado
+#0 C:\xampp\htdocs\parcial\app\Views\contacto\form_contacto.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\parcial\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('contacto/form_c...', Array, true)
+#3 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(7): view('contacto/form_c...')
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#6 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-16 17:33:46 --> Undefined variable: enviado
+#0 C:\xampp\htdocs\parcial\app\Views\contacto\form_contacto.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\parcial\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\parcial\system\Common.php(1087): CodeIgniter\View\View->render('contacto/form_c...', Array, true)
+#3 C:\xampp\htdocs\parcial\app\Controllers\contacto.php(9): view('contacto/form_c...', Array)
+#4 C:\xampp\htdocs\parcial\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#5 C:\xampp\htdocs\parcial\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#6 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
