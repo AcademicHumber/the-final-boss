@@ -1,0 +1,35 @@
+CRITICAL - 2020-06-17 17:37:10 --> syntax error, unexpected '$mensaje_pre' (T_VARIABLE)
+#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
+#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
+#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 17:37:29 --> syntax error, unexpected '$mensaje_pre' (T_VARIABLE)
+#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
+#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
+#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 17:37:43 --> syntax error, unexpected 'mail' (T_STRING)
+#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
+#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
+#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 17:37:55 --> syntax error, unexpected '$enviado' (T_VARIABLE)
+#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
+#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
+#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 17:38:04 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
+#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
+#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
