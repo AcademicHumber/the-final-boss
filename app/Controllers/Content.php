@@ -4,27 +4,80 @@ use App\Models\ContentModel;
 
 class Content extends BaseController{
     
+    protected  $instancia_del_modelo;
+    
+    function __construct() {
+        helper('form'); 
+        $this->instancia_del_modelo = new ContentModel();;
+    }
+            
     function crear(){
-        helper('form');
-        
-        // Creamos una variable para almacenar los errores y otra para alamcenar el mensaje de éxito
+       $datos = [
+            "id" => "",
+            "titulo" => "",
+            "encabezado" => "",
+            "cuerpo" => ""
+        ];
+       $errors = [];
+        $exito = ""; 
+        $this->guardar($datos,$exito,$errors);
+        return view("contenidos/crear", ["exito" => $exito,
+                                         "errores" => $errors,
+                                         "dato" => $datos]); 
+    }
+    
+    function edit($id){
+        $datos = $this->instancia_del_modelo->find($id);
         $errors = [];
-        $exito = "";
+        $exito = ""; 
+        $this->guardar($datos,$exito,$errors);
+        return view("contenidos/editar", ["exito" => $exito,
+                                          "errores" => $errors,
+                                          "dato" => $datos]);
+    }
+
+    function articulo($id){
+        // variable de usuario tipo admin hardcodeada
+        // esta variable determina si aparecen opciones de edicion o no
+        $creador = true;
         
-        // Si se ejecuto el formulario, el servidor tendra un metodo Post y se ejecuta lo que esta dentro del if
+        $articulo = $this->instancia_del_modelo->find($id);
+        
+        return view("contenidos/articulo", ["dato" => $articulo, "creador" => $creador]);
+    }
+    
+    function articulos(){
+        
+        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
+        $lista_completa = $this->listar();
+        
+        return view("contenidos/mostrar", ["datos" => $lista_completa]);
+    }
+    
+    
+    
+    protected function listar() {        
+        $lista = $this->instancia_del_modelo->findAll();
+        
+        return $lista;
+    }
+    
+    // Funcion que se encarga de guardar y actualizar con el metodo save del modelo
+    //recibimos las 2 ultimas variables por referencia 
+    
+    public function guardar($datos,&$exito, &$errors) {
+              
+        
         if ($this->request->getMethod() == "post"){
-            echo "entra";
-           // Creamos una instancia del modelo
-           $instancia_modelo = new ContentModel();
+           // juntamos todo lo que viene en una sola variable
+            $content = $_POST["cont"];
+            $content["cuerpo"] = $_POST["editordata"];
            
            // Insertamos los datos a la BD, utilizando la funcion insert del modelo
-           // Lo guardamos en una variable ($insertar) para comprobar si todo salio bien
-           // Si todo salio bien, insertar es igual a 1, que significa true
-           // Si hubo errores, insetar es igual a 0, que significa false
-           $insertar = $instancia_modelo->insert($_POST["cont"]);
+           $guardar = $this->instancia_del_modelo->save($content);
            
            //Comprobamos el resultado
-           if ($insertar){
+           if ($guardar){
                // Mesaje de éxito
                $exito = "Se guardo todo correctamente";
            }
@@ -32,29 +85,19 @@ class Content extends BaseController{
                // Mesnaje de error
                $exito = "Hubieron errores al guardar";
                // Guardamos los errores que hubieron
-               $errors = $instancia_modelo->errors();
+               $errors = $this->instancia_del_modelo->errors();
            }
            
-        }
-        
-        // Ejecutamos la vista y mandamos las variables
-        return view("contenidos/crear", ["exito" => $exito, "errores" => $errors]);
+        }        
     }
     
-    function mostrar(){
-        $instancia_del_modelo = new ContentModel();
-        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $lista_completa = $this->listar($instancia_del_modelo);
+    public function delete($id){
+        $this->instancia_del_modelo->delete($id);
+        
+        // volvemos a la pantalla de articulos
+        $lista_completa = $this->listar();
         
         return view("contenidos/mostrar", ["datos" => $lista_completa]);
-    }
-    
-    private function listar($instancia_del_modelo) {
-        // Con una instancia del modelo, llamamos a la funcion find_all(), la cual nos
-        // devolverá todos los datos en nuestra tabla, estos datos, tenemos que guardarlos en una variable
-        $lista = $instancia_del_modelo->findAll();
-        
-        return $lista;
     }
     
 }

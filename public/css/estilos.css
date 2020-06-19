@@ -1,19 +1,13 @@
-* {
-	padding: 0;
+
+.warp {
+        background: white;
+	font-size: 16px;
+	font-family: "Staatliches", Arial, sans-serif, helvetica;
+        padding: 0;
 	margin: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-}
-
-body {
-	background: white;
-	font-size: 16px;
-	font-family: "Staatliches", Arial, sans-serif, helvetica;
-
-}
-
-.warp {
 	width: 90%;
 	max-width: 500px;
 	margin: auto;
@@ -46,7 +40,7 @@ form textarea {
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
-form input[type="password"]focus,
+form input[type="password"]:focus,
 form textarea:focus{
 	border: 2px solid blue;
 	padding: 15px;
@@ -59,6 +53,12 @@ form textarea{
 	min-height: 150px;
 }
 
+.formerror{
+    color: #a94442;
+    background: #F2DEDE;
+    border: 1px solid #a94442;
+    border-radius: 2px;
+}
 .alert {
 	padding: 1em;
 	color: #fff;
@@ -91,4 +91,8 @@ form input [type="submit"]{
 }
 form input [type="submit"]:hover{
 	background: #E64A19;
+}
+.caja{
+    padding: 0% 10%;
+    text-align: center;
 }
