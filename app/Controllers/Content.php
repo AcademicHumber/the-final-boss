@@ -70,8 +70,7 @@ class Content extends BaseController{
         
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable
-            $content = $_POST["cont"];
-            $content["cuerpo"] = $_POST["editordata"];
+            $content = $_POST["cont"];            
            
            // Insertamos los datos a la BD, utilizando la funcion insert del modelo
            $guardar = $this->instancia_del_modelo->save($content);
@@ -98,6 +97,11 @@ class Content extends BaseController{
         $lista_completa = $this->listar();
         
         return view("contenidos/mostrar", ["datos" => $lista_completa]);
+    }
+    
+    public function procesar_imagen(){
+        echo $_FILES;
+        
     }
     
 }

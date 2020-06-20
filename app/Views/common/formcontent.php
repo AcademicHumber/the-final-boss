@@ -55,8 +55,8 @@ print_r($exito);
         <tr>
             <td></td>
             <td>
-                <textarea id="summernote" name="editordata" name="cont[cuerpo]"></textarea>
-
+                <textarea name="cont[cuerpo]" id="editor1"><?php echo $dato["cuerpo"]; ?></textarea>
+                
                 <?php
                 
                 // condicional para los errrores
@@ -91,6 +91,6 @@ print_r($exito);
 echo form_close();
 echo anchor("Content/articulos", "Ir a los articulos");
 echo "<pre>";
-print_r($dato);
+print_r($_POST);
 echo "</pre>";
 ?>  

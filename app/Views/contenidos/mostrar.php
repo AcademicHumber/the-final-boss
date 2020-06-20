@@ -20,8 +20,7 @@ echo view("common/basicheader", ["titulo"=> "Artículos"])
                 // parte del cuerpo cuando este es muy largo
 
                 if (strlen($dato["cuerpo"]) > 500) {
-                    $pos = stripos($dato["cuerpo"], "</p>");
-                    echo $pos;
+                    $pos = stripos($dato["cuerpo"], "</p>");                    
                     echo substr($dato["cuerpo"], 0, $pos) . "...";
                 } else {
                     echo $dato["cuerpo"];
