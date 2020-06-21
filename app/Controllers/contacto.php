@@ -7,7 +7,6 @@ class Contacto extends BaseController
         $nombre = $_POST['nombre'];
         $correo = $_POST['correo'];
         $mensaje = $_POST['mensaje'];
-    
 
     // Si el campo del nombre está en blanco
 
@@ -33,13 +32,12 @@ class Contacto extends BaseController
 
     // Si el campo del mensaje está en blanco
 
-
 	if (!empty($mensaje)) {
 		$mensaje = htmlspecialchars($mensaje);
 		$mensaje = trim($mensaje);
 		$mensaje = stripcslashes($mensaje);
 	} else {
-		$errores .= 'Por favor ingresa el mensaje';
+	$errores .= 'Por favor ingresa el mensaje';
     }
     
 
@@ -49,11 +47,14 @@ class Contacto extends BaseController
 
         $email = \Config\Services::email();
 
-        $enviar_a = "enriquetm1818@hotmail.com";
+        $enviar_a = "enriquetm1818@hotmail.com,"
+                . "ahfernandez-es@udabol.edu.bo,"
+                . "darianitamartinezjimenez17@gmail.com,"
+                . "jenifferbalcazarjustiniano@gmail.com";
         $asunto = 'Correo enviado desde: www.blog-all.org';
         $mensaje_pre = "De: $nombre \n";
-		$mensaje_pre .= "Correo: $correo \n";
-		$mensaje_pre .= "Mensaje: " . $mensaje;
+	$mensaje_pre .= "Correo: $correo \n";
+	$mensaje_pre .= "Mensaje: " . $mensaje;
         
         $email->setFrom($correo, $nombre);
         $email->setTo($enviar_a);
@@ -64,25 +65,17 @@ class Contacto extends BaseController
             $enviado = true;
 
         }else{
-            $enviado = false;
-            
+            $enviado = false;           
         }
-
-
-
-		
-	}
-
-
-
+        
+     }
     }
     public function index()
 
 	{
-
         $errores = "";
         $enviado = "";
-
+        
         if($this->request->getMethod()=="post"){
             $this -> validarEmail($errores, $enviado);
         }

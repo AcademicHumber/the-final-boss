@@ -44,3 +44,23 @@ CRITICAL - 2020-06-21 10:13:21 --> Unable to save the image. Please make sure th
 #5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2020-06-21 15:34:15 --> Call to undefined method CodeIgniter\Email\Email::errors()
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\contacto.php(83): App\Controllers\Contacto->validarEmail('', false)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Contacto->index()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Contacto))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-21 16:14:08 --> Trying to access array offset on value of type null
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\common\formcontent.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\ahft_\\...', 15, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('common/formcont...', Array, true)
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\editar.php(7): view('common/formcont...')
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/edit...', Array, true)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(38): view('contenidos/edit...', Array)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->edit('983201984901849...')
+#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

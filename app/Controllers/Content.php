@@ -67,8 +67,7 @@ class Content extends BaseController{
     // Funcion que se encarga de guardar y actualizar con el metodo save del modelo
     //recibimos las 2 ultimas variables por referencia 
     
-    public function guardar(&$exito, &$errors) {
-              
+    public function guardar(&$exito, &$errors) {              
         
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable
@@ -99,11 +98,7 @@ class Content extends BaseController{
         $lista_completa = $this->listar();
         
         return view("contenidos/mostrar", ["datos" => $lista_completa]);
-    }
-    
-    public function images_dir(){
-        return WRITEPATH.'uploads';
-    }
+    }       
     
     //Funcion que recibe las imagenes que se cargan al editor
     // Me tomo 3 días hacer esto :'v
@@ -129,6 +124,5 @@ class Content extends BaseController{
         }         
         return $this->response->setJSON($repuesta);        
     }    
-    
-    
+
 }
