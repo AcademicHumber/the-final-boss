@@ -74,7 +74,7 @@ print_r($exito);
             <td></td>
             <td>
                 <?php
-                if (!empty($dato["tituo"])){
+                if (!empty($dato["titulo"])){
                     echo form_submit("", "Actualizar");
                 }
                 else{
@@ -92,6 +92,6 @@ echo form_close();
 echo anchor("Content/articulos", "Ir a los articulos");
 echo "<pre>";
 print_r($_POST);
-print_r($_FILES);
+print_r($dato);
 echo "</pre>";
 ?>  

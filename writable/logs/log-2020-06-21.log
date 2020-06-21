@@ -1,0 +1,46 @@
+CRITICAL - 2020-06-21 09:32:56 --> Unable to save the image. Please make sure the image and file directory are writable.
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Images\Handlers\GDHandler.php(344): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(147): CodeIgniter\Images\Handlers\GDHandler->save('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(113): App\Controllers\Content->guardar_imagen('1592749975_4156...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-21 09:42:40 --> Unable to save the image. Please make sure the image and file directory are writable.
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Images\Handlers\GDHandler.php(344): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(147): CodeIgniter\Images\Handlers\GDHandler->save('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(113): App\Controllers\Content->guardar_imagen('1592750560_050b...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-21 09:45:30 --> Unable to save the image. Please make sure the image and file directory are writable.
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Images\Handlers\GDHandler.php(344): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(147): CodeIgniter\Images\Handlers\GDHandler->save('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(113): App\Controllers\Content->guardar_imagen('1592750730_eecf...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-21 09:47:26 --> File not found: {0}
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('C:\\Users\\ahft_\\...')
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Images\Handlers\BaseHandler.php(170): CodeIgniter\Files\File->__construct('C:\\Users\\ahft_\\...', true)
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(146): CodeIgniter\Images\Handlers\BaseHandler->withFile('C:\\Users\\ahft_\\...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(113): App\Controllers\Content->guardar_imagen('phpF100.tmp')
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-21 10:13:21 --> Unable to save the image. Please make sure the image and file directory are writable.
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Images\Handlers\GDHandler.php(344): CodeIgniter\Images\Exceptions\ImageException::forSaveFailed()
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(150): CodeIgniter\Images\Handlers\GDHandler->save('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(116): App\Controllers\Content->guardar_imagen('1592752401_753f...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

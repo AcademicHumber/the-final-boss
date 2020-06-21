@@ -4,6 +4,8 @@ use App\Models\ContentModel;
 
 class Content extends BaseController{
     
+    // esta instancia se utilizara en todo el controlador
+    // se inicializa en el constructor
     protected  $instancia_del_modelo;
     
     function __construct() {
@@ -12,25 +14,25 @@ class Content extends BaseController{
     }
             
     function crear(){
-       $datos = [
+        $datos = [
             "id" => "",
             "titulo" => "",
             "encabezado" => "",
             "cuerpo" => ""
         ];
-       $errors = [];
+        $errors = [];
         $exito = ""; 
-        $this->guardar($datos,$exito,$errors);
+        $this->guardar($exito,$errors);
         return view("contenidos/crear", ["exito" => $exito,
                                          "errores" => $errors,
                                          "dato" => $datos]); 
     }
     
-    function edit($id){
-        $datos = $this->instancia_del_modelo->find($id);
+    function edit($id){        
         $errors = [];
         $exito = ""; 
-        $this->guardar($datos,$exito,$errors);
+        $this->guardar($exito,$errors);
+        $datos = $this->instancia_del_modelo->find($id);
         return view("contenidos/editar", ["exito" => $exito,
                                           "errores" => $errors,
                                           "dato" => $datos]);
@@ -65,7 +67,7 @@ class Content extends BaseController{
     // Funcion que se encarga de guardar y actualizar con el metodo save del modelo
     //recibimos las 2 ultimas variables por referencia 
     
-    public function guardar($datos,&$exito, &$errors) {
+    public function guardar(&$exito, &$errors) {
               
         
         if ($this->request->getMethod() == "post"){
@@ -108,38 +110,24 @@ class Content extends BaseController{
         
         if ($img = $this->request->getFile("upload")){
          $newName = $img->getRandomName();
-         $img->move($this->images_dir(), $newName);
-         // ejecutar funcion que pondra las imagenes en public/images, retornara su ubicacion
-         $ubicacion_img = $this->guardar_imagen($newName);
-         
-         // generar respuesta
-         $repuesta = [
+        // public/images
+        $destination_dir = FCPATH."images";                   
+        $img->move($destination_dir ,$newName);       
+        // generar respuesta
+        $repuesta = [
             "uploaded" => 1,
             "filename" => $newName,
-            "url" => $ubicacion_img,
-            "error" => [
-                "message" => "No estas repondiendo bien"
-         ]];
+            "url" => base_url("images/".$newName)
+            ];
         }else{
           $repuesta = [
             "uploaded" => 0,           
             "error" => [
                 "message" => "No se subio ningun archivo"
          ]];  
-        } 
-        
-        return $this->response->setJSON($repuesta);
-        
-    }
+        }         
+        return $this->response->setJSON($repuesta);        
+    }    
     
-    protected function guardar_imagen($name){
-     // Hacer instancia de la clase manejadora de imagenes
-        $image = \Config\Services::image();
-     
-     // Mover la imagen del writable a public
-        $image->withFile($this->images_dir()."/".$name)                 
-                  ->save($destination_file);
-      
-    }
     
 }

@@ -19,9 +19,8 @@ echo view("common/basicheader", ["titulo"=> "Artículos"])
                 // Condicionante para que se vea solo una
                 // parte del cuerpo cuando este es muy largo
 
-                if (strlen($dato["cuerpo"]) > 500) {
-                    $pos = stripos($dato["cuerpo"], "</p>");                    
-                    echo substr($dato["cuerpo"], 0, $pos) . "...";
+                if (strlen($dato["cuerpo"]) > 500) {                                      
+                    echo substr($dato["cuerpo"], 0, 500) . "...";
                 } else {
                     echo $dato["cuerpo"];
                     echo "";
