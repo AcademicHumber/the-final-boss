@@ -99,9 +99,47 @@ class Content extends BaseController{
         return view("contenidos/mostrar", ["datos" => $lista_completa]);
     }
     
-    public function procesar_imagen(){
-        echo $_FILES;
+    public function images_dir(){
+        return WRITEPATH.'uploads';
+    }
+    
+    //Funcion que recibe las imagenes que se cargan al editor    
+    public function procesar_imagen(){  
         
+        if ($img = $this->request->getFile("upload")){
+         $newName = $img->getRandomName();
+         $img->move($this->images_dir(), $newName);
+         // ejecutar funcion que pondra las imagenes en public/images, retornara su ubicacion
+         $ubicacion_img = $this->guardar_imagen($newName);
+         
+         // generar respuesta
+         $repuesta = [
+            "uploaded" => 1,
+            "filename" => $newName,
+            "url" => $ubicacion_img,
+            "error" => [
+                "message" => "No estas repondiendo bien"
+         ]];
+        }else{
+          $repuesta = [
+            "uploaded" => 0,           
+            "error" => [
+                "message" => "No se subio ningun archivo"
+         ]];  
+        } 
+        
+        return $this->response->setJSON($repuesta);
+        
+    }
+    
+    protected function guardar_imagen($name){
+     // Hacer instancia de la clase manejadora de imagenes
+        $image = \Config\Services::image();
+     
+     // Mover la imagen del writable a public
+        $image->withFile($this->images_dir()."/".$name)                 
+                  ->save($destination_file);
+      
     }
     
 }

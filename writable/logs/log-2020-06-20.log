@@ -1,0 +1,79 @@
+CRITICAL - 2020-06-20 19:24:10 --> Undefined variable: totalTime
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Debug\Toolbar\Views\toolbar.tpl.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ahft_\\...', 56, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Debug\Toolbar.php(498): include('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Debug\Toolbar.php(455): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Config\Events.php(44): CodeIgniter\Debug\Toolbar->respond()
+#4 [internal function]: CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Events\Events.php(188): call_user_func(Object(Closure))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(289): CodeIgniter\Events\Events::trigger('pre_system')
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-20 19:28:09 --> Array to string conversion
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\ahft_\\...', 103, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 19:45:23 --> Undefined index: name
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 19:47:03 --> Undefined index: name
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 19:56:37 --> Undefined index: name
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 19:56:43 --> Undefined index: name
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 19:57:10 --> Undefined index: name
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 23:24:59 --> Undefined variable: img
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-20 23:50:32 --> fopen(http://localhost:8080/ProyectoFinal/public/imagesindex.html): failed to open stream: HTTP wrapper does not support writeable connections
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://lo...', 'C:\\Users\\ahft_\\...', 216, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\HTTP\Files\UploadedFile.php(216): fopen('http://localhos...', 'x+')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\HTTP\Files\UploadedFile.php(163): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhos...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(106): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhos...', '1592715032_5d63...')
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-20 23:55:22 --> fopen(http://localhost:8080/ProyectoFinal/public/index.php/imagesindex.html): failed to open stream: HTTP wrapper does not support writeable connections
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fopen(http://lo...', 'C:\\Users\\ahft_\\...', 216, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\HTTP\Files\UploadedFile.php(216): fopen('http://localhos...', 'x+')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\HTTP\Files\UploadedFile.php(163): CodeIgniter\HTTP\Files\UploadedFile->setPath('http://localhos...')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(107): CodeIgniter\HTTP\Files\UploadedFile->move('http://localhos...', '1592715322_35fe...')
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->procesar_imagen()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
