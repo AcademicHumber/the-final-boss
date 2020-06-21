@@ -105,7 +105,8 @@ class Content extends BaseController{
         return WRITEPATH.'uploads';
     }
     
-    //Funcion que recibe las imagenes que se cargan al editor    
+    //Funcion que recibe las imagenes que se cargan al editor
+    // Me tomo 3 días hacer esto :'v
     public function procesar_imagen(){  
         
         if ($img = $this->request->getFile("upload")){
