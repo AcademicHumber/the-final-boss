@@ -10,7 +10,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion"])
         echo "<div>";
         echo "<p>".$dato["titulo"]."</p>";
         echo "<p><a href='pagina/".$dato["id"]."'>Ver</a> - "
-                . "<a href='editarPagina/".$dato["id"]."'>Editar</a> - "
+                . "<a href='editPagina/".$dato["id"]."'>Editar</a> - "
                 . "<a href='deletePage/".$dato["id"]."'>Eliminar</a></p>";
         echo "<div style='float: rigth;'>Fecha de creación: ".$dato["created_at"]."</div>";
         echo "</div>";

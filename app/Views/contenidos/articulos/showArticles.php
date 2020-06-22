@@ -5,10 +5,13 @@ echo view("common/basicheader", ["titulo"=> "Artículos"])
 <div class="caja">
 
     <h1>Lista de artículos y paginas</h1>
-    
-    <a href="content/verpaginas">Ver lista de paginas</a><br>    
-    <a href="content/verarticulos">Ver lista de articulos</a><br>  
-    
+    <?php
+    echo anchor("content/verarticulos","Ver lista de artículos");
+    echo "<br>";
+    echo anchor("content/verpaginas","Ver lista de páginas");    
+    echo "<br>";
+    echo anchor("content/vercomentarios","Ver lista de comentarios");    
+    ?>
     <h3>Paginas</h3>    
     <ul>
         <?php

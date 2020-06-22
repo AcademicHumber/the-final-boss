@@ -2,26 +2,29 @@
 
 use App\Models\ContentModel;
 use App\Models\PagesModel;
+use App\Models\CommentsModel;
 
 class Content extends BaseController{
     
-    /*------------------ SECCION UTILITARIOS---------------------------*/
+    /*------------------ SECCIÓN UTILITARIOS---------------------------*/
     
     // estas instancias se utilizara en todo el controlador
     // se inicializan en el constructor
     protected  $instancia_articulos;
     protected  $instancia_paginas;
+    protected  $instancia_comentarios;
     
     function __construct() {
         helper('form'); 
         $this->instancia_articulos = new ContentModel();
         $this->instancia_paginas = new PagesModel();
+        $this->instancia_comentarios = new CommentsModel();
     }
     
     public function index(){
       $articulos = $this->listar($this->instancia_articulos);        
       $paginas = $this->listar($this->instancia_paginas);        
-      return view("contenidos/showArticles", ["datos" => $articulos, "paginas" => $paginas]);  
+      return view("contenidos/articulos/showArticles", ["datos" => $articulos, "paginas" => $paginas]);  
     }
         
     protected function listar($instancia) {        
@@ -82,7 +85,7 @@ class Content extends BaseController{
         return $this->response->setJSON($repuesta);        
     }
     
-    /*--------------------SECCION ARTICULOS-----------------*/ 
+    /*--------------------SECCIÓN ARTICULOS-----------------*/ 
     
     function crearArticulo(){
         $datos = [
@@ -94,7 +97,7 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_articulos, $exito, $errors);
-        return view("contenidos/createArticle", ["exito" => $exito,
+        return view("contenidos/articulos/createArticle", ["exito" => $exito,
                                          "errores" => $errors,
                                          "dato" => $datos]); 
     }
@@ -105,52 +108,48 @@ class Content extends BaseController{
         $this->guardar($this->instancia_articulos, $exito, $errors);
         //Cargar el articulo actualizado o a actualizar
         $datos = $this->instancia_articulos->find($id);
-        echo $datos;
-        return view("contenidos/editArticle", ["exito" => $exito,
+        //Si el id no existe $datos=NULL, entonces se redirige 
+        if(is_null($datos)){
+            return redirect()->to(site_url("content/verarticulos"));
+        }
+        
+        return view("contenidos/articulos/editArticle", ["exito" => $exito,
                                           "errores" => $errors,
                                           "dato" => $datos]);
     }
-
     function articulo($id){
-        // variable de usuario tipo admin hardcodeada
-        // esta variable determina si aparecen opciones de edicion o no
-        $creador = true;
+        //Procesar comentarios nuevos
+        $exito = "";
+        $errors = "";
+        $this->guardar($this->instancia_comentarios, $exito, $errors); 
         
+        //cargar articulo
         $articulo = $this->instancia_articulos->find($id);
-        
-        return view("contenidos/article", ["dato" => $articulo, "creador" => $creador]);
-    }
-    
-    function articulos(){
-        
-        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $articulos = $this->listar($this->instancia_articulos);
-        
-        $paginas = $this->listar($this->instancia_paginas);
-        
-        return view("contenidos/showArticles", ["datos" => $articulos, "paginas" => $paginas]);
+        if(is_null($articulo)){
+            return redirect()->to(site_url("content/verarticulos"));
+        }
+        //cargar comentarios para el articulo
+        $comentarios = $this->instancia_comentarios->comentarios_del_articulo($id);
+              
+        return view("contenidos/articulos/article", ["dato" => $articulo, "comentarios" => $comentarios]);
     }
     function verarticulos(){
         
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
         $articulos = $this->listar($this->instancia_articulos);
         
-        return view("contenidos/showListOfArticles", ["datos" => $articulos]);
+        return view("contenidos/articulos/showListOfArticles", ["datos" => $articulos]);
     }
     
     public function deleteArticle($id){
-        $this->instancia_articulos->delete($id);
-        
-        // volvemos a la pantalla de articulos
-        $lista_completa = $this->listar();
-        
-        return view("contenidos/showListOfArticles", ["datos" => $lista_completa]);
+        $this->instancia_articulos->delete($id);        
+       return redirect()->to(site_url("content/verarticulos"));
     }
     
     
-    /*----------------FIN SECCION ARTICULOS----------------------------*/
+    /*----------------FIN SECCIÓN ARTICULOS--------------------------*/
     
-    /*--------------------- SECCION PÄGINAS--------------------------*/
+    /*--------------------- SECCIÓN PÄGINAS--------------------------*/
     
     function crearPagina(){
         $datos = [
@@ -162,52 +161,78 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_paginas,$exito,$errors);
-        return view("contenidos/createPage", ["exito" => $exito,
+        return view("contenidos/paginas/createPage", ["exito" => $exito,
                                          "errores" => $errors,
                                          "dato" => $datos]); 
-    }
-    
+    }    
     function editPagina($id){        
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_paginas, $exito, $errors);
         //Cargar la pagina actualizada o a actualizar
         $datos = $this->instancia_paginas->find($id);  
-        
-        return view("contenidos/editPage", ["exito" => $exito,
+        if (is_null($datos)) return redirect ()->to (site_url ("content/verpaginas"));
+        return view("contenidos/paginas/editPage", ["exito" => $exito,
                                           "errores" => $errors,
                                            "dato" => $datos]);
-      
-        
-        
-    }
-    function pagina($id){
-        // variable de usuario tipo admin hardcodeada
-        // esta variable determina si aparecen opciones de edicion o no
-        $creador = true;
-        
+        }
+    function pagina($id){        
         $pagina = $this->instancia_paginas->find($id);
-        
-        return view("contenidos/page", ["dato" => $pagina, "creador" => $creador]);
+        if (is_null($pagina)) return redirect ()->to (site_url ("content/verpaginas"));
+        return view("contenidos/paginas/page", ["dato" => $pagina]);
     }    
     public function deletePage($id){
-        $this->instancia_paginas->delete($id);
-        
-        // volvemos a la pantalla de articulos
-        $lista_completa = $this->listar($this->instancia_paginas);
-        
-        return view("contenidos/showListOfPages", ["datos" => $lista_completa]);
+        $this->instancia_paginas->delete($id);        
+        return redirect()->to(site_url("content/verpaginas"));
     }
-    function verpaginas(){
-        
+    function verpaginas(){        
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $articulos = $this->listar($this->instancia_paginas);
-        
-        return view("contenidos/showListOfPages", ["datos" => $articulos]);
+        $paginas = $this->listar($this->instancia_paginas);
+        return view("contenidos/paginas/showListOfPages", ["datos" => $paginas]);
     }
     
     
-    /*---------------------FIN SECCION PÁGINAS--------------------------*/
+    /*---------------------FIN SECCIÓN PÁGINAS--------------------------*/
+    
+    /*--------------------- SECCIÓN COMENTARIOS ------------------------*/
+    
+    public function vercomentarios(){
+        // Funcion personalizada para obtener el nombre del articulo al que pertenece cada comment     
+        $comentarios = $this->instancia_comentarios->listar_comentarios();        
+        
+        return view("contenidos/comentarios/showListOfComments", ["datos" => $comentarios]);
+    }
+    public function editComment($id){
+        $errors = [];
+        $exito = ""; 
+        if ($this->request->getMethod()=="post"){
+            $actualizacion = $this->instancia_comentarios->actualizar_cuerpo($id, $_POST["cuerpo"]);   
+            // Si todo sale bien, devuelve 1, es decir true
+            if($actualizacion){
+                $exito = "Comentario actualizado correctamente";
+            }
+            else{
+                $exito = "No se ha actualizado ningun comentario";
+            }
+        }
+        //Cargar el comentario actualizado o a actualizar
+        $datos = $this->instancia_comentarios->find($id);
+        //Si el id no existe $datos=NULL, entonces se redirige 
+        if(is_null($datos)){
+            return redirect()->to(site_url("content/verarticulos"));
+        }
+        
+        return view("contenidos/comentarios/editComment", ["exito" => $exito,
+                                                           "errores" => $errors,
+                                                           "dato" => $datos]);
+    }
+    public function deleteComment($id){
+       $this->instancia_comentarios->delete($id);       
+       return redirect()->to(site_url("content/vercomentarios"));
+    }
+    
+    
+    /*------------------ FIN SECCIÓN COMENTARIOS ------------------------*/
     
         
 

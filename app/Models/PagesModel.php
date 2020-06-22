@@ -15,11 +15,8 @@ class PagesModel extends Model{
     protected $primaryKey = "id";
     
     //Varible que define como la base de datos nos entrega informacion (opcional)
-    protected $returnType = "array";
-    
-    //Configurar la eliminación de archivos (opcional)
-    protected $useSoftDeletes = false;
-    
+    protected $returnType = "array";   
+ 
     //Campos habilitados para su escritura en la tabla
     protected $allowedFields = ["id", "titulo", "encabezado", "cuerpo"];
     
@@ -61,8 +58,6 @@ class PagesModel extends Model{
         $data['data']['cuerpo'] .= "\n   ";
         return $data;
     }
-    
-    //Configurar el saltar la validacion (opcional, por defecto viene en false)
-    protected $skipValidation = false;
+
     
 }
