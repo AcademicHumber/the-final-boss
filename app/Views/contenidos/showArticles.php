@@ -4,9 +4,21 @@ echo view("common/basicheader", ["titulo"=> "Artículos"])
   
 <div class="caja">
 
-    <h1>Lista de artículos</h1>
-    <a href="crear">Crear nuevo</a>
-
+    <h1>Lista de artículos y paginas</h1>
+    
+    <a href="content/verpaginas">Ver lista de paginas</a><br>    
+    <a href="content/verarticulos">Ver lista de articulos</a><br>  
+    
+    <h3>Paginas</h3>    
+    <ul>
+        <?php
+        foreach($paginas as $pagina){
+            echo "<li><a href='content/pagina/".$pagina["id"]."'>".$pagina["titulo"]."</a></li>";
+        }
+        ?>        
+    </ul>
+      
+    <h3>Articulos</h3> 
     <?php
     foreach ($datos as $dato) {
         ?>

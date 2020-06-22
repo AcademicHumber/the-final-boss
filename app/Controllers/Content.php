@@ -1,65 +1,31 @@
 <?php namespace App\Controllers;
 
 use App\Models\ContentModel;
+use App\Models\PagesModel;
 
 class Content extends BaseController{
     
-    // esta instancia se utilizara en todo el controlador
-    // se inicializa en el constructor
-    protected  $instancia_del_modelo;
+    /*------------------ SECCION UTILITARIOS---------------------------*/
+    
+    // estas instancias se utilizara en todo el controlador
+    // se inicializan en el constructor
+    protected  $instancia_articulos;
+    protected  $instancia_paginas;
     
     function __construct() {
         helper('form'); 
-        $this->instancia_del_modelo = new ContentModel();;
-    }
-            
-    function crear(){
-        $datos = [
-            "id" => "",
-            "titulo" => "",
-            "encabezado" => "",
-            "cuerpo" => ""
-        ];
-        $errors = [];
-        $exito = ""; 
-        $this->guardar($exito,$errors);
-        return view("contenidos/crear", ["exito" => $exito,
-                                         "errores" => $errors,
-                                         "dato" => $datos]); 
+        $this->instancia_articulos = new ContentModel();
+        $this->instancia_paginas = new PagesModel();
     }
     
-    function edit($id){        
-        $errors = [];
-        $exito = ""; 
-        $this->guardar($exito,$errors);
-        $datos = $this->instancia_del_modelo->find($id);
-        return view("contenidos/editar", ["exito" => $exito,
-                                          "errores" => $errors,
-                                          "dato" => $datos]);
+    public function index(){
+      $articulos = $this->listar($this->instancia_articulos);        
+      $paginas = $this->listar($this->instancia_paginas);        
+      return view("contenidos/showArticles", ["datos" => $articulos, "paginas" => $paginas]);  
     }
-
-    function articulo($id){
-        // variable de usuario tipo admin hardcodeada
-        // esta variable determina si aparecen opciones de edicion o no
-        $creador = true;
         
-        $articulo = $this->instancia_del_modelo->find($id);
-        
-        return view("contenidos/articulo", ["dato" => $articulo, "creador" => $creador]);
-    }
-    
-    function articulos(){
-        
-        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $lista_completa = $this->listar();
-        
-        return view("contenidos/mostrar", ["datos" => $lista_completa]);
-    }
-    
-    
-    
-    protected function listar() {        
-        $lista = $this->instancia_del_modelo->findAll();
+    protected function listar($instancia) {        
+        $lista = $instancia->findAll();
         
         return $lista;
     }
@@ -67,14 +33,14 @@ class Content extends BaseController{
     // Funcion que se encarga de guardar y actualizar con el metodo save del modelo
     //recibimos las 2 ultimas variables por referencia 
     
-    public function guardar(&$exito, &$errors) {              
+    public function guardar($instancia, &$exito, &$errors) {              
         
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable
             $content = $_POST["cont"];            
            
            // Insertamos los datos a la BD, utilizando la funcion insert del modelo
-           $guardar = $this->instancia_del_modelo->save($content);
+           $guardar = $instancia->save($content);
            
            //Comprobamos el resultado
            if ($guardar){
@@ -85,21 +51,12 @@ class Content extends BaseController{
                // Mesnaje de error
                $exito = "Hubieron errores al guardar";
                // Guardamos los errores que hubieron
-               $errors = $this->instancia_del_modelo->errors();
+               $errors = $instancia->errors();
            }
            
         }        
-    }
-    
-    public function delete($id){
-        $this->instancia_del_modelo->delete($id);
-        
-        // volvemos a la pantalla de articulos
-        $lista_completa = $this->listar();
-        
-        return view("contenidos/mostrar", ["datos" => $lista_completa]);
-    }       
-    
+    }   
+          
     //Funcion que recibe las imagenes que se cargan al editor
     // Me tomo 3 días hacer esto :'v
     public function procesar_imagen(){  
@@ -123,6 +80,135 @@ class Content extends BaseController{
          ]];  
         }         
         return $this->response->setJSON($repuesta);        
+    }
+    
+    /*--------------------SECCION ARTICULOS-----------------*/ 
+    
+    function crearArticulo(){
+        $datos = [
+            "id" => "",
+            "titulo" => "",
+            "encabezado" => "",
+            "cuerpo" => ""
+        ];
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_articulos, $exito, $errors);
+        return view("contenidos/createArticle", ["exito" => $exito,
+                                         "errores" => $errors,
+                                         "dato" => $datos]); 
+    }
+    
+    function editArticulo($id){        
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_articulos, $exito, $errors);
+        //Cargar el articulo actualizado o a actualizar
+        $datos = $this->instancia_articulos->find($id);
+        echo $datos;
+        return view("contenidos/editArticle", ["exito" => $exito,
+                                          "errores" => $errors,
+                                          "dato" => $datos]);
+    }
+
+    function articulo($id){
+        // variable de usuario tipo admin hardcodeada
+        // esta variable determina si aparecen opciones de edicion o no
+        $creador = true;
+        
+        $articulo = $this->instancia_articulos->find($id);
+        
+        return view("contenidos/article", ["dato" => $articulo, "creador" => $creador]);
+    }
+    
+    function articulos(){
+        
+        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
+        $articulos = $this->listar($this->instancia_articulos);
+        
+        $paginas = $this->listar($this->instancia_paginas);
+        
+        return view("contenidos/showArticles", ["datos" => $articulos, "paginas" => $paginas]);
+    }
+    function verarticulos(){
+        
+        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
+        $articulos = $this->listar($this->instancia_articulos);
+        
+        return view("contenidos/showListOfArticles", ["datos" => $articulos]);
+    }
+    
+    public function deleteArticle($id){
+        $this->instancia_articulos->delete($id);
+        
+        // volvemos a la pantalla de articulos
+        $lista_completa = $this->listar();
+        
+        return view("contenidos/showListOfArticles", ["datos" => $lista_completa]);
+    }
+    
+    
+    /*----------------FIN SECCION ARTICULOS----------------------------*/
+    
+    /*--------------------- SECCION PÄGINAS--------------------------*/
+    
+    function crearPagina(){
+        $datos = [
+            "id" => "",
+            "titulo" => "",
+            "encabezado" => "",
+            "cuerpo" => ""
+        ];
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_paginas,$exito,$errors);
+        return view("contenidos/createPage", ["exito" => $exito,
+                                         "errores" => $errors,
+                                         "dato" => $datos]); 
+    }
+    
+    function editPagina($id){        
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_paginas, $exito, $errors);
+        //Cargar la pagina actualizada o a actualizar
+        $datos = $this->instancia_paginas->find($id);  
+        
+        return view("contenidos/editPage", ["exito" => $exito,
+                                          "errores" => $errors,
+                                           "dato" => $datos]);
+      
+        
+        
+    }
+    function pagina($id){
+        // variable de usuario tipo admin hardcodeada
+        // esta variable determina si aparecen opciones de edicion o no
+        $creador = true;
+        
+        $pagina = $this->instancia_paginas->find($id);
+        
+        return view("contenidos/page", ["dato" => $pagina, "creador" => $creador]);
     }    
+    public function deletePage($id){
+        $this->instancia_paginas->delete($id);
+        
+        // volvemos a la pantalla de articulos
+        $lista_completa = $this->listar($this->instancia_paginas);
+        
+        return view("contenidos/showListOfPages", ["datos" => $lista_completa]);
+    }
+    function verpaginas(){
+        
+        // Utilizamos la funcion listar para obtener todos los datos de la tabla        
+        $articulos = $this->listar($this->instancia_paginas);
+        
+        return view("contenidos/showListOfPages", ["datos" => $articulos]);
+    }
+    
+    
+    /*---------------------FIN SECCION PÁGINAS--------------------------*/
+    
+        
 
 }

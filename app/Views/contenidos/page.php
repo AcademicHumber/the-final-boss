@@ -8,8 +8,8 @@ echo view("common/formheader", ["titulo" => $dato["titulo"]])
     ?>
     <nav>
         <ul>
-            <li><?php echo anchor("content/edit/".$dato["id"], "Editar");?></li>
-            <li><?php echo anchor("content/delete/".$dato["id"], "Eliminar");?></li>
+            <li><?php echo anchor("content/editPagina/".$dato["id"], "Editar");?></li>
+            <li><?php echo anchor("content/deletePagina/".$dato["id"], "Eliminar");?></li>
         </ul>
     </nav>
     <?php

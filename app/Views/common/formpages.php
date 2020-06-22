@@ -7,7 +7,7 @@ print_r($exito);
 <table>              
     <tbody>                    
         <tr>
-            <td><label>Titulo de la publicación</label></td>
+            <td><label>Titulo de la página</label></td>
             <td>                            
                 <?php
                 //input hidden que mandara el id del articulo, estara vacio si es crear
@@ -31,7 +31,7 @@ print_r($exito);
             </td>                       
         </tr>
         <tr>
-            <td><label>Encabezado de la publicación</label></td>
+            <td><label>Encabezado de la página</label></td>
             <td>
                 <?php
                 echo form_input("cont[encabezado]", $dato["encabezado"], ["required" => 1]);
@@ -50,7 +50,7 @@ print_r($exito);
         </tr>
         
         <tr>
-            <td><label>Cuerpo de la publicación</label></td>
+            <td><label>Cuerpo de la página</label></td>
         </tr>    
         <tr>
             <td></td>
@@ -89,7 +89,7 @@ print_r($exito);
 <?php
 // Cerrar formulario
 echo form_close();
-echo anchor("content/verarticulos", "Ir a los articulos");
+echo anchor("Content/verpaginas", "Ir a las paginas");
 /*echo "<pre>";
 print_r($_POST);
 print_r($dato);
