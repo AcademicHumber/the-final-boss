@@ -40,6 +40,8 @@ class CategoriesModel extends Model{
         ]
     ];
     
+    protected $skipvalidation= false;
+    
     public function articulos_por_categoria($slug){
         $db = \Config\Database::connect();
         $query = $db->query("SELECT contenidos.id, contenidos.titulo, contenidos.encabezado, contenidos.cuerpo, categorias.nombre "
