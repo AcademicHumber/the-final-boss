@@ -25,8 +25,8 @@
                         }
                         ?>
                     </td>
-                    <td> <input type="submit" value="Ingresar"></td>
-
+                    <td><input type="submit" value="Ingresar"></td>
+                    
                 </tr>
                 <tr>
                     <td>Contraseña</td>

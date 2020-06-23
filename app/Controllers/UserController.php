@@ -8,14 +8,12 @@ class UserController extends BaseController {
 
     //metodo para ingresar un usuario previamente registrado
     public function login() {
-
         helper("form");
         //Variables donde se cargaran los errores si es que hubiesen y exito
         $errores = [];
-        $exito = "";
-
+        $exito = "";       
         //si el método es post
-        if ($this->request->getMethod() == "post") {
+        if ($this->request->getMethod() == "post") {            
             //se instancia al modelo
             $instancia = new UsuarioModel();
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
@@ -25,9 +23,9 @@ class UserController extends BaseController {
             $contraseña = $correo['contrasena'];
 
             //si la contraseña ingresa por el usuario coincide con la contraseña del mismo en la bd
-            if (password_verify($_POST['contrasena'], $contraseña)) {
-                //se redirecciona al frontend
-                return redirect()->to('backend');
+            if (password_verify($_POST['contrasena'], $contraseña) && $correo["perfil"] != "suscriptor") {
+                //se redirecciona al backend                
+                return redirect()->to('backend');                
             } else {
                 //sino se manda un mensaje de usuario no valido y los errores
                 $exito = "Usuario no válido";
@@ -177,7 +175,7 @@ class UserController extends BaseController {
 
     //metodo donde se redirecciona si el usuario ingresado en el login es válido
     public function frontend() {
-        //solo devuelve la vista del backend
+        //solo devuelve la vista del frontend
         return view('UserFrontend/frontend');
     }
 
