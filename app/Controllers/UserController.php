@@ -11,21 +11,41 @@ class UserController extends BaseController {
         helper("form");
         //Variables donde se cargaran los errores si es que hubiesen y exito
         $errores = [];
-        $exito = "";       
+        $exito = "";
+        $usuario = [
+           "id" => "",
+           "username" => "",
+           "nombre" => "",
+           "correo" => "",
+           "perfil" => ""
+         ];
+        $this->session->set($usuario);
         //si el método es post
-        if ($this->request->getMethod() == "post") {            
+        if ($this->request->getMethod() == "post") {
             //se instancia al modelo
             $instancia = new UsuarioModel();
+            
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
             $correo = $instancia->correo($_POST["correo"]);
+            
             //como el metodo correo devuelve un array con todos los campos del usuario en base al correo que se manda,
             //se obtiene asi la contraseña encriptada para luego compararla con el password_verify
             $contraseña = $correo['contrasena'];
 
             //si la contraseña ingresa por el usuario coincide con la contraseña del mismo en la bd
             if (password_verify($_POST['contrasena'], $contraseña) && $correo["perfil"] != "suscriptor") {
+                //iniciamos la sesion del usuario
+                $usuario = [
+                    "id" => $correo["id"],
+                    "username" => $correo["nombre_usuario"],
+                    "nombre" => $correo["nombre"],
+                    "correo" => $correo["correo"],
+                    "perfil" => $correo["perfil"]
+                ];
+                $this->session->set($usuario);
+                
                 //se redirecciona al backend                
-                return redirect()->to('backend');                
+                return redirect()->to('backend');
             } else {
                 //sino se manda un mensaje de usuario no valido y los errores
                 $exito = "Usuario no válido";
@@ -67,9 +87,18 @@ class UserController extends BaseController {
 
                 //se inserta a la bd de datos todo lo que hay en la variable datos
                 $insertar = $instancia->insert($datos);
-
-                //mandamos el mensaje de confirmación
-                $exito = "El usuario se registró correctamente";
+                
+                //confirmar si se inserto correctamente el usuario
+                if ($insertar){
+                    //mandamos el mensaje de confirmación
+                    $exito = "El usuario se registró correctamente"; 
+                }
+                else{
+                   //Mandamos mensaje de error, seguramente fallo una validacion
+                    $exito = "Hubo problemas para registrar al usuario";
+                    $errores = $instancia->errors(); 
+                }                   
+            
             } else {
                 $exito = "Hubo problemas para registrar al usuario";
                 $errores = $instancia->errors();
@@ -93,27 +122,18 @@ class UserController extends BaseController {
         //Se instancia al modelo
         $instancia = new UsuarioModel();
 
-        //se llama al método idUsuario pasando el argumento ID obtenido del get
-        $usuario = $instancia->idUsuario($_GET["id"]);
+        
         //se crea las variables para almacenar el éxito y los errores
         $errores = [];
         $exito = "";
-
-        //Si el id no existe en la base de datos, se redirecciona la misma página
-        //(Luego agregar mensaje de no se encontró el usuario_ OJO)
-        if (empty($usuario)) {
-            return redirect()->to(site_url("UserController/listar"));
-        }
-
+        
         //Si el método es post
         if ($this->request->getMethod() == "post") {
             //se guarda todo lo que se recibe de post en la varible datos
-            $datos = $_POST["user"];
-            //luego se lo asignamos a la variable usuario donde se encuentra almancenado el id(metodo IdUsuario del modelo)
-            $usuario = $datos;
+            $datos = $_POST["user"];           
 
             //Se hace el update, pasandole el id y lo que hay dentro de usuario que anteriormente se guardó todo lo que vino de post
-            $modificar = $instancia->update($_GET["id"], $usuario);
+            $modificar = $instancia->update($_GET["id"],$datos);
             //se hacen las validaciones
             if ($modificar) {
                 $exito = "El usuario se modificó correctamente";
@@ -121,6 +141,14 @@ class UserController extends BaseController {
                 $exito = "Hubo problemas para modificar al usuario";
                 $errores = $instancia->errors();
             }
+        }
+        
+        //se llama al método idUsuario pasando el argumento ID obtenido del get
+        $usuario = $instancia->idUsuario($_GET["id"]);
+        //Si el id no existe en la base de datos, se redirecciona la misma página
+        //(Luego agregar mensaje de no se encontró el usuario_ OJO)
+        if (empty($usuario)) {
+            return redirect()->to(site_url("UserController/listar"));
         }
         helper("form");
         //se manda a la vista las variables de exito y error y la variable usuairo, que va a estar almacenado en la variable $modificar 
@@ -142,12 +170,21 @@ class UserController extends BaseController {
     }
 
     //metodo para ingresar un usuario previamente registrado
-    public function loginFrontend() {
+    public function index() {
 
         helper("form");
         //Variables donde se cargaran los errores si es que hubiesen y exito
         $errores = [];
         $exito = "";
+        //Limpiar la variable sessions
+        $usuario = [
+            "id" => "",
+            "username" => "",
+            "nombre" => "",
+            "correo" => "",
+            "perfil" => ""
+         ];
+         $this->session->set($usuario);
 
         //si el método es post
         if ($this->request->getMethod() == "post") {
@@ -161,6 +198,15 @@ class UserController extends BaseController {
 
             //si la contraseña ingresa por el usuario coincide con la contraseña del mismo en la bd
             if (password_verify($_POST['contrasena'], $contraseña)) {
+                //Cargar usuario a la variable sessions
+                $usuario = [
+                    "id" => $correo["id"],
+                    "username" => $correo["nombre_usuario"],
+                    "nombre" => $correo["nombre"],
+                    "correo" => $correo["correo"],
+                    "perfil" => $correo["perfil"]
+                ];
+                $this->session->set($usuario);
                 //se redirecciona al frontend
                 return redirect()->to('frontend');
             } else {
@@ -204,18 +250,26 @@ class UserController extends BaseController {
                 //se inserta a la bd de datos todo lo que hay en la variable datos
                 $insertar = $instancia->insert($datos);
 
-                //mandamos el mensaje de confirmación
-                $exito = "El usuario se registró correctamente";
-
-                //lo redireccionamos al frontend
-                return redirect()->to('frontend');
+                //confirmar si se inserto correctamente el usuario
+                if ($insertar){
+                    //mandamos el mensaje de confirmación
+                    $exito = "El usuario se registró correctamente";
+                    //lo redireccionamos al frontend
+                    return view('UserFrontend/loginFront', ["exito" => $exito]);
+                }
+                else{
+                   //Mandamos mensaje de error, seguramente fallo una validacion
+                    $exito = "Hubo problemas para registrar al usuario";
+                    $errores = $instancia->errors(); 
+                }
+                
             } else {
                 $exito = "Hubo problemas para registrar al usuario";
                 $errores = $instancia->errors();
             }
         }
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan
-        echo view('UserFrontend/RegistroFront', ["exito" => $exito, "errores" => $errores]);
+        return view('UserFrontend/RegistroFront', ["exito" => $exito, "errores" => $errores]);
     }
 
     public function recuperarContra() {

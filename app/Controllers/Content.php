@@ -149,8 +149,7 @@ class Content extends BaseController{
     }
     
     public function deleteArticle($id){
-       $this->instancia_articulos->delete($id);
-       echo "llega";
+       $this->instancia_articulos->delete($id);       
        return redirect()->to(site_url("content/verarticulos"));
     }
     

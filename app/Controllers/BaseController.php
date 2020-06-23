@@ -27,8 +27,10 @@ class BaseController extends Controller
 	 * @var array
 	 */
 	protected $helpers = [];
+        
+        protected $session;
 
-	/**
+        /**
 	 * Constructor.
 	 */
 	public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
@@ -39,6 +41,7 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
 		//--------------------------------------------------------------------
+                $this->session = session();
 		// E.g.:
 		// $this->session = \Config\Services::session();
 	}

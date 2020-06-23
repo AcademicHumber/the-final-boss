@@ -19,16 +19,17 @@ class UsuarioModel extends Model {
         $this->allowedFields = ['nombre_usuario', 'nombre', 'apellido', 'correo', 'contrasena', 'perfil'];
 
         $this->validationRules = [
-            "nombre_usuario" => "required|min_length[5]|max_length[50]",
+            "nombre_usuario" => "required|min_length[5]|max_length[50]|is_unique[user.nombre_usuario]",
             "nombre" => "min_length[3]|max_length[255]",
             "apellido" => "min_length[3]|max_length[255]",
-            "correo" => "min_length[6]|max_length[50]|valid_email",
+            "correo" => "min_length[6]|max_length[50]|valid_email|is_unique[user.correo]",
             "contrasena" => "min_length[5]|max_length[255]",
             "contrasena_confir" => "matches[contrasena]",
             "perfil" => "min_length[5]|max_length[255]",
         ];
         $this->validationMessages = [
             "nombre_usuario" => [
+                "is_unique" => "El nombre de usuario ya existe",
                 "required" => "Datos requeridos",
                 "max_length" => "Nombre de usuario muy largo, máximo 50 caracteres",
                 "min_length" => "Nombre de usuario muy corto, mínimo 5 caracteres"
@@ -47,7 +48,8 @@ class UsuarioModel extends Model {
                 "required" => "Datos requeridos",
                 "valid_email" => "Debe de tener una dirección de correo válida",
                 "max_length" => "Máximo 50 caracteres",
-                "min_length" => "Mínimo 6 caracteres"
+                "min_length" => "Mínimo 6 caracteres",
+                "is_unique" => "El correo que ingreso ya existe"
             ],
             "contrasena" => [
                 "required" => "Datos requeridos",
