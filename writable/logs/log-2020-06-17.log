@@ -1,35 +1,246 @@
-CRITICAL - 2020-06-17 17:37:10 --> syntax error, unexpected '$mensaje_pre' (T_VARIABLE)
-#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
-#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
-#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-17 16:33:44 --> Class 'App\Models\UsuarioModel' not found
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-17 16:36:44 --> Class 'App\Controllers\UsuarioModel' not found
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-17 16:39:42 --> Class 'App\Controllers\UsuarioModel1' not found
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-17 16:42:41 --> Class 'App\Controllers\UsuarioModel' not found
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-17 17:03:28 --> Undefined index: user
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 32, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2020-06-17 17:37:29 --> syntax error, unexpected '$mensaje_pre' (T_VARIABLE)
-#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
-#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
-#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-17 17:07:05 --> Undefined index: user
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 30, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2020-06-17 17:37:43 --> syntax error, unexpected 'mail' (T_STRING)
-#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
-#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
-#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-17 17:08:11 --> Undefined index: user
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 30, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2020-06-17 17:37:55 --> syntax error, unexpected '$enviado' (T_VARIABLE)
-#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
-#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
-#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-17 17:10:40 --> Undefined variable: insertar
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 33, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2020-06-17 17:38:04 --> syntax error, unexpected '}'
-#0 C:\xampp\htdocs\parcial\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('contacto/index')
-#1 C:\xampp\htdocs\parcial\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('contacto/index')
-#2 C:\xampp\htdocs\parcial\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
-#3 C:\xampp\htdocs\parcial\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\xampp\htdocs\parcial\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-17 17:15:17 --> Array to string conversion
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xamppp\\htdoc...', 13, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(42): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 17:34:46 --> Undefined variable: listar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\lista.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 10, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/lista', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(50): view('UserViews/lista', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->listar()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 17:36:11 --> Undefined variable: listar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\lista.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 22, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/lista', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(50): view('UserViews/lista', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->listar()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:00:38 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(42): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:01:13 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(42): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:01:39 --> Undefined index: user
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 62, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:02:13 --> Undefined index: user
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 63, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:05:41 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 81, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:06:36 --> Undefined variable: datos_a_modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 81, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:07:45 --> Undefined variable: datos_a_modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 82, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:10:23 --> Undefined variable: datos_a_modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 82, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:12:12 --> Undefined index: id
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-17 23:12:46 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:16:04 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:16:21 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:16:39 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:20:19 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:20:51 --> Undefined variable: modificar
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Registro.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(41): view('UserViews/Regis...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:23:39 --> Undefined variable: row
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\lista.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 31, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/lista', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(51): view('UserViews/lista', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->listar()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:23:51 --> syntax error, unexpected '"id"' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/lista', Array, true)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(51): view('UserViews/lista', Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->listar()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-17 23:50:06 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\editar.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 20, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/edita...', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): view('UserViews/edita...', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->editar()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-17 23:59:13 --> Undefined variable: borrado
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 92, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->borrar()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}

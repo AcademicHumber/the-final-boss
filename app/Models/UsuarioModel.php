@@ -1,0 +1,87 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class UsuarioModel extends Model {
+
+    protected $table = 'user';
+    protected $primaryKey = 'id';
+    protected $returnType = 'array';
+    protected $useTimestamps = true;
+
+
+    public function __construct(\CodeIgniter\Database\ConnectionInterface &$db = null,
+            \CodeIgniter\Validation\ValidationInterface $validation = null) {
+        parent::__construct($db, $validation);
+
+        $this->allowedFields = ['nombre_usuario', 'nombre', 'apellido', 'correo', 'contrasena', 'perfil'];
+
+        $this->validationRules = [
+            "nombre_usuario" => "required|min_length[5]|max_length[50]",
+            "nombre" => "min_length[3]|max_length[255]",
+            "apellido" => "min_length[3]|max_length[255]",
+            "correo" => "min_length[6]|max_length[50]|valid_email",
+            "contrasena" => "min_length[5]|max_length[255]",
+            "contrasena_confir" => "matches[contrasena]",
+            "perfil" => "min_length[5]|max_length[255]",
+        ];
+        $this->validationMessages = [
+            "nombre_usuario" => [
+                "required" => "Datos requeridos",
+                "max_length" => "Nombre de usuario muy largo, máximo 50 caracteres",
+                "min_length" => "Nombre de usuario muy corto, mínimo 5 caracteres"
+            ],
+            "nombre" => [
+                "required" => "Datos requeridos",
+                "max_length" => "Nombre muy largo, máximo 255 caracteres",
+                "min_length" => "Nombre muy corto, mínimo 3 caracteres"
+            ],
+            "apellido" => [
+                "required" => "Datos requeridos",
+                "max_length" => "Apellido muy largo, máximo 255 caracteres",
+                "min_length" => "Apellido muy corto, mínimo 3 caracteres"
+            ],
+            "correo" => [
+                "required" => "Datos requeridos",
+                "valid_email" => "Debe de tener una dirección de correo válida",
+                "max_length" => "Máximo 50 caracteres",
+                "min_length" => "Mínimo 6 caracteres"
+            ],
+            "contrasena" => [
+                "required" => "Datos requeridos",
+                "max_length" => "Contraseña muy larga, máximo 50 caracteres",
+                "min_length" => "Contraseña muy corta, mínimo 5 caracteres"
+            ],
+            "contrasena_confir" => [
+                "required" => "Datos requeridos",
+                "matches" => "La contraseña no es igual",
+                "max_length" => "Máximo 50 caracteres",
+                "min_length" => "Mínimo 5 caracteres"
+            ]
+        ];
+   
+    }
+   
+    //Este metodo selecciona el id del usuario, requiere del argumento id
+    public function idUsuario($id) {
+        return $this->asArray()
+                        ->where(["id" => $id])
+                        ->first();
+    }
+
+    //metodo para borrar, requiere del argumento id
+    public function borrar($id) {
+        $borrado = $this->db->query('DELETE FROM `user` WHERE `id`=:id:', ["id" => $id]);
+        $affected_rows = $this->db->affectedRows();
+        return ($affected_rows > 0);
+    }
+
+     //metodo para seleccionar el correo del usuario, devuelve una sola fila.
+    public function correo($correo) {
+        $query = $this->db->query("SELECT * FROM `user` WHERE `correo`=:correo: ", ["correo" => $correo]);
+        return $query->getRowArray();
+    }
+
+}

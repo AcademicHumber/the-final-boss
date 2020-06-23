@@ -1,209 +1,821 @@
-CRITICAL - 2020-06-19 08:48:01 --> Too few arguments to function App\Controllers\Content::articulo(), 0 passed in C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php on line 914 and exactly 1 expected
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->articulo()
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#4 {main}
-CRITICAL - 2020-06-19 09:13:39 --> Call to undefined function validation_errors()
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include()
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('myform', Array, true)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Form.php(23): view('myform')
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Form->hola()
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Form))
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#7 {main}
-CRITICAL - 2020-06-19 09:13:53 --> Undefined property: App\Controllers\Form::$load
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Form.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ahft_\\...', 7, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Form->index()
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Form))
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-19 09:41:23 --> Undefined variable: select
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 67, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
-CRITICAL - 2020-06-19 09:14:25 --> Call to undefined function App\Controllers\library()
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Form->index()
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Form))
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-19 09:44:36 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 74, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:45:03 --> Illegal string offset 'correo'
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xamppp\\htdoc...', 74, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:47:07 --> Undefined variable: instancia
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 51, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:47:24 --> Undefined index: id
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 54, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:48:17 --> Undefined index: id
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 54, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:48:29 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 21, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 09:50:03 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 21, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 09:50:33 --> Array to string conversion
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xamppp\\htdoc...', 21, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 09:54:24 --> Undefined variable: count
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 64, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:57:05 --> Undefined variable: count
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 64, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 09:57:51 --> in_array() expects at least 2 parameters, 1 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'in_array() expe...', 'C:\\xamppp\\htdoc...', 65, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(65): in_array('jenif@gmail.com')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 09:58:20 --> key() expects parameter 1 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'key() expects p...', 'C:\\xamppp\\htdoc...', 65, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(65): key('jenif@gmail.com')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 09:59:16 --> in_array() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'in_array() expe...', 'C:\\xamppp\\htdoc...', 65, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(65): in_array('correo', 'jenif@gmail.com')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 10:02:00 --> in_array() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'in_array() expe...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): in_array('correo', 'j')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 10:04:12 --> Call to undefined function App\Controllers\array_key_exist()
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
-CRITICAL - 2020-06-19 09:33:14 --> Undefined property: App\Controllers\Content::$instancia_modelo
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ahft_\\...', 75, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-19 10:04:31 --> array_key_exists() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_key_exist...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): array_key_exists('correo', 'j')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
-CRITICAL - 2020-06-19 09:33:43 --> Undefined variable: instancia_modelo
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(86): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ahft_\\...', 86, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, 'Hubieron errore...', Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-19 10:04:44 --> array_key_exists() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_key_exist...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): array_key_exists('correo', 'jenif@gmail.com')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
-CRITICAL - 2020-06-19 09:36:14 --> Cannot use [] for reading
-#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
-#1 {main}
-CRITICAL - 2020-06-19 10:41:05 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'La historia', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(837): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(553): CodeIgniter\Model->update(Array, Array)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(33): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->edit('2')
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 10:43:12 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'La historia', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(701): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 10:45:17 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'La historia', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(701): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 10:59:17 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'La historia', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(701): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 11:00:45 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'La historia', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(701): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 11:01:31 --> {0} is not a valid rule.
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('max_lenght')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('titulo', 'titulo', 'qewqeqweqw', Array, Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(701): CodeIgniter\Model->validate(Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(75): CodeIgniter\Model->save(Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#11 {main}
-CRITICAL - 2020-06-19 11:09:38 --> count(): Parameter must be an array or an object that implements Countable
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\mostrar.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\Users\\ahft_\\...', 18, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/most...', Array, true)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(54): view('contenidos/most...', Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->articulos()
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-06-19 11:13:32 --> Undefined index: cuepo
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\mostrar.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 18, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/most...', Array, true)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(54): view('contenidos/most...', Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->articulos()
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-06-19 14:48:19 --> Invalid file: {0}
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('common/header.p...')
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('common/header', Array, true)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\crear.php(2): view('common/header', Array)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/crea...', Array, true)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(26): view('contenidos/crea...', Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2020-06-19 15:43:10 --> Call to undefined function html_entity_enconde()
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include()
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('common/formfoot...', Array, true)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\editar.php(12): view('common/formfoot...')
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/edit...', Array, true)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(36): view('contenidos/edit...', Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->edit('11')
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2020-06-19 15:43:25 --> Call to undefined function HTML_ENTITIES()
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include()
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('common/formfoot...', Array, true)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\editar.php(12): view('common/formfoot...')
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/edit...', Array, true)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(36): view('contenidos/edit...', Array)
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->edit('11')
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#10 {main}
-CRITICAL - 2020-06-19 16:00:10 --> Trying to access array offset on value of type null
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\articulo.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\ahft_\\...', 2, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(46): view('contenidos/arti...', Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->articulo('12')
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-06-19 16:23:15 --> Trying to access array offset on value of type null
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Views\contenidos\articulo.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\ahft_\\...', 2, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(46): view('contenidos/arti...', Array)
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->articulo('12')
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-06-19 17:35:50 --> Undefined index: editordata
-#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 74, Array)
-#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\app\Controllers\Content.php(23): App\Controllers\Content->guardar(Array, '', Array)
-#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(914): App\Controllers\Content->crear()
-#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
-#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\ProyectoFinal\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-06-19 10:05:00 --> array_key_exists() expects parameter 2 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_key_exist...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): array_key_exists('correo', 'jenif@gmail.com')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2020-06-19 10:06:06 --> Invalid argument supplied for foreach()
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xamppp\\htdoc...', 65, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:08:23 --> syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xamppp\htdocs\Proyecto\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('UserController/...')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('UserController/...')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:09:14 --> Undefined offset: 3
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:09:38 --> Undefined offset: 3
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:11:02 --> Argument 1 passed to CodeIgniter\Model::findAll() must be of the type int, string given, called in C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php on line 54
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): CodeIgniter\Model->findAll('correo')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:12:31 --> Unknown column 'active' in 'where clause'
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xamppp\htdocs\Proyecto\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xamppp\htdocs\Proyecto\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(55): CodeIgniter\Model->findAll()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-06-19 10:13:58 --> Too few arguments to function CodeIgniter\Model::findColumn(), 0 passed in C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php on line 55 and exactly 1 expected
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(55): CodeIgniter\Model->findColumn()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:14:13 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xamppp\\htdoc...', 66, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(66): count(NULL)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 10:14:28 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 67, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:16:02 --> syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xamppp\htdocs\Proyecto\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('UserController/...')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('UserController/...')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:21:12 --> syntax error, unexpected end of file
+#0 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xamppp\\htdoc...')
+#1 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Usua...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Usua...')
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): spl_autoload_call('App\\Models\\Usua...')
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 10:21:25 --> syntax error, unexpected end of file
+#0 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xamppp\\htdoc...')
+#1 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Usua...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Usua...')
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): spl_autoload_call('App\\Models\\Usua...')
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 10:21:39 --> syntax error, unexpected end of file
+#0 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xamppp\\htdoc...')
+#1 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Usua...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Usua...')
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): spl_autoload_call('App\\Models\\Usua...')
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 10:25:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' ['correo' => vfsvfd]' at line 1
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *FROM `u...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *FROM `u...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *FROM `u...')
+#3 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Database\BaseConnection->query('SELECT *FROM `u...')
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->consulta('vfsvfd')
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-06-19 10:27:39 --> syntax error, unexpected end of file
+#0 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\xamppp\\htdoc...')
+#1 C:\xamppp\htdocs\Proyecto\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Usua...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Usua...')
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): spl_autoload_call('App\\Models\\Usua...')
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 10:27:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':correo:' at line 1
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *FROM `u...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *FROM `u...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *FROM `u...')
+#3 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Database\BaseConnection->query('SELECT *FROM `u...')
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->consulta('vfsvfd')
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-06-19 10:28:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':correo:' at line 1
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *FROM `u...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *FROM `u...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *FROM `u...')
+#3 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Database\BaseConnection->query('SELECT *FROM `u...')
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->consulta('vfsvfd')
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-06-19 10:30:54 --> Too few arguments to function App\Controllers\UserController::login(), 0 passed in C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-19 10:32:01 --> Too few arguments to function App\Controllers\UserController::consulta(), 0 passed in C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php on line 914 and exactly 1 expected
+#0 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->consulta()
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-06-19 10:33:02 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 78, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:33:21 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 78, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:34:37 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 79, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:35:31 --> Undefined variable: corres
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 79, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:37:35 --> Undefined variable: corres
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(81): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 81, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:38:01 --> Undefined property: App\Controllers\UserController::$db
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xamppp\\htdoc...', 64, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:38:45 --> Undefined property: App\Controllers\UserController::$db
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(64): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xamppp\\htdoc...', 64, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:39:03 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::getResult()
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): App\Models\UsuarioModel->consulta('jeniffer@gmail....')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:41:31 --> Undefined variable: corr
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 67, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:42:10 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 53, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:51:53 --> Array to string conversion
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xamppp\\htdoc...', 23, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(77): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 10:56:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':correo:' at line 1
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT *FROM `u...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *FROM `u...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *FROM `u...')
+#3 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Database\BaseConnection->query('SELECT *FROM `u...')
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->correo('dariana@gmail.c...')
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-06-19 10:59:06 --> Undefined variable: id
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 80, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 10:59:27 --> Undefined variable: id
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 24, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(80): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 11:00:17 --> key() expects parameter 1 to be array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'key() expects p...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): key(NULL)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:02:24 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 70, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:03:21 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 70, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:04:13 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 70, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:04:19 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 56, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:04:46 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 56, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:05:11 --> Trying to access array offset on value of type null
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xamppp\\htdoc...', 56, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:05:27 --> Undefined variable: id
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 75, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:08:48 --> array_intersect(): Expected parameter 2 to be an array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 75, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(75): array_intersect(Array, 'jeniffer@gmail....')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:13:52 --> in_array() expects parameter 2 to be array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'in_array() expe...', 'C:\\xamppp\\htdoc...', 70, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(70): in_array(Array, NULL)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:15:28 --> syntax error, unexpected 'private' (T_PRIVATE)
+#0 C:\xamppp\htdocs\Proyecto\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('UserController/...')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('UserController/...')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:19:41 --> array_intersect_assoc(): Expected parameter 1 to be an array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 64, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(64): array_intersect_assoc('jeniffer@gmail....', Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:20:46 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:21:13 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:22:55 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, 'bbbbb')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:23:12 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:23:24 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:24:05 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:24:30 --> Undefined variable: cor
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:24:47 --> Undefined variable: contrasena
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:25:02 --> Undefined variable: correos
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 72, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:25:27 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:25:54 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:26:46 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:27:41 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:27:59 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:28:31 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:28:49 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 76, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:29:19 --> Undefined variable: correo
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 74, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:29:55 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 58, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(58): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:32:14 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 58, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(58): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:32:52 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 58, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(58): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:33:19 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:33:36 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(57): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:33:45 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 58, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(58): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:35:07 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 63, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(63): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:35:48 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 63, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(63): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:36:18 --> array_intersect_assoc(): Expected parameter 2 to be an array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 62, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(62): array_intersect_assoc(Array, 'dariana@gmail.c...')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:37:06 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 63, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(63): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:37:49 --> array_intersect_assoc(): Expected parameter 1 to be an array, null given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_intersect...', 'C:\\xamppp\\htdoc...', 63, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(63): array_intersect_assoc(NULL, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:38:17 --> Undefined variable: cor
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 70, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:38:30 --> Undefined variable: cor
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(74): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 74, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:46:47 --> Array to string conversion
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xamppp\\htdoc...', 26, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(82): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 11:51:11 --> Undefined variable: id
+#0 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 56, Array)
+#1 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->correo('jeniffer@gmail....')
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-19 11:51:29 --> Too few arguments to function App\Models\UsuarioModel::correo(), 1 passed in C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php on line 54 and exactly 2 expected
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->correo('jeniffer@gmail....')
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:57:41 --> Undefined variable: validacion2
+#0 C:\xamppp\htdocs\Proyecto\app\Views\UserViews\Login.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 26, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\Proyecto\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/login', Array, true)
+#3 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(83): view('UserViews/login', Array)
+#4 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-19 11:58:55 --> Undefined variable: contra
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 71, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 11:59:55 --> Illegal parameter data types varchar and row for operation '='
+#0 C:\xamppp\htdocs\Proyecto\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT id, corr...')
+#1 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT id, corr...')
+#2 C:\xamppp\htdocs\Proyecto\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT id, corr...')
+#3 C:\xamppp\htdocs\Proyecto\app\Models\UsuarioModel.php(56): CodeIgniter\Database\BaseConnection->query('SELECT id, corr...', Array)
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(54): App\Models\UsuarioModel->correo(Array)
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-06-19 12:01:40 --> Undefined variable: contra
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 71, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 12:11:40 --> Undefined variable: consulta
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 32, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->login()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 12:12:01 --> Use of undefined constant UserViews - assumed 'UserViews' (this will throw an Error in a future version of PHP)
+#0 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xamppp\\htdoc...', 37, Array)
+#1 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->backend()
+#2 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-19 12:35:08 --> {0} is not a valid rule.
+#0 C:\xamppp\htdocs\Proyecto\system\Validation\Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('')
+#1 C:\xamppp\htdocs\Proyecto\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('nombre', 'nombre', 'adad', Array, Array)
+#2 C:\xamppp\htdocs\Proyecto\system\Model.php(1443): CodeIgniter\Validation\Validation->run(Array, NULL, NULL)
+#3 C:\xamppp\htdocs\Proyecto\system\Model.php(701): CodeIgniter\Model->validate(Array)
+#4 C:\xamppp\htdocs\Proyecto\app\Controllers\UserController.php(53): CodeIgniter\Model->insert(Array)
+#5 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#6 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 C:\xamppp\htdocs\Proyecto\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xamppp\htdocs\Proyecto\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

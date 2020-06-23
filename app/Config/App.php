@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://localhost:8080/tareas/Code-Igniter/public/';
+	public $baseURL = 'http://localhost:8080/Proyecto/public/';
 
 	/*
 	|--------------------------------------------------------------------------
