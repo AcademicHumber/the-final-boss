@@ -1,29 +1,13 @@
 <?php
-echo view("common/basicheader", ["titulo"=> "Artículos"])
+echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
 ?> 
   
 <div class="caja">
 
-    <h1>Lista de artículos y paginas</h1>
-    <?php
-    echo anchor("content/verarticulos","Ver lista de artículos");
-    echo "<br>";
-    echo anchor("content/verpaginas","Ver lista de páginas");    
-    echo "<br>";
-    echo anchor("content/vercomentarios","Ver lista de comentarios");  
-    echo "<br>";
-    echo anchor("content/vercategorias","Ver lista de categorias");  
-    ?>
-    <h3>Paginas</h3>    
-    <ul>
-        <?php
-        foreach($paginas as $pagina){
-            echo "<li><a href='content/pagina/".$pagina["id"]."'>".$pagina["titulo"]."</a></li>";
-        }
-        ?>        
-    </ul>
+    <h1><?php echo "Categoría: ".$datos[0]["nombre"] ?></h1>    
+    
       
-    <h3>Articulos</h3> 
+    <h3>Articulos de la categoría</h3> 
     <?php
     foreach ($datos as $dato) {
         ?>

@@ -3,6 +3,7 @@
 use App\Models\ContentModel;
 use App\Models\PagesModel;
 use App\Models\CommentsModel;
+use App\Models\CategoriesModel;
 
 class Content extends BaseController{
     
@@ -13,12 +14,14 @@ class Content extends BaseController{
     protected  $instancia_articulos;
     protected  $instancia_paginas;
     protected  $instancia_comentarios;
+    protected  $instancia_categorias;
     
     function __construct() {
         helper('form'); 
         $this->instancia_articulos = new ContentModel();
         $this->instancia_paginas = new PagesModel();
         $this->instancia_comentarios = new CommentsModel();
+        $this->instancia_categorias = new CategoriesModel();
     }
     
     public function index(){
@@ -41,7 +44,6 @@ class Content extends BaseController{
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable
             $content = $_POST["cont"];            
-           
            // Insertamos los datos a la BD, utilizando la funcion insert del modelo
            $guardar = $instancia->save($content);
            
@@ -97,9 +99,11 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_articulos, $exito, $errors);
+        $categorias = $this->listar($this->instancia_categorias);        
         return view("contenidos/articulos/createArticle", ["exito" => $exito,
                                          "errores" => $errors,
-                                         "dato" => $datos]); 
+                                         "dato" => $datos,
+                                         "categorias" => $categorias]); 
     }
     
     function editArticulo($id){        
@@ -112,10 +116,11 @@ class Content extends BaseController{
         if(is_null($datos)){
             return redirect()->to(site_url("content/verarticulos"));
         }
-        
+        $categorias = $this->listar($this->instancia_categorias);        
         return view("contenidos/articulos/editArticle", ["exito" => $exito,
-                                          "errores" => $errors,
-                                          "dato" => $datos]);
+                                         "errores" => $errors,
+                                         "dato" => $datos,
+                                         "categorias" => $categorias]); 
     }
     function articulo($id){
         //Procesar comentarios nuevos
@@ -128,10 +133,12 @@ class Content extends BaseController{
         if(is_null($articulo)){
             return redirect()->to(site_url("content/verarticulos"));
         }
+        //cargar categorias
+        $categorias = $this->listar($this->instancia_categorias); 
         //cargar comentarios para el articulo
         $comentarios = $this->instancia_comentarios->comentarios_del_articulo($id);
               
-        return view("contenidos/articulos/article", ["dato" => $articulo, "comentarios" => $comentarios]);
+        return view("contenidos/articulos/article", ["dato" => $articulo, "comentarios" => $comentarios, "categorias" => $categorias]);
     }
     function verarticulos(){
         
@@ -175,7 +182,7 @@ class Content extends BaseController{
         return view("contenidos/paginas/editPage", ["exito" => $exito,
                                           "errores" => $errors,
                                            "dato" => $datos]);
-        }
+    }
     function pagina($id){        
         $pagina = $this->instancia_paginas->find($id);
         if (is_null($pagina)) return redirect ()->to (site_url ("content/verpaginas"));
@@ -233,6 +240,52 @@ class Content extends BaseController{
     
     
     /*------------------ FIN SECCIÓN COMENTARIOS ------------------------*/
+    
+    /*---------------------- SECCIÓN CATEGORÍAS ------------------------*/
+    
+    public function crearCategoria(){
+        $datos = [
+            "id" => "",
+            "nombre" => "",
+            "slug" => "",
+            "descripcion" => ""
+        ];
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_categorias,$exito,$errors);
+        return view("contenidos/categorias/createCategory", ["exito" => $exito,
+                                         "errores" => $errors,
+                                         "dato" => $datos]); 
+    }
+    function editCategory($id){        
+        $errors = [];
+        $exito = ""; 
+        $this->guardar($this->instancia_categorias, $exito, $errors);
+        //Cargar la pagina actualizada o a actualizar
+        $datos = $this->instancia_categorias->find($id);  
+        if (is_null($datos)) return redirect ()->to (site_url ("content/vercategorias"));
+        return view("contenidos/categorias/editCategory", ["exito" => $exito,
+                                          "errores" => $errors,
+                                           "dato" => $datos]);
+    }
+    public function vercategorias(){           
+        $categorias = $this->listar($this->instancia_categorias);        
+        return view("contenidos/categorias/showListOfCategories", ["datos" => $categorias]);
+    }
+    public function deleteCategory($id){
+       $this->instancia_categorias->delete($id);       
+       return redirect()->to(site_url("content/vercategorias"));
+    }
+    public function categoria($slug){
+       $datos = $this->instancia_categorias->articulos_por_categoria($slug);
+       if (is_null($datos)) return redirect ()->to (site_url ("content/vercategorias"));
+       return view("contenidos/categorias/showArticlesPerCategory",
+                    ["slug" => $slug, "datos" => $datos]);
+    }
+    
+    /*-------------------FIN SECCIÓN CATEGORÍAS ------------------------*/
+    
+    
     
         
 

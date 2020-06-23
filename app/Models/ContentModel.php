@@ -21,7 +21,7 @@ class ContentModel extends Model{
     protected $useSoftDeletes = false;
     
     //Campos habilitados para su escritura en la tabla
-    protected $allowedFields = ["id", "titulo", "encabezado", "cuerpo"];
+    protected $allowedFields = ["id", "titulo", "encabezado", "cuerpo", "categoria"];
     
     //Configurar si queremos que se agreguen los campos "creado a:" y "actualizado a: " para los horarios (opcional)
     protected $useTimestamps = true;
@@ -64,6 +64,7 @@ class ContentModel extends Model{
     }
     
     //Configurar el saltar la validacion (opcional, por defecto viene en false)
-    protected $skipValidation = false;
+    protected $skipValidation = false; 
+    
     
 }

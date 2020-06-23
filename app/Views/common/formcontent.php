@@ -48,7 +48,18 @@ print_r($exito);
                 
             </td>
         </tr>
-        
+        <tr>
+            <td>Categoría de la publicación</td>
+            <td>                                
+                <?php
+                // crear el arreglo relacionando ids y nombres de categorias
+                foreach ($categorias as $categoria){
+                    $opciones[$categoria["id"]] = $categoria["nombre"];
+                }
+                echo form_dropdown("cont[categoria]",$opciones, "1");                  
+                ?>
+            </td>
+        </tr>
         <tr>
             <td><label>Cuerpo de la publicación</label></td>
         </tr>    
@@ -69,10 +80,11 @@ print_r($exito);
                 }        
                 ?>
             </td>
-        </tr>     
+        </tr>         
         <tr>
             <td></td>
             <td>
+                <br>
                 <?php
                 if (!empty($dato["titulo"])){
                     echo form_submit("", "Actualizar");

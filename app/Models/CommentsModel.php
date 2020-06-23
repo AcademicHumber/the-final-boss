@@ -22,13 +22,12 @@ class CommentsModel extends Model{
     
     //Reglas de validación
     protected $validationRules = [
-        'cuerpo' => 'required|min_length[20]'     
+        'cuerpo' => 'required'     
         ];        
     
     //Mensajes de validación
     protected $validationMessages = [       
-        'cuerpo' => [            
-            'min_length' => 'Ese es un cuerpo del articulo muy corto, por favor coloca uno más largo',
+        'cuerpo' => [           
             'required' => 'El cuerpo es requerido'            
         ]
     ];
@@ -49,6 +48,8 @@ class CommentsModel extends Model{
     public function actualizar_cuerpo($id, $cuerpo){
         $db = \Config\Database::connect();
         $query = $db->query("UPDATE comentarios SET comentarios.cuerpo='$cuerpo' WHERE comentarios.id=$id");
-        return $db->affectedRows();
+        $afectados = $db->affectedRows();
+        $db->close();
+        return $afectados;        
     }
 }
