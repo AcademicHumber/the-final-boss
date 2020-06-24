@@ -1,7 +1,18 @@
 # Proyecto Final
 
-## Módulo de Usuarios
-    Se divide en 3 por el momento:
-    -Añadir un nuevo usuario
-    -Listar los usuarios
-    -Ver usuario(se mostraran todas sus publicaciones)
+## CMS estilo wordpress
+
+	- Entradas (titulo, contenido, categorías, comentarios)
+    	- Páginas (titulo, contenido)
+    	- Usuarios
+    	- Una plantilla para el frontend
+    	- Una plantilla para el backend
+    	- CodeIgniter (version 3 o 4)
+	- Envíos de correos electrónicos (Por ejemplo en el uso de un formulario de contacto)
+
+### Integrantes
+
+	-Jeniffer Balcazar
+	-Dariana Martinez
+	-Enrique Pedriel
+	-Humberto Fernandez
