@@ -75,7 +75,7 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex" >
         <div class="row">
-        <div class="info d-block text-white">
+        <div class="info d-block">
           <div class="image">
           <img src="<?php echo base_url('adminlte'); ?>/dist/img/user.png" class="img-circle elevation-2" alt="User Image" style="width: 35px; height: 35px;">
           </div>

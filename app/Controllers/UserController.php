@@ -140,6 +140,7 @@ class UserController extends BaseController {
 
             //Se hace el update, pasandole el id y lo que hay dentro de usuario que anteriormente se guardó todo lo que vino de post
             $modificar = $this->instancia_usuarios->update($_GET["id"],$datos);
+
             //se hacen las validaciones
             if ($modificar) {
                 $exito = "El usuario se modificó correctamente";
@@ -151,6 +152,7 @@ class UserController extends BaseController {
         
         //se llama al método idUsuario pasando el argumento ID obtenido del get
         $usuario = $this->instancia_usuarios->idUsuario($_GET["id"]);
+
         //Si el id no existe en la base de datos, se redirecciona la misma página
         //(Luego agregar mensaje de no se encontró el usuario_ OJO)
         if (empty($usuario)) {
@@ -158,9 +160,9 @@ class UserController extends BaseController {
         }
         helper("form");
         //cargar paginas para la vista
-        $paginas = $this->listar($this->instancia_paginas);
+         $listarPage = $this->instancia_paginas->findAll();
         //se manda a la vista las variables de exito y error y la variable usuairo, que va a estar almacenado en la variable $modificar 
-        echo view('UserViews/editar', ["modificar" => $usuario, "exito" => $exito, "errores" => $errores, "paginas" => $paginas]);
+        echo view('UserViews/editar', ["modificar" => $usuario, "exito" => $exito, "errores" => $errores, "paginas" => $listarPage]);
     }
 
     public function borrar($id) {       
@@ -226,8 +228,11 @@ class UserController extends BaseController {
                 $exito = "Usuario no válido";
                 $errores = $this->instancia_usuarios->errors();
             }
+
            }
+            
         }
+
         //se llama a la vista de login y se le pasa las variables de exito y error para las validaciones
         echo view('UserFrontend/loginFront', ["exito" => $exito, "errores" => $errores]);
     }
@@ -235,9 +240,9 @@ class UserController extends BaseController {
     //metodo donde se redirecciona si el usuario ingresado en el login es válido
     public function frontend() {
         //cargar paginas para la vista
-        $paginas = $this->listar($this->instancia_paginas);
+        //$paginas = $this->listar($this->instancia_paginas);
         //solo devuelve la vista del frontend
-        return view('UserFrontend/frontend', ["paginas" => $paginas]);
+        return view('UserFrontend/frontend');
     }
 
     //metodo para registrar un nuevo usuario

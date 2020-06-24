@@ -1,86 +1,102 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?php echo $titulo; ?></title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
-<body class="hold-transition sidebar-mini">
-
-
+   
       <div class="container-fluid">
-        <div class="row">
-   
-            <!-- /.card -->
-            <!-- Horizontal Form -->
-            <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">Horizontal Form</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form class="form-horizontal">
+
+        <div class="row card card-dark">
+      
+          <!-- left column -->
+          <div class="col-md-6">
+            <br>
+                 <h3> Registrar Usuario</h3>
+            <!-- general form elements -->
+            <div class="card card-dark">
+ 
+                 <?php
+                  echo form_open_multipart('');
+                  echo "<br>";
+                  echo "<h5> $exito </h5>";
+                  ?>
                 <div class="card-body">
-                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-4 col-form-label">Email</label>
-                    <div class="col-8">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
+                  <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" class="form-control" name="user[nombre_usuario]" placeholder="Enter username" required="">
+                     <?php
+                    if (isset($errores["nombre_usuario"])) {
+                      echo $errores["nombre_usuario"];
+                  }?>
                   </div>
-                  <div class="form-group row">
-                    <label for="inputPassword3" class="col-4 col-form-label">Password</label>
-                    <div class="col-8">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
+
+                  <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="user[nombre]" placeholder="Enter name" required="" >
+                     <?php
+                    if (isset($errores["nombre"])) {
+                      echo $errores["nombre"];
+                  }?>
                   </div>
-                  <div class="form-group row">
-                    <div class="offset-sm-2 col-sm-10">
-                      <div class="form-check">
-                        <label class="form-check-label" for="exampleCheck2">Remember me</label>
-                      </div>
-                    </div>
+
+                   <div class="form-group">
+                    <label >Apellido</label>
+                    <input type="text" class="form-control" name="user[apellido]" placeholder="Enter lastname" required="" >
+                      <?php
+                    if (isset($errores["apellido"])) {
+                      echo $errores["apellido"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" class="form-control" name="user[correo]" placeholder="Enter email" required="" >
+                     <?php
+                    if (isset($errores["correo"])) {
+                      echo $errores["correo"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" name="user[contrasena]" placeholder="Enter password" required="" >
+                      <?php
+                    if (isset($errores["contrasena"])) {
+                      echo $errores["contrasena"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Confirmar Contraseña</label>
+                    <input type="password" class="form-control" name="user[contrasena_confir] " placeholder="Confirm password" required="" >
+            
+                   <?php
+                    if (isset($errores["contrasena_confir"])) {
+                      echo $errores["contrasena_confir"];
+                  }?>
+               
+                 
+                  </div>
+                  <div class="form-group">
+                    <label>Perfil</label>
+                    <select name="user[perfil]" class="form-control">
+                      <option value="administrador">Administrador</option>
+                      <option value="editor">Editor</option>
+                      <option value="autor">Autor</option>
+                      <option value="contribuidor">Contribuidor</option>
+                    </select>
+                   
+                  </div>
+
+                  </div>
+                  <div class="form-group">
+                              <button type="submit" class="btn btn-dark">Crear Cuenta</button>
                   </div>
                 </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Sign in</button>
-                  <button type="submit" class="btn btn-default float-right">Cancel</button>
-                </div>
-          
-              </form>
+                    <?php
+                        echo form_close();
+                    ?>
             </div>
-   
-
+            <!-- /.card -->
           </div>
-
+          <!--/.col (right) -->
         </div>
 
-
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-  bsCustomFileInput.init();
-});
-</script>
-</body>
-</html>
+ 
+ 

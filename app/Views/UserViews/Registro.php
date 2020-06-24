@@ -2,102 +2,109 @@
 <?php
 echo view("common/basicheader", ["titulo" => "Registro"]);
 ?>
-<h2>Registro de Usuarios</h2>
-<?php
-echo form_open_multipart('');
-echo "<h2> $exito </h2>";
-echo anchor("UserController/login", "¿Ya tienes una cuenta?");
-echo "<br>";
-?>
-<!–Enlace para ir a la página de login–>
 
-<table>
-    <tbody>
-    <br>
-    <tr>
-        <td>Nombre de Usuario</td>
-        <td><?php
-            echo form_input("user[nombre_usuario]", "", ["required" => 1]);
-            if (isset($errores["nombre_usuario"])) {
-                echo '<div>' . esc($errores["nombre_usuario"]) . '</div>';
-            }
-            ?></td>
+<div class="container-fluid">
 
-    </tr>
-    <tr>
-        <td>Nombre</td>
-        <td><?php
-            echo form_input("user[nombre]", "", ["required" => 1]);
-            if (isset($errores["nombre"])) {
-                echo '<div>' . esc($errores["nombre"]) . '</div>';
-            }
-            ?></td>
-    </tr>
-    <tr>
-        <td>Apellido</td>
-        <td><?php
-            echo form_input("user[apellido]", "", ["required" => 1]);
-            if (isset($errores["apellido"])) {
-                echo '<div>' . esc($errores["apellido"]) . '</div>';
-            }
-            ?></td>
-    </tr>
-    <tr>
-        <td>Correo</td>
-        <td><input type="email" name="user[correo]" required="">
-<?php
-if (isset($errores["correo"])) {
-    echo '<div>' . esc($errores["correo"]) . '</div>';
-}
-?>
-        </td>
-    </tr>
-    <tr>
-        <td>Contraseña</td>
-        <td><input type="password" name="user[contrasena]" required="">
-<?php
-if (isset($errores["contrasena"])) {
-    echo '<div>' . esc($errores["contrasena"]) . '</div>';
-}
-?>
-        </td>
-    </tr>
-    <tr>
-        <td>Confirmar Contraseña</td>
-        <td><input type="password" name="user[contrasena_confir]" required="">
-<?php
-if (isset($errores["contrasena_confir"])) {
-    echo '<div>' . esc($errores["contrasena_confir"]) . '</div>';
-}
-?>
-        </td>
-    </tr>
+        <div class="row card card-dark">
+      
+          <!-- left column -->
+          <div class="col-md-6">
+            <br>
+                 <h3> Registrar Usuario</h3>
+            <!-- general form elements -->
+            <div class="card card-dark">
+ 
+                 <?php
+                  echo form_open_multipart('');
+                  echo "<br>";
+                  echo "<h5> $exito </h5>";
+                  ?>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" class="form-control" name="user[nombre_usuario]" placeholder="Enter username" required="1">
+                     <?php
+                    if (isset($errores["nombre_usuario"])) {
+                      echo $errores["nombre_usuario"];
+                  }?>
+                  </div>
 
-    <tr>
-        <td>Perfil</td>
-        <td><?php
-            echo form_dropdown("user[perfil]", [
-                "administrador" => "Administrador",
-                "editor" => "Editor",
-                "autor" => "Autor",
-                "contribuidor" => "Contribuidor"
-                    ], "", ["required" => 1]);
-            ?>
-        </td>
+                  <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" class="form-control" name="user[nombre]" placeholder="Enter name" required="1" >
+                     <?php
+                    if (isset($errores["nombre"])) {
+                      echo $errores["nombre"];
+                  }?>
+                  </div>
 
-    </tr>
-    <tr>
-        <td> <?php echo form_submit("", "Crear Cuenta") ?></td>
+                   <div class="form-group">
+                    <label >Apellido</label>
+                    <input type="text" class="form-control" name="user[apellido]" placeholder="Enter lastname" required="1" >
+                      <?php
+                    if (isset($errores["apellido"])) {
+                      echo $errores["apellido"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" class="form-control" name="user[correo]" placeholder="Enter email" required="1" >
+                     <?php
+                    if (isset($errores["correo"])) {
+                      echo $errores["correo"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" name="user[contrasena]" placeholder="Enter password" required="1" >
+                      <?php
+                    if (isset($errores["contrasena"])) {
+                      echo $errores["contrasena"];
+                  }?>
+                  </div>
+
+                   <div class="form-group">
+                    <label>Confirmar Contraseña</label>
+                    <input type="password" class="form-control" name="user[contrasena_confir] " placeholder="Confirm password" required="1" >
+            
+                   <?php
+                    if (isset($errores["contrasena_confir"])) {
+                      echo $errores["contrasena_confir"];
+                  }?>
+               
+                 
+                  </div>
+                  <div class="form-group">
+                    <label>Perfil</label>
+                    <select name="user[perfil]" class="form-control">
+                      <option value="administrador">Administrador</option>
+                      <option value="editor">Editor</option>
+                      <option value="autor">Autor</option>
+                      <option value="contribuidor">Contribuidor</option>
+                    </select>
+                   
+                  </div>
+
+                  </div>
+                  <div class="form-group">
+                              <button type="submit" class="btn btn-dark">Crear Cuenta</button>
+                  </div>
+                </div>
+                    <?php
+                        echo form_close();
+                    ?>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
 
 
-    </tr>
-</tbody>
-</table>
-<?php
-echo "<br>";
-echo anchor("UserController/listar", "Ver lista de Usuarios");
-echo form_close();
-?>
+
+
+
 <?php
 echo view("common/basicfooter");
 ?>

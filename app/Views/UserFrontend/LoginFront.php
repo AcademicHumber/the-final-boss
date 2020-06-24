@@ -1,6 +1,20 @@
+
+<?php
+
+echo view("common/adminlte/headerForm", ["titulo" => "Login"]);
+
+
+echo form_open_multipart('UserController/index',["class" => "form-horizontal"]);
+   
+echo view("common/adminlte/footerForm", ["titulo" => "Login"]);
+
+
+
+?>
+<!-------
 <!–FORMULARIO DE LOGIN, USUARIOS YA REGISTRADOS PREVIAMENTE –>
 <?php
-echo view("common/basicheader", ["titulo" => "Login"]);
+//echo view("common/basicheader", ["titulo" => "Login"]);
 ?>
 
 <h2>Ingreso</h2>
@@ -8,8 +22,8 @@ echo view("common/basicheader", ["titulo" => "Login"]);
 <!–Enlace para ir a la página de registro–>
 <a href="registroFrontend">Registrate</a><br>
 <?php
-echo form_open('UserController/index');
-echo "<h2> $exito </h2>";
+//echo form_open('UserController/index');
+//echo "<h2> $exito </h2>";
 ?>
 <table >
     <tbody>
@@ -17,9 +31,9 @@ echo "<h2> $exito </h2>";
             <td>Correo</td>
             <td><input type="email" name="correo" required="">
                 <?php
-                if (isset($errores["correo"])) {
-                    echo '<div>' . esc($errores["correo"]) . '</div>';
-                }
+               // if (isset($errores["correo"])) {
+                    //echo '<div>' . esc($errores["correo"]) . '</div>';
+                //}
                 ?>
             </td>
             <td> <input type="submit" value="Ingresar"></td>
@@ -29,9 +43,9 @@ echo "<h2> $exito </h2>";
             <td>Contraseña</td>
             <td><input type="password" name="contrasena" required="">
                 <?php
-                if (isset($errores["contrasena"])) {
-                    echo '<div>' . esc($errores["contrasena"]) . '</div>';
-                }
+                //if (isset($errores["contrasena"])) {
+                   // echo '<div>' . esc($errores["contrasena"]) . '</div>';
+                //}
                 ?>
             </td>
         </tr>
@@ -39,11 +53,11 @@ echo "<h2> $exito </h2>";
     </tbody>
 </table>
 <?php
-echo "<br>";
-echo anchor("UserController/recuperarContra", "¿Olvidaste tu contraseña?");
+//echo "<br>";
+//echo anchor("UserController/recuperarContra", "¿Olvidaste tu contraseña?");
 
-echo form_close();
+//echo form_close();
 ?>
 <?php
-echo view("common/basicfooter");
+//echo view("common/basicfooter");
 ?>
