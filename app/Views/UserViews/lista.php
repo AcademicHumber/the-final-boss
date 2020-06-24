@@ -47,7 +47,9 @@ if (!empty($lista)) {
         <td><?php echo $listar["correo"] ?></td>
         <td><?php echo $listar["perfil"] ?></td>
         <td>
-   <?php echo anchor("UserController/editar?id=" . $listar["id"], "Edit"); ?>
+   <?php 
+
+   echo anchor("UserController/editar?id=" . $listar["id"], "Edit"); ?>
            </td>
            <td>
     <?php echo anchor("UserController/borrar/" . $listar["id"], "Delete"); ?>
