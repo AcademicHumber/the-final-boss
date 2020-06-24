@@ -1,6 +1,11 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\UsuarioModel;
+use App\Models\ContentModel;
+use App\Models\PagesModel;
+use App\Models\CommentsModel;
+use App\Models\CategoriesModel;
 /**
  * Class BaseController
  *
@@ -29,7 +34,13 @@ class BaseController extends Controller
 	protected $helpers = [];
         
         protected $session;
-
+        
+        //Instacias de los modelos
+        protected  $instancia_usuarios;
+        protected  $instancia_articulos;
+        protected  $instancia_paginas;
+        protected  $instancia_comentarios;
+        protected  $instancia_categorias;
         /**
 	 * Constructor.
 	 */
@@ -44,6 +55,11 @@ class BaseController extends Controller
                 $this->session = session();
 		// E.g.:
 		// $this->session = \Config\Services::session();
+                 $this->instancia_usuarios = new UsuarioModel();
+                 $this->instancia_articulos = new ContentModel();
+                 $this->instancia_paginas = new PagesModel();
+                 $this->instancia_comentarios = new CommentsModel();
+                 $this->instancia_categorias = new CategoriesModel();
 	}
 
 }

@@ -1,9 +1,5 @@
 <?php namespace App\Controllers;
 
-use App\Models\ContentModel;
-use App\Models\PagesModel;
-use App\Models\CommentsModel;
-use App\Models\CategoriesModel;
 
 class Content extends BaseController{
     
@@ -11,17 +7,9 @@ class Content extends BaseController{
     
     // estas instancias se utilizara en todo el controlador
     // se inicializan en el constructor
-    protected  $instancia_articulos;
-    protected  $instancia_paginas;
-    protected  $instancia_comentarios;
-    protected  $instancia_categorias;
     
     function __construct() {
-        helper('form'); 
-        $this->instancia_articulos = new ContentModel();
-        $this->instancia_paginas = new PagesModel();
-        $this->instancia_comentarios = new CommentsModel();
-        $this->instancia_categorias = new CategoriesModel();
+        helper('form');        
     }
     
     public function index(){
@@ -98,11 +86,13 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_articulos, $exito, $errors);
-        $categorias = $this->listar($this->instancia_categorias);        
+        $categorias = $this->listar($this->instancia_categorias);
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/articulos/createArticle", ["exito" => $exito,
                                          "errores" => $errors,
                                          "dato" => $datos,
-                                         "categorias" => $categorias]); 
+                                         "categorias" => $categorias,
+                                         "paginas" => $paginas]); 
     }
     
     function editArticulo($id){        
@@ -115,11 +105,13 @@ class Content extends BaseController{
         if(is_null($datos)){
             return redirect()->to(site_url("content/verarticulos"));
         }
-        $categorias = $this->listar($this->instancia_categorias);        
+        $categorias = $this->listar($this->instancia_categorias);
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/articulos/editArticle", ["exito" => $exito,
                                          "errores" => $errors,
                                          "dato" => $datos,
-                                         "categorias" => $categorias]); 
+                                         "categorias" => $categorias,
+                                         "paginas" => $paginas]); 
     }
     function articulo($id){
         //Procesar comentarios nuevos
@@ -136,15 +128,21 @@ class Content extends BaseController{
         $categorias = $this->listar($this->instancia_categorias); 
         //cargar comentarios para el articulo
         $comentarios = $this->instancia_comentarios->comentarios_del_articulo($id);
-              
-        return view("contenidos/articulos/article", ["dato" => $articulo, "comentarios" => $comentarios, "categorias" => $categorias]);
+        //Cargar paginas
+        $paginas = $this->listar($this->instancia_paginas);
+                      
+        return view("contenidos/articulos/article", ["dato" => $articulo,
+                                                    "comentarios" => $comentarios,
+                                                    "categorias" => $categorias,
+                                                    "paginas" => $paginas]);
     }
     function verarticulos(){
         
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
         $articulos = $this->listar($this->instancia_articulos);
+        $paginas = $this->listar($this->instancia_paginas);
         
-        return view("contenidos/articulos/showListOfArticles", ["datos" => $articulos]);
+        return view("contenidos/articulos/showListOfArticles", ["datos" => $articulos, "paginas" => $paginas]);
     }
     
     public function deleteArticle($id){
@@ -167,9 +165,11 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_paginas,$exito,$errors);
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/paginas/createPage", ["exito" => $exito,
                                          "errores" => $errors,
-                                         "dato" => $datos]); 
+                                         "dato" => $datos,
+                                         "paginas" => $paginas]); 
     }    
     function editPagina($id){        
         $errors = [];
@@ -178,14 +178,18 @@ class Content extends BaseController{
         //Cargar la pagina actualizada o a actualizar
         $datos = $this->instancia_paginas->find($id);  
         if (is_null($datos)) return redirect ()->to (site_url ("content/verpaginas"));
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/paginas/editPage", ["exito" => $exito,
                                           "errores" => $errors,
-                                           "dato" => $datos]);
+                                           "dato" => $datos,
+                                           "paginas" => $paginas]);
     }
     function pagina($id){        
         $pagina = $this->instancia_paginas->find($id);
         if (is_null($pagina)) return redirect ()->to (site_url ("content/verpaginas"));
-        return view("contenidos/paginas/page", ["dato" => $pagina]);
+        $paginas = $this->listar($this->instancia_paginas);
+        return view("contenidos/paginas/page", ["dato" => $pagina, "paginas" => $paginas]);
     }    
     public function deletePage($id){
         $this->instancia_paginas->delete($id);        
@@ -194,7 +198,7 @@ class Content extends BaseController{
     function verpaginas(){        
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
         $paginas = $this->listar($this->instancia_paginas);
-        return view("contenidos/paginas/showListOfPages", ["datos" => $paginas]);
+        return view("contenidos/paginas/showListOfPages", ["datos" => $paginas, "paginas" => $paginas]);
     }
     
     
@@ -205,7 +209,7 @@ class Content extends BaseController{
     public function vercomentarios(){
         // Funcion personalizada para obtener el nombre del articulo al que pertenece cada comment     
         $comentarios = $this->instancia_comentarios->listar_comentarios();
-         $paginas = $this->listar($this->instancia_paginas);         
+        $paginas = $this->listar($this->instancia_paginas);       
         
         return view("contenidos/comentarios/showListOfComments", ["datos" => $comentarios,"paginas" => $paginas]);
     }
@@ -228,10 +232,13 @@ class Content extends BaseController{
         if(is_null($datos)){
             return redirect()->to(site_url("content/verarticulos"));
         }
+        //Cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         
         return view("contenidos/comentarios/editComment", ["exito" => $exito,
                                                            "errores" => $errors,
-                                                           "dato" => $datos]);
+                                                           "dato" => $datos,
+                                                           "paginas" => $paginas]);
     }
     public function deleteComment($id){
        $this->instancia_comentarios->delete($id);       
@@ -253,9 +260,12 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_categorias,$exito,$errors);
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/categorias/createCategory", ["exito" => $exito,
                                          "errores" => $errors,
-                                         "dato" => $datos]); 
+                                         "dato" => $datos,
+                                         "paginas" => $paginas]); 
     }
     function editCategory($id){        
         $errors = [];
@@ -264,13 +274,18 @@ class Content extends BaseController{
         //Cargar la pagina actualizada o a actualizar
         $datos = $this->instancia_categorias->find($id);  
         if (is_null($datos)) return redirect ()->to (site_url ("content/vercategorias"));
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/categorias/editCategory", ["exito" => $exito,
                                           "errores" => $errors,
-                                           "dato" => $datos]);
+                                           "dato" => $datos,
+                                          "paginas" => $paginas]);
     }
     public function vercategorias(){           
-        $categorias = $this->listar($this->instancia_categorias);        
-        return view("contenidos/categorias/showListOfCategories", ["datos" => $categorias]);
+        $categorias = $this->listar($this->instancia_categorias);     
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
+        return view("contenidos/categorias/showListOfCategories", ["datos" => $categorias, "paginas" => $paginas]);
     }
     public function deleteCategory($id){
        $this->instancia_categorias->delete($id);       
@@ -279,8 +294,10 @@ class Content extends BaseController{
     public function categoria($slug){
        $datos = $this->instancia_categorias->articulos_por_categoria($slug);
        if (is_null($datos)) return redirect ()->to (site_url ("content/vercategorias"));
+       //cargar paginas para la vista
+       $paginas = $this->listar($this->instancia_paginas);
        return view("contenidos/categorias/showArticlesPerCategory",
-                    ["slug" => $slug, "datos" => $datos]);
+                    ["slug" => $slug, "datos" => $datos, "paginas" => $paginas]);
     }
     
     /*-------------------FIN SECCIÓN CATEGORÍAS ------------------------*/

@@ -2,9 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\UsuarioModel;
-use App\Models\PagesModel;
-
 class UserController extends BaseController {
 
     //metodo para ingresar un usuario previamente registrado
@@ -21,13 +18,12 @@ class UserController extends BaseController {
            "perfil" => ""
          ];
         $this->session->set($usuario);
+        
         //si el método es post
-        if ($this->request->getMethod() == "post") {
-            //se instancia al modelo
-            $instancia = new UsuarioModel();
+        if ($this->request->getMethod() == "post") {            
             
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
-            $correo = $instancia->correo($_POST["correo"]);
+            $correo = $this->instancia_usuarios->correo($_POST["correo"]);
 
             //si el correo no existe en la bd, mandara un mensaje de error
             if (!$correo) {
@@ -57,7 +53,7 @@ class UserController extends BaseController {
             } else {
                 //sino se manda un mensaje de usuario no valido y los errores
                 $exito = "Usuario no válido";
-                $errores = $instancia->errors();
+                $errores = $this->instancia_usuarios->errors();
             }
         }
         }
@@ -66,9 +62,8 @@ class UserController extends BaseController {
     }
 
     //metodo donde se redirecciona si el usuario ingresado en el login es válido
-    public function backend() {
-        //solo devuelve la vista del backend
-        return view('UserViews/backend');
+    public function backend() {  
+        return redirect()->to(site_url("content"));
        // echo view('common/adminlte/main');
     }
 
@@ -79,14 +74,11 @@ class UserController extends BaseController {
         //Variables donde se cargaran los errores si es que hubiesen y exito
         $errores = [];
         $exito = "";
-
-        $instancia_paginas = new PagesModel();
-        $listarPage = $instancia_paginas->findAll();
+       
+        $listarPage = $this->instancia_paginas->findAll();
 
         //si el metodo es post
-        if ($this->request->getMethod() == "post") {
-            //se crea una instancia del UsuarioModel
-            $instancia = new UsuarioModel();
+        if ($this->request->getMethod() == "post") {            
      
             //guardamos todo lo de post en la variable datos
             $datos = $_POST["user"];
@@ -100,7 +92,7 @@ class UserController extends BaseController {
                 $datos["contrasena_confir"] = $datos["contrasena"];
 
                 //se inserta a la bd de datos todo lo que hay en la variable datos
-                $insertar = $instancia->insert($datos);
+                $insertar = $this->instancia_usuarios->insert($datos);
                
                 
                 //confirmar si se inserto correctamente el usuario
@@ -112,12 +104,12 @@ class UserController extends BaseController {
                 else{
                    //Mandamos mensaje de error, seguramente fallo una validacion
                     $exito = "Hubo problemas para registrar al usuario";
-                    $errores = $instancia->errors(); 
+                    $errores = $this->instancia_usuarios->errors(); 
                 }                   
             
             } else {
                 $exito = "Hubo problemas para registrar al usuario";
-                $errores = $instancia->errors();
+                $errores = $this->instancia_usuarios->errors();
             }
         }
         
@@ -125,23 +117,17 @@ class UserController extends BaseController {
         echo view('UserViews/Registro', ["exito" => $exito, "errores" => $errores, "paginas"=>$listarPage]);
     }
 
-    public function listar() {
-        //se instancia al usuarioModel
-        $instancia = new UsuarioModel();
-        $instancia_paginas = new PagesModel();
+    public function listar() {        
         //con la funcion findAll obtenemos todos los datos de la bd y se la asigna a una variable
-        $listar = $instancia->findAll();
-        $listarPage = $instancia_paginas->findAll();
+        $listar = $this->instancia_usuarios->findAll();
+        $listarPage = $this->instancia_paginas->findAll();
 
         //se llama a la vista y se pasan todos los datos en la variable LISTA
         echo view('UserViews/lista', ["lista" => $listar, "paginas"=>$listarPage]);
        
     }
 
-    public function editar() {
-        //Se instancia al modelo
-        $instancia = new UsuarioModel();
-
+    public function editar() {     
         
         //se crea las variables para almacenar el éxito y los errores
         $errores = [];
@@ -153,35 +139,35 @@ class UserController extends BaseController {
             $datos = $_POST["user"];           
 
             //Se hace el update, pasandole el id y lo que hay dentro de usuario que anteriormente se guardó todo lo que vino de post
-            $modificar = $instancia->update($_GET["id"],$datos);
+            $modificar = $this->instancia_usuarios->update($_GET["id"],$datos);
             //se hacen las validaciones
             if ($modificar) {
                 $exito = "El usuario se modificó correctamente";
             } else {
                 $exito = "Hubo problemas para modificar al usuario";
-                $errores = $instancia->errors();
+                $errores = $this->instancia_usuarios->errors();
             }
         }
         
         //se llama al método idUsuario pasando el argumento ID obtenido del get
-        $usuario = $instancia->idUsuario($_GET["id"]);
+        $usuario = $this->instancia_usuarios->idUsuario($_GET["id"]);
         //Si el id no existe en la base de datos, se redirecciona la misma página
         //(Luego agregar mensaje de no se encontró el usuario_ OJO)
         if (empty($usuario)) {
             return redirect()->to(site_url("UserController/listar"));
         }
         helper("form");
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         //se manda a la vista las variables de exito y error y la variable usuairo, que va a estar almacenado en la variable $modificar 
-        echo view('UserViews/editar', ["modificar" => $usuario, "exito" => $exito, "errores" => $errores]);
+        echo view('UserViews/editar', ["modificar" => $usuario, "exito" => $exito, "errores" => $errores, "paginas" => $paginas]);
     }
 
-    public function borrar($id) {
-        //se instancia el modelo
-        $instancia = new UsuarioModel();
+    public function borrar($id) {       
 
         //se obtiene el metodo borrar del usuario model y se redirecciona este o no este el id de usuario
         //(Luego agregar mensaje de no se encontró el usuario_ OJO)
-        if ($instancia->borrar($id)) {
+        if ($this->instancia_usuarios->borrar($id)) {
             return redirect()->to(site_url('UserController/listar'));
         } else {
 
@@ -207,11 +193,9 @@ class UserController extends BaseController {
          $this->session->set($usuario);
 
         //si el método es post
-        if ($this->request->getMethod() == "post") {
-            //se instancia al modelo
-            $instancia = new UsuarioModel();
+        if ($this->request->getMethod() == "post") {            
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
-            $correo = $instancia->correo($_POST["correo"]);
+            $correo = $this->instancia_usuarios->correo($_POST["correo"]);
 
             //si el correo no existe en la bd, mandara un mensaje de error
             if (!$correo) {
@@ -240,7 +224,7 @@ class UserController extends BaseController {
             } else {
                 //sino se manda un mensaje de usuario no valido y los errores
                 $exito = "Usuario no válido";
-                $errores = $instancia->errors();
+                $errores = $this->instancia_usuarios->errors();
             }
            }
         }
@@ -250,8 +234,10 @@ class UserController extends BaseController {
 
     //metodo donde se redirecciona si el usuario ingresado en el login es válido
     public function frontend() {
+        //cargar paginas para la vista
+        $paginas = $this->listar($this->instancia_paginas);
         //solo devuelve la vista del frontend
-        return view('UserFrontend/frontend');
+        return view('UserFrontend/frontend', ["paginas" => $paginas]);
     }
 
     //metodo para registrar un nuevo usuario
@@ -262,9 +248,7 @@ class UserController extends BaseController {
         $exito = "";
 
         //si el metodo es post
-        if ($this->request->getMethod() == "post") {
-            //se crea una instancia del UsuarioModel
-            $instancia = new UsuarioModel();
+        if ($this->request->getMethod() == "post") {           
             //guardamos todo lo de post en la variable datos
             $datos = $_POST["u"];
 
@@ -277,7 +261,7 @@ class UserController extends BaseController {
                 $datos["contrasena_confir"] = $datos["contrasena"];
 
                 //se inserta a la bd de datos todo lo que hay en la variable datos
-                $insertar = $instancia->insert($datos);
+                $insertar = $this->instancia_usuarios->insert($datos);
 
                 //confirmar si se inserto correctamente el usuario
                 if ($insertar){
@@ -289,12 +273,12 @@ class UserController extends BaseController {
                 else{
                    //Mandamos mensaje de error, seguramente fallo una validacion
                     $exito = "Hubo problemas para registrar al usuario";
-                    $errores = $instancia->errors(); 
+                    $errores = $this->instancia_usuarios->errors(); 
                 }
                 
             } else {
                 $exito = "Hubo problemas para registrar al usuario";
-                $errores = $instancia->errors();
+                $errores = $this->instancia_usuarios->errors();
             }
         }
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan

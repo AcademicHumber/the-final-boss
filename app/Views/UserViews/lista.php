@@ -1,4 +1,4 @@
- <?php echo view('common/adminlte/header');?>
+ <?php echo view('common/basicheader', ["titulo" => "Lista de Usuarios"]);?>
 
   <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -71,4 +71,4 @@ if (!empty($lista)) {
 </div>
 
 </section>
-      <?php echo view('common/adminlte/footer');?>
+      <?php echo view('common/basicfooter');?>

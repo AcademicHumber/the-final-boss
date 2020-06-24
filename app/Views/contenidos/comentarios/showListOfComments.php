@@ -1,5 +1,5 @@
 <?php
-echo view("common/adminlte/header", ["titulo"=> "Edicion"])
+echo view("common/basicheader", ["titulo"=> "Edicion de Comentarios"])
 ?>
 <h1>Comentarios</h1>
 <div>
@@ -22,6 +22,6 @@ echo view("common/adminlte/header", ["titulo"=> "Edicion"])
     <hr>
 </div>
 <?php
-echo view("common/adminlte/footer")
+echo view("common/basicfooter")
 ?>
 

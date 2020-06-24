@@ -1,5 +1,5 @@
 
- <?php echo view('common/adminlte/header');
+ <?php echo view('common/basicheader', ["titulo" => "Pantalla Principal"]);
 
 //echo view("common/basicheader", ["titulo"=> "Artículos"])
 ?> 
@@ -38,5 +38,5 @@
 </div>
 <?php
 //echo view("common/basicfooter")
-echo view('common/adminlte/footer');
+echo view('common/basicfooter');
 ?>
