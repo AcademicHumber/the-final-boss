@@ -56,9 +56,9 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
 
 <?php
 echo anchor("content/verarticulos", "Volver a todos los articulos");
-echo "<pre>";
+/*echo "<pre>";
 print_r($_POST);
-echo "</pre>";
+echo "</pre>";*/
         
 echo view("common/basicfooter");
 ?>

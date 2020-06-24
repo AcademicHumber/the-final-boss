@@ -1,28 +1,11 @@
-<?php
-echo view("common/basicheader", ["titulo"=> "Artículos"])
+
+ <?php echo view('common/adminlte/header');
+
+//echo view("common/basicheader", ["titulo"=> "Artículos"])
 ?> 
   
 <div class="caja">
-
-    <h1>Lista de artículos y paginas</h1>
-    <?php
-    echo anchor("content/verarticulos","Ver lista de artículos");
-    echo "<br>";
-    echo anchor("content/verpaginas","Ver lista de páginas");    
-    echo "<br>";
-    echo anchor("content/vercomentarios","Ver lista de comentarios");  
-    echo "<br>";
-    echo anchor("content/vercategorias","Ver lista de categorias");  
-    ?>
-    <h3>Paginas</h3>    
-    <ul>
-        <?php
-        foreach($paginas as $pagina){
-            echo "<li><a href='content/pagina/".$pagina["id"]."'>".$pagina["titulo"]."</a></li>";
-        }
-        ?>        
-    </ul>
-      
+   
     <h3>Articulos</h3> 
     <?php
     foreach ($datos as $dato) {
@@ -54,5 +37,6 @@ echo view("common/basicheader", ["titulo"=> "Artículos"])
             ?>
 </div>
 <?php
-echo view("common/basicfooter")
+//echo view("common/basicfooter")
+echo view('common/adminlte/footer');
 ?>
