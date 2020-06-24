@@ -29,7 +29,7 @@
     <ul class="navbar-nav">
       <li class="nav-item d-none d-sm-inline-block nav-link bg-white btn-outline-dark">
           <?php echo anchor("content", "Index"); ?>
-      </li>
+      </li>     
       <li class="nav-item d-none d-sm-inline-block nav-link bg-white">
           <div class="dropdown">
 

@@ -7,18 +7,19 @@ class Contacto extends BaseController
         $nombre = $_POST['nombre'];
         $correo = $_POST['correo'];
         $mensaje = $_POST['mensaje'];
-
+    
+    
     // Si el campo del nombre está en blanco
-
+    $nombre = trim($nombre);
 	if (!empty($nombre)) {
-		$nombre = trim($nombre);
+		
 		$nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
 	}else{
 		$errores .= 'Por favor ingresa un nombre <br />';
 	}
 
     // Si el campo del correo está en blanco o no es un correo válido
-
+    $correo = trim($correo);
     if (!empty($correo)) {
         $correo = filter_var($correo, FILTER_SANITIZE_EMAIL);
 
@@ -32,12 +33,14 @@ class Contacto extends BaseController
 
     // Si el campo del mensaje está en blanco
 
+    $mensaje = trim($mensaje);
 	if (!empty($mensaje)) {
 		$mensaje = htmlspecialchars($mensaje);
 		$mensaje = trim($mensaje);
 		$mensaje = stripcslashes($mensaje);
-	} else {
-	$errores .= 'Por favor ingresa el mensaje';
+	} 
+    else{
+		$errores .= 'Por favor ingresa el mensaje';
     }
     
 
@@ -47,14 +50,11 @@ class Contacto extends BaseController
 
         $email = \Config\Services::email();
 
-        $enviar_a = "enriquetm1818@hotmail.com,"
-                . "ahfernandez-es@udabol.edu.bo,"
-                . "darianitamartinezjimenez17@gmail.com,"
-                . "jenifferbalcazarjustiniano@gmail.com";
+        $enviar_a = "enriquetm1818@hotmail.com, ahft_2000@hotmail.com, jenifferbalcazarjustiniano@gmail.com, darianitamartinezjimenez17@gmail.com";
         $asunto = 'Correo enviado desde: www.blog-all.org';
         $mensaje_pre = "De: $nombre \n";
-	$mensaje_pre .= "Correo: $correo \n";
-	$mensaje_pre .= "Mensaje: " . $mensaje;
+		$mensaje_pre .= "Correo: $correo \n";
+		$mensaje_pre .= "Mensaje: " . $mensaje;
         
         $email->setFrom($correo, $nombre);
         $email->setTo($enviar_a);
@@ -62,20 +62,26 @@ class Contacto extends BaseController
         $email->setMessage($mensaje_pre);
 
         if($email->send()){
-            $enviado = true;
+            $enviado = "enviado";
 
         }else{
-            $enviado = false;           
+            $enviado = "no enviado";
+            
         }
-        
-     }
+		
+	}
+
+
+
     }
+    
     public function index()
 
 	{
+
         $errores = "";
         $enviado = "";
-        
+
         if($this->request->getMethod()=="post"){
             $this -> validarEmail($errores, $enviado);
         }

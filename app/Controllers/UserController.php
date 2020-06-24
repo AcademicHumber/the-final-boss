@@ -286,8 +286,10 @@ class UserController extends BaseController {
                 $errores = $this->instancia_usuarios->errors();
             }
         }
+        //cargar paginas para la vista
+         $listarPage = $this->instancia_paginas->findAll();
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan
-        return view('UserFrontend/RegistroFront', ["exito" => $exito, "errores" => $errores]);
+        return view('UserFrontend/RegistroFront', ["exito" => $exito, "errores" => $errores, "paginas" => $listarPage]);
     }
 
     public function recuperarContra() {

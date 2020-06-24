@@ -1,8 +1,11 @@
 <!–FORMULARIO PARA AÑADIR USUARIO–>
-<?php
-echo view("common/basicheader", ["titulo" => "Registro"]);
-?>
-<h2>Registro de Usuarios</h2>
+<html>
+    <head>
+        <title>Registro</title>
+        <link rel="stylesheet" href="<?php echo base_url('adminlte'); ?>/dist/css/adminlte.min.css">
+    </head>
+    <body>
+        <h2>Registro de Usuarios</h2>
 <?php
 echo form_open_multipart('');
 echo "<h2> $exito </h2>";
@@ -87,6 +90,7 @@ if (isset($errores["contrasena_confir"])) {
 echo "<br>";
 echo form_close();
 ?>
-<?php
-echo view("common/basicfooter");
-?>
+
+    </body>
+</html>
+
