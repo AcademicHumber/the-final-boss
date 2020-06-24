@@ -1,13 +1,31 @@
-<?php
-echo view("common/basicheader", ["titulo" => "Lista de usuarios"]);
+ <?php echo view('common/adminlte/header');?>
+
+  <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Usuarios</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+          </div>
+        </div>
+
+        <div class="card-body">
+           <?php
+//echo anchor("UserController/Registro", "Registra un usuario");
+
+if (!empty($lista)) {
+
 ?>
-<h1>Lista de Usuarios</h1>
-<?php
-echo anchor("UserController/Registro", "Registra un usuario");
-echo "<br>";
-?>
-<table border="1">
-    <br>
+<table class="table table-head-fixed text-nowrap table-hover  table-md">
     <tr>
         <th>Nombre de Usuario</th>
         <th>Nombre</th>
@@ -15,21 +33,24 @@ echo "<br>";
         <th>Correo</th>
         <th>Perfil</th>
         <th></th>
+        <th></th>
     </tr>
     <?php
     foreach ($lista as $listar) {
         ?>
         <tbody>
 
-        <td><?php echo $listar["nombre_usuario"] ?></td>
+        <td><?php echo $listar["nombre_usuario"] ?>
+        </td>
         <td><?php echo $listar["nombre"] ?></td>
         <td><?php echo $listar["apellido"] ?></td>
         <td><?php echo $listar["correo"] ?></td>
         <td><?php echo $listar["perfil"] ?></td>
         <td>
-            <?php echo anchor("UserController/editar?id=" . $listar["id"], "Editar"); ?>
-            -
-    <?php echo anchor("UserController/borrar/" . $listar["id"], "Borrar"); ?>
+   <?php echo anchor("UserController/editar?id=" . $listar["id"], "Edit"); ?>
+           </td>
+           <td>
+    <?php echo anchor("UserController/borrar/" . $listar["id"], "Delete"); ?>
         </td>
 
     </tbody>
@@ -37,8 +58,17 @@ echo "<br>";
 }
 ?>
 </table>
-
+<?php  
+} else {
+?>
+<h3>No hay usuarios registrados</h3>
 <?php
-echo view("common/basicfooter");
+}
 ?>
 
+  </div>
+
+</div>
+
+</section>
+      <?php echo view('common/adminlte/footer');?>

@@ -32,7 +32,6 @@ class Content extends BaseController{
         
     protected function listar($instancia) {        
         $lista = $instancia->findAll();
-        
         return $lista;
     }
     
@@ -205,9 +204,10 @@ class Content extends BaseController{
     
     public function vercomentarios(){
         // Funcion personalizada para obtener el nombre del articulo al que pertenece cada comment     
-        $comentarios = $this->instancia_comentarios->listar_comentarios();        
+        $comentarios = $this->instancia_comentarios->listar_comentarios();
+         $paginas = $this->listar($this->instancia_paginas);         
         
-        return view("contenidos/comentarios/showListOfComments", ["datos" => $comentarios]);
+        return view("contenidos/comentarios/showListOfComments", ["datos" => $comentarios,"paginas" => $paginas]);
     }
     public function editComment($id){
         $errors = [];

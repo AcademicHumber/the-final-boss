@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\UsuarioModel;
+use App\Models\PagesModel;
 
 class UserController extends BaseController {
 
@@ -27,10 +28,17 @@ class UserController extends BaseController {
             
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
             $correo = $instancia->correo($_POST["correo"]);
+
+            //si el correo no existe en la bd, mandara un mensaje de error
+            if (!$correo) {
+                $exito = "Usuario no válido";
+            }
+            else{
             
             //como el metodo correo devuelve un array con todos los campos del usuario en base al correo que se manda,
             //se obtiene asi la contraseña encriptada para luego compararla con el password_verify
             $contraseña = $correo['contrasena'];
+
 
             //si la contraseña ingresa por el usuario coincide con la contraseña del mismo en la bd
             if (password_verify($_POST['contrasena'], $contraseña) && $correo["perfil"] != "suscriptor") {
@@ -52,6 +60,7 @@ class UserController extends BaseController {
                 $errores = $instancia->errors();
             }
         }
+        }
         //se llama a la vista de login y se le pasa las variables de exito y error para las validaciones
         echo view('UserViews/login', ["exito" => $exito, "errores" => $errores]);
     }
@@ -60,6 +69,7 @@ class UserController extends BaseController {
     public function backend() {
         //solo devuelve la vista del backend
         return view('UserViews/backend');
+       // echo view('common/adminlte/main');
     }
 
     //metodo para registrar un nuevo usuario
@@ -70,10 +80,14 @@ class UserController extends BaseController {
         $errores = [];
         $exito = "";
 
+        $instancia_paginas = new PagesModel();
+        $listarPage = $instancia_paginas->findAll();
+
         //si el metodo es post
         if ($this->request->getMethod() == "post") {
             //se crea una instancia del UsuarioModel
             $instancia = new UsuarioModel();
+     
             //guardamos todo lo de post en la variable datos
             $datos = $_POST["user"];
 
@@ -87,11 +101,13 @@ class UserController extends BaseController {
 
                 //se inserta a la bd de datos todo lo que hay en la variable datos
                 $insertar = $instancia->insert($datos);
+               
                 
                 //confirmar si se inserto correctamente el usuario
                 if ($insertar){
                     //mandamos el mensaje de confirmación
                     $exito = "El usuario se registró correctamente"; 
+
                 }
                 else{
                    //Mandamos mensaje de error, seguramente fallo una validacion
@@ -104,18 +120,22 @@ class UserController extends BaseController {
                 $errores = $instancia->errors();
             }
         }
+        
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan
-        echo view('UserViews/Registro', ["exito" => $exito, "errores" => $errores]);
+        echo view('UserViews/Registro', ["exito" => $exito, "errores" => $errores, "paginas"=>$listarPage]);
     }
 
     public function listar() {
         //se instancia al usuarioModel
         $instancia = new UsuarioModel();
+        $instancia_paginas = new PagesModel();
         //con la funcion findAll obtenemos todos los datos de la bd y se la asigna a una variable
         $listar = $instancia->findAll();
+        $listarPage = $instancia_paginas->findAll();
 
         //se llama a la vista y se pasan todos los datos en la variable LISTA
-        echo view('UserViews/lista', ["lista" => $listar]);
+        echo view('UserViews/lista', ["lista" => $listar, "paginas"=>$listarPage]);
+       
     }
 
     public function editar() {
@@ -192,6 +212,14 @@ class UserController extends BaseController {
             $instancia = new UsuarioModel();
             //se llama al metodo correo(devuelve un correo) y se le pasa el argumento del correo, de post
             $correo = $instancia->correo($_POST["correo"]);
+
+            //si el correo no existe en la bd, mandara un mensaje de error
+            if (!$correo) {
+                $exito = "Usuario no válido";
+            }
+
+            else{
+            
             //como el metodo correo devuelve un array con todos los campos del usuario en base al correo que se manda,
             //se obtiene asi la contraseña encriptada para luego compararla con el password_verify
             $contraseña = $correo['contrasena'];
@@ -214,6 +242,7 @@ class UserController extends BaseController {
                 $exito = "Usuario no válido";
                 $errores = $instancia->errors();
             }
+           }
         }
         //se llama a la vista de login y se le pasa las variables de exito y error para las validaciones
         echo view('UserFrontend/loginFront', ["exito" => $exito, "errores" => $errores]);
