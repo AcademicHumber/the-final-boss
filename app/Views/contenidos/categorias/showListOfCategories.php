@@ -1,25 +1,42 @@
 <?php
 echo view("common/basicheader", ["titulo"=> "Edicion"])
 ?>
-<h1>Categorías</h1>
-<a href="crearCategoria">Crear nueva categoria</a><br>
-<div>
+<!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+<section class="content">
+    <div class="card">
+        <div class="card-header">
+            <h1>Categorías</h1>
+            <a href="crearCategoria" class="card-link">Crear nueva categoria</a>
+            <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+          </div>
+        </div>
+         <div class="card-body">
     <?php
     foreach ($datos as $dato){
-        echo "<hr>";
-        echo "<div>";
-        echo "<p><strong>Nombre: </strong>".$dato["nombre"]."</p>";
-        echo "<p><strong>Descripción: </strong></p>";
-        echo "<p>".$dato["descripcion"]."</p>";
-        echo " <a href='editCategory/".$dato["id"]."'>Editar</a> -"
-                . " <a href='deleteCategory/".$dato["id"]."'>Eliminar</a></p>";        
-        echo "<div style='float: rigth;'><strong>Fecha de creación: </strong>".$dato["created_at"]."</div>";
-        echo "</div>";
+        ?>
+            <div class="card border border-primary">
+            <div class="card-header"><p class="card-title"><strong>Nombre: </strong><?php echo $dato["nombre"] ?></p></div>
+            <div class="card-body">
+            <p class="card-title"><strong>Descripción: </strong></p>
+            <p class="card-text"><?php echo $dato["descripcion"]?></p>
+            <p class="card-link text-primary">
+                <?php
+                echo " <a href='editCategory/".$dato["id"]."'>Editar</a> - ";
+                echo " <a href='deleteCategory/".$dato["id"]."'>Eliminar</a></p>"; 
+                ?>
+            </p> 
+            <p class="card-text text-muted"><strong>Fecha de creación: </strong><?php echo $dato["created_at"] ?></p>
+        </div>
+        </div>
+    <?php
     }
     ?>
-    <hr>
-</div>
+    </div>
+    </div>
+  </section>
 <?php
-echo view("common/basicfooter")
-?>
-
+echo view("common/basicfooter");
