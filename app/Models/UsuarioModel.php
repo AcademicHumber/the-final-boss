@@ -20,11 +20,11 @@ class UsuarioModel extends Model {
 
         $this->validationRules = [
             "nombre_usuario" => "required|min_length[5]|max_length[50]|is_unique[user.nombre_usuario]",
-            "nombre" => "min_length[3]|max_length[255]",
-            "apellido" => "min_length[3]|max_length[255]",
-            "correo" => "min_length[6]|max_length[50]|valid_email|is_unique[user.correo]",
-            "contrasena" => "min_length[5]|max_length[255]",
-            "contrasena_confir" => "matches[contrasena]",
+            "nombre" => "required|min_length[3]|max_length[255]",
+            "apellido" => "required|min_length[3]|max_length[255]",
+            "correo" => "required|min_length[6]|max_length[50]|valid_email|is_unique[user.correo]",
+            "contrasena" => "required|min_length[5]|max_length[255]",
+            "contrasena_confir" => "required|matches[contrasena]",
             "perfil" => "min_length[5]|max_length[255]",
         ];
         $this->validationMessages = [
@@ -59,8 +59,6 @@ class UsuarioModel extends Model {
             "contrasena_confir" => [
                 "required" => "Datos requeridos",
                 "matches" => "La contraseña no es igual",
-                "max_length" => "Máximo 50 caracteres",
-                "min_length" => "Mínimo 5 caracteres"
             ]
         ];
    

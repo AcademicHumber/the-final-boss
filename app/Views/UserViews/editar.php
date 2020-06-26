@@ -1,4 +1,3 @@
-<!–FORMULARIO PARA EDITAR USUARIO–>
 <?php
 echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
 ?>
@@ -10,7 +9,7 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
           <!-- left column -->
           <div class="col-md-6">
             <br>
-                 <h3> Registrar Usuario</h3>
+                 <h3>Editar Usuario</h3>
             <!-- general form elements -->
             <div class="card card-dark">
  
@@ -61,19 +60,21 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
                    
                   <div class="form-group">
                     <label>Perfil</label>
-                    <select name="user[perfil]" class="form-control">
-                     <option ><?php echo $modificar["perfil"] ?></option>
-                      <option value="administrador">Administrador</option>
-                      <option value="editor">Editor</option>
-                      <option value="autor">Autor</option>
-                      <option value="contribuidor">Contribuidor</option>
-                    </select>
+                    <?php
+                        echo form_dropdown("user[perfil]", [
+                            "administrador" => "Administrador",
+                            "editor" => "Editor",
+                            "autor" => "Autor",
+                            "contribuidor" => "Contribuidor",
+                            "suscriptor" => "Suscriptor"
+                            ], $modificar["perfil"], ["required" => 1, "class"=> "form-control"]);
+                        ?>
                    
                   </div>
 
                   </div>
                   <div class="form-group">
-                              <button type="submit" class="btn btn-dark">Crear Cuenta</button>
+                              <button type="submit" class="btn btn-dark">Editar</button>
                   </div>
                 </div>
                     <?php

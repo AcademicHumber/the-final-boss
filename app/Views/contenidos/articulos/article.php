@@ -1,10 +1,28 @@
 <?php
 echo view("common/basicheader", ["titulo" => $dato["titulo"]])
 ?>
+<section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Artículos</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+          </div>
+        </div>
+
+        <div class="card-body">
 
 <div class="caja">  
-    <h1><?php echo $dato["encabezado"] ?></h1>
-    <h3><?php
+    <h2><?php echo $dato["encabezado"] ?></h2>
+    <h4><?php
     // la variable opciones se volvera un arreglo que tiene el nombre y el slug de cada categoria
     foreach ($categorias as $categoria){
        $opciones[$categoria["id"]]["nombre"] = $categoria["nombre"];
@@ -18,27 +36,35 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
     else{
         echo anchor("content/categoria/sin-categoria","Sin CAtegoría");
     }
-    ?></h3>
+    ?></h4>
     <div>
     <p><?php echo $dato["cuerpo"] ?></p>       
     </div>
 </div>
-<div>
+
+
+
+<div  style="line-height:35px;">
     <h3>Comentarios</h3>
-    <?php    
-    foreach ($comentarios as $comentario):
-    echo "<hr>";
-    //Usuario
-     echo "<h4>nombre de usuario</h4>";
-     echo anchor("content/deleteComment/".$comentario["id"], "Eliminar");
-    //Fecha
-    echo "<p>".$comentario["created_at"]."<p>";
-    //Cuerpo
-    echo "<p>".$comentario["cuerpo"]."<p>";
-    endforeach;
-    echo "<hr>";
-    ?>
+     <?php foreach ($comentarios as $comentario):?>
+    <table >
+     <hr>
+        <tr>
+            <td><h5>Nombre de usuario</h5></td>
+        </tr>
+        <td><?php echo $comentario["created_at"];?></td>
+        <tr>
+            <td ><?php echo $comentario["cuerpo"];?></td> 
+        </tr>
+         <tr>
+            <td> <?php echo anchor("content/deleteComment/".$comentario["id"], "Eliminar",["class"=>"btn btn-dark btn-sm"]);?></td>
+        </tr>
+     
+<?php endforeach;?>
+    </table>
 </div>
+<br>
+
 <div>
     <h3>Deja tu comentario</h3>
     <?php
@@ -49,16 +75,15 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
     // hidden que llevara el id del usuario
     echo form_hidden("cont[usuario]","1");
     echo "<br>";
-    echo form_submit("","Enviar Comentario");
+    echo form_submit("","Enviar Comentario",["class"=>"btn btn-dark"]);
     
     ?>
-</div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
-echo anchor("content/verarticulos", "Volver a todos los articulos");
-/*echo "<pre>";
-print_r($_POST);
-echo "</pre>";*/
-        
+
 echo view("common/basicfooter");
 ?>
