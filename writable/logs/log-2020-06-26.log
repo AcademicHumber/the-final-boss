@@ -1,0 +1,13 @@
+CRITICAL - 2020-06-26 11:18:40 --> Undefined index: nombre
+#0 C:\xampp\htdocs\the-final-boss\app\Views\common\basicheader.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 84, Array)
+#1 C:\xampp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('common/basichea...', Array, true)
+#3 C:\xampp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(2): view('common/basichea...', Array)
+#4 C:\xampp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#6 C:\xampp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#7 C:\xampp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#8 C:\xampp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#9 C:\xampp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
