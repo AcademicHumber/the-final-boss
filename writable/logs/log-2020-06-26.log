@@ -1,0 +1,58 @@
+CRITICAL - 2020-06-26 10:37:19 --> Undefined index: nombre
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\common\basicheader.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 84, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('common/basichea...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showArticles.php(2): view('common/basichea...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#6 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(18): view('contenidos/arti...', Array)
+#7 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#8 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#9 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-06-26 10:37:20 --> Undefined index: nombre
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\common\basicheader.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 84, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('common/basichea...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showArticles.php(2): view('common/basichea...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#6 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(18): view('contenidos/arti...', Array)
+#7 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#8 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#9 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-06-26 11:31:40 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/come...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(214): view('contenidos/come...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->vercomentarios()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-26 11:32:16 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/come...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(214): view('contenidos/come...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->vercomentarios()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-26 11:41:01 --> syntax error, unexpected ')', expecting ']'
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/come...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(241): view('contenidos/come...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->editComment('18')
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-26 11:41:15 --> syntax error, unexpected ')', expecting ']'
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/come...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(241): view('contenidos/come...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->editComment('18')
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

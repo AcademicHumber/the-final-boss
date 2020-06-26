@@ -2,23 +2,25 @@
 <?php
 echo view("common/basicheader", ["titulo" => "Registro"]);
 ?>
+<section class="content-header">
+    </section>
 
-<div class="container-fluid">
+    <!-- Main content -->
+    <section class="content">
 
-        <div class="row card card-dark">
-      
-          <!-- left column -->
-          <div class="col-md-6">
-            <br>
-                 <h3> Registrar Usuario</h3>
-            <!-- general form elements -->
-            <div class="card card-dark">
- 
-                 <?php
-                  echo form_open_multipart('');
-                  echo "<br>";
-                  echo "<h5> $exito </h5>";
-                  ?>
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+          <h4>Registrar Usuario</h4>
+        </div>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+          </div>
+        </div>
+
                 <div class="card-body">
                   <div class="form-group">
                     <label>Nombre de Usuario</label>
@@ -86,24 +88,18 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
                     </select>
                    
                   </div>
-
+                        <h5> <?php echo $exito;  ?></h5>
                   </div>
                   <div class="form-group">
                               <button type="submit" class="btn btn-dark">Crear Cuenta</button>
                   </div>
                 </div>
+          </div>
+
+</section>
                     <?php
                         echo form_close();
                     ?>
-            </div>
-            <!-- /.card -->
-          </div>
-          <!--/.col (right) -->
-        </div>
-
-
-
-
 
 <?php
 echo view("common/basicfooter");

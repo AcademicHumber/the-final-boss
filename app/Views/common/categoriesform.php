@@ -4,7 +4,6 @@
 print_r($exito);
 echo form_open("");
 echo form_hidden("cont[id]", $dato["id"]);
-echo "<br>";
 echo "<p>Nombre de la categoría:</p>";
 echo form_input("cont[nombre]", $dato["nombre"]);
 echo "<br>";

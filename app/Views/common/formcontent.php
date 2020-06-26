@@ -4,7 +4,7 @@ echo form_open_multipart("");
 // Comprobamos errores o exito en la consulta, luego de ejecutarla
 print_r($exito);
 ?>            
-<table>              
+<table style="line-height: 35px;">              
     <tbody>                    
         <tr>
             <td><label>Titulo de la publicación</label></td>
@@ -31,7 +31,7 @@ print_r($exito);
             </td>                       
         </tr>
         <tr>
-            <td><label>Encabezado de la publicación</label></td>
+            <td><label>Encabezado de la publicación </label></td>
             <td>
                 <?php
                 echo form_input("cont[encabezado]", $dato["encabezado"], ["required" => 1]);
@@ -49,7 +49,7 @@ print_r($exito);
             </td>
         </tr>
         <tr>
-            <td>Categoría de la publicación</td>
+            <td><label>Categoría de la publicación </label></td>
             <td>                                
                 <?php
                 // crear el arreglo relacionando ids y nombres de categorias
@@ -87,10 +87,10 @@ print_r($exito);
                 <br>
                 <?php
                 if (!empty($dato["titulo"])){
-                    echo form_submit("", "Actualizar");
+                    echo form_submit("", "Actualizar", ["class"=>"btn btn-dark"]);
                 }
                 else{
-                    echo form_submit("", "Publicar");
+                    echo form_submit("", "Publicar", ["class"=>"btn btn-dark"]);
                 }
                 
                 ?>
@@ -101,7 +101,7 @@ print_r($exito);
 <?php
 // Cerrar formulario
 echo form_close();
-echo anchor("content/verarticulos", "Ir a los articulos");
+echo anchor("content/verarticulos", "Ir a los articulos",["class"=>"badge badge-dark"]);
 /*echo "<pre>";
 print_r($_POST);
 print_r($dato);

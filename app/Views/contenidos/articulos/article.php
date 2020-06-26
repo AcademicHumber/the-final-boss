@@ -10,7 +10,9 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Artículos</h3>
+         <div class="card-title">
+          <h4>Artículos</h4>
+        </div>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -31,7 +33,7 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
     // Este if es por si borraron la categoria pero no la publicacion, para evitar bugs xd
     if (!empty($opciones[$dato["categoria"]])){ 
         // En el texto va el nombre y en la url va el slug
-        echo anchor("content/categoria/".$opciones[$dato["categoria"]]["slug"],$opciones[$dato["categoria"]]["nombre"]);
+        echo anchor("content/categoria/".$opciones[$dato["categoria"]]["slug"],$opciones[$dato["categoria"]]["nombre"],["class"=> "badge badge-light"]);
     }
     else{
         echo anchor("content/categoria/sin-categoria","Sin CAtegoría");
@@ -43,12 +45,14 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
 </div>
 
 
+ <h3>Comentarios</h3>
+<div style="line-height:35px" >
+   <div>
 
-<div  style="line-height:35px;">
-    <h3>Comentarios</h3>
      <?php foreach ($comentarios as $comentario):?>
-    <table >
-     <hr>
+   
+         <table >
+         <hr>
         <tr>
             <td><h5>Nombre de usuario</h5></td>
         </tr>
@@ -61,7 +65,8 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
         </tr>
      
 <?php endforeach;?>
-    </table>
+        </table>
+    </div>
 </div>
 <br>
 

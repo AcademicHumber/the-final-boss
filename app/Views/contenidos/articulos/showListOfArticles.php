@@ -10,7 +10,9 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Entradas</h3>
+          <div class="card-title">
+          <h4>Entradas</h4>
+        </div>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -49,9 +51,11 @@ if (!empty($datos)) {
        <?php
 }
 ?>
-</table>
+  </table>
 <?php  
-} else {
+} 
+else 
+{
 ?>
 <h3>No hay usuarios registrados</h3>
 <?php
