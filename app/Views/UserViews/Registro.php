@@ -22,7 +22,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
                 <div class="card-body">
                   <div class="form-group">
                     <label>Nombre de Usuario</label>
-                    <input type="text" class="form-control" name="user[nombre_usuario]" placeholder="Enter username" required="1">
+                    <input type="text" class="form-control" name="user[nombre_usuario]" id="nombre_usuario" placeholder="Enter username" required="1" value="<?php set_value('nombre_usuario')?>">
                      <?php
                     if (isset($errores["nombre_usuario"])) {
                       echo $errores["nombre_usuario"];
@@ -31,7 +31,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
 
                   <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" class="form-control" name="user[nombre]" placeholder="Enter name" required="1" >
+                    <input type="text" class="form-control" name="user[nombre]" id="nombre" placeholder="Enter name" required="1" value="<?php set_value('nombre') ?>">
                      <?php
                     if (isset($errores["nombre"])) {
                       echo $errores["nombre"];
@@ -40,7 +40,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
 
                    <div class="form-group">
                     <label >Apellido</label>
-                    <input type="text" class="form-control" name="user[apellido]" placeholder="Enter lastname" required="1" >
+                    <input type="text" class="form-control" name="user[apellido]" id="apellido" placeholder="Enter lastname" required="1" value="<?php set_value('apellido')?>" >
                       <?php
                     if (isset($errores["apellido"])) {
                       echo $errores["apellido"];
@@ -49,7 +49,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
 
                    <div class="form-group">
                     <label>Correo electrónico</label>
-                    <input type="email" class="form-control" name="user[correo]" placeholder="Enter email" required="1" >
+                    <input type="email" class="form-control" name="user[correo]" id="correo" placeholder="Enter email" required="1" value="<?php set_value('correo')?>" >
                      <?php
                     if (isset($errores["correo"])) {
                       echo $errores["correo"];
@@ -58,7 +58,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
 
                    <div class="form-group">
                     <label>Contraseña</label>
-                    <input type="password" class="form-control" name="user[contrasena]" placeholder="Enter password" required="1" >
+                    <input type="password" class="form-control" name="user[contrasena]" id="contrasena" placeholder="Enter password" required="1" value="<?php set_value('contrasena')?>" >
                       <?php
                     if (isset($errores["contrasena"])) {
                       echo $errores["contrasena"];
@@ -67,7 +67,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
 
                    <div class="form-group">
                     <label>Confirmar Contraseña</label>
-                    <input type="password" class="form-control" name="user[contrasena_confir] " placeholder="Confirm password" required="1" >
+                    <input type="password" class="form-control" name="user[contrasena_confir] " id="contrasena_confir" placeholder="Confirm password" required="1" value="<?php set_value('contrasena_confir')?>">
             
                    <?php
                     if (isset($errores["contrasena_confir"])) {

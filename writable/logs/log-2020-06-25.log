@@ -1,0 +1,303 @@
+CRITICAL - 2020-06-25 20:23:45 --> Undefined index: nombre
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\common\basicheader.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 84, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('common/basichea...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Views\UserViews\Registro.php(3): view('common/basichea...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#5 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('UserViews/Regis...', Array, true)
+#6 C:\xamppp\htdocs\the-final-boss\app\Controllers\UserController.php(117): view('UserViews/Regis...', Array)
+#7 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\UserController->registro()
+#8 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-06-25 20:27:49 --> Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-06-25 20:32:07 --> Invalid file: {0}
+#0 C:\xamppp\htdocs\the-final-boss\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserController/...')
+#1 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('UserController/...', Array, true)
+#2 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(22): view('UserController/...')
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-25 20:32:26 --> Invalid file: {0}
+#0 C:\xamppp\htdocs\the-final-boss\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserController/...')
+#1 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('UserController/...', Array, true)
+#2 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(22): view('UserController/...')
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-25 20:33:31 --> Invalid file: {0}
+#0 C:\xamppp\htdocs\the-final-boss\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserController/...')
+#1 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('UserController/...', Array, true)
+#2 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(22): view('UserController/...')
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-06-25 20:36:49 --> Undefined variable: session
+#0 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 18, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->index()
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-25 21:23:31 --> syntax error, unexpected 'btn' (T_STRING), expecting ';' or ','
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 21:24:20 --> syntax error, unexpected 'btn' (T_STRING), expecting ';' or ','
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 21:51:00 --> syntax error, unexpected '"paginas"' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 C:\xamppp\htdocs\the-final-boss\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('content/vercome...')
+#1 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('content/vercome...')
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-06-25 21:51:34 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 21:52:01 --> syntax error, unexpected '"</p>"' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ','
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 21:52:09 --> syntax error, unexpected '"</p>"' (T_CONSTANT_ENCAPSED_STRING), expecting ';' or ','
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 21:52:23 --> Undefined variable: coment
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showListOfArticles.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 39, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 21:53:07 --> Undefined variable: coment
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showListOfArticles.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 39, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 21:53:41 --> Undefined variable: coment
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showListOfArticles.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 39, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 21:54:41 --> Undefined variable: coment
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\showListOfArticles.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 39, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 21:59:21 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:00:25 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:02:17 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:03:59 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:04:15 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:04:53 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:05:07 --> syntax error, unexpected '}', expecting end of file
+#0 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#1 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(145): view('contenidos/arti...', Array)
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->verarticulos()
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-06-25 22:50:22 --> Array to string conversion
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xamppp\\htdoc...', 51, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:54:35 --> Undefined variable: lista
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 59, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:54:49 --> Undefined variable: comentario
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamppp\\htdoc...', 57, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:55:27 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:56:26 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:57:23 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:57:47 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 22:59:39 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 23:01:14 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 23:02:42 --> Undefined index: created_at
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 53, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-06-25 23:04:18 --> Undefined index: id
+#0 C:\xamppp\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 52, Array)
+#1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#3 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('21')
+#5 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#6 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

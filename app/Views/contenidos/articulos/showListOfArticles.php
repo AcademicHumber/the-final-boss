@@ -1,23 +1,68 @@
 <?php
-echo view("common/basicheader", ["titulo"=> "Edicion"])
+echo view("common/basicheader", ["titulo"=> "Articulos"])
 ?>
-<h1>Entradas</h1>
-<a href="crearArticulo">Crear nuevo articulo</a><br>
-<div>
+<section class="content-header">
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Entradas</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+          </div>
+        </div>
+
+        <div class="card-body">
+
+
+<?php 
+if (!empty($datos)) {
+
+?>
+<table class="table table-head-fixed text-nowrap table-md">
+    <tr>
+        <!-----PREG si habrá autor y categoria--->
+        <th>Título</th>
+        <th>Ver </th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+        <th>Fecha de creación</th>
+    </tr>
     <?php
-    foreach ($datos as $dato){
-        echo "<hr>";
-        echo "<div>";
-        echo "<p>".$dato["titulo"]."</p>";
-        echo "<p><a href='articulo/".$dato["id"]."'>Ver</a> -"
-                . " <a href='editArticulo/".$dato["id"]."'>Editar</a> -"
-                . " <a href='deleteArticle/".$dato["id"]."'>Eliminar</a></p>";
-        echo "<div style='float: rigth;'>Fecha de creación: ".$dato["created_at"]."</div>";
-        echo "</div>";
-    }
-    ?>
-    <hr>
-</div>
+    foreach ($datos as $dato) {
+        ?>
+        <tbody>
+
+        <td><?php echo $dato["titulo"] ?></td>
+        <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?></td>
+        <td><?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?></td>
+        <td><?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>
+        <td><?php echo $dato["created_at"]?></td>
+
+    </tbody>
+       <?php
+}
+?>
+</table>
+<?php  
+} else {
+?>
+<h3>No hay usuarios registrados</h3>
+<?php
+}
+?>
+
+        </div>
+
+    </div>
+
+</section>
 <?php
 echo view("common/basicfooter")
 ?>
