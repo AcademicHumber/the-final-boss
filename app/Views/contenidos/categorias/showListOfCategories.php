@@ -21,7 +21,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion"])
             <div class="card border border-primary">
             <div class="card-header"><p class="card-title"><strong>Nombre: </strong><?php echo $dato["nombre"] ?></p></div>
             <div class="card-body">
-            <p class="card-title"><strong>Descripción: </strong></p>
+            <p class="card-title"><strong>Descripción:</strong></p>
             <p class="card-text"><?php echo $dato["descripcion"]?></p>
             <p class="card-link text-primary">
                 <?php
