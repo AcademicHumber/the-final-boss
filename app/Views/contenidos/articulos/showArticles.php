@@ -11,7 +11,9 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Artículos</h3>
+          <div class="card-title">
+          <h4>Artículos</h4>
+        </div>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
