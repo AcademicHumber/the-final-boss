@@ -8,7 +8,7 @@ class Content extends BaseController{
     // estas instancias se utilizara en todo el controlador
     // se inicializan en el constructor
     
-    function __construct() {
+    function __construct() {        
         helper('form');        
     }
     

@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-class UserController extends BaseController {
-
+class UserController extends BaseController { 
+    
     //metodo para ingresar un usuario previamente registrado
     public function login() {
         helper("form");
@@ -63,8 +63,7 @@ class UserController extends BaseController {
 
     //metodo donde se redirecciona si el usuario ingresado en el login es válido
     public function backend() {  
-        return redirect()->to(site_url("content"));
-       // echo view('common/adminlte/main');
+        return redirect()->to(site_url("content"));       ;
     }
 
     //metodo para registrar un nuevo usuario
@@ -116,8 +115,11 @@ class UserController extends BaseController {
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan
         echo view('UserViews/Registro', ["exito" => $exito, "errores" => $errores, "paginas"=>$listarPage]);
     }
+       
 
-    public function listar() {        
+    public function listar() {       
+        $this->comprobar_perfil();
+        
         //con la funcion findAll obtenemos todos los datos de la bd y se la asigna a una variable
         $listar = $this->instancia_usuarios->findAll();
         $listarPage = $this->instancia_paginas->findAll();

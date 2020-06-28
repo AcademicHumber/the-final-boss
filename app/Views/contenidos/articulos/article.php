@@ -54,17 +54,20 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
          <table >
          <hr>
         <tr>
-            <td><h5>Nombre de usuario</h5></td>
+            <td><h5><?php echo $comentario["nombre_usuario"];?></h5></td>
         </tr>
         <td><?php echo $comentario["created_at"];?></td>
         <tr>
             <td ><?php echo $comentario["cuerpo"];?></td> 
         </tr>
+        <?php
+        // Condicion para que solo el usuario que creo el comentario pueda eliminarlo
+        if ($_SESSION["id"] == $comentario["usuario"]){ ?>
          <tr>
-            <td> <?php echo anchor("content/deleteComment/".$comentario["id"], "Eliminar",["class"=>"btn btn-dark btn-sm"]);?></td>
+        <td> <?php echo anchor("content/deleteComment/".$comentario["id"], "Eliminar",["class"=>"btn btn-dark btn-sm"]); ?></td>
         </tr>
      
-<?php endforeach;?>
+<?php } endforeach;?>
         </table>
     </div>
 </div>
@@ -78,7 +81,7 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
     // un hidden que llevara el id del articulo
     echo form_hidden("cont[articulo]",$dato["id"]);
     // hidden que llevara el id del usuario
-    echo form_hidden("cont[usuario]","1");
+    echo form_hidden("cont[usuario]", $_SESSION["id"]);
     echo "<br>";
     echo form_submit("","Enviar Comentario",["class"=>"btn btn-dark"]);
     

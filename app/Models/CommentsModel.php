@@ -33,7 +33,16 @@ class CommentsModel extends Model{
     ];
     
     public function comentarios_del_articulo($id) {
-        return $this->where('articulo', $id)->findAll();
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT comentarios.id, comentarios.cuerpo, comentarios.created_at, comentarios.articulo, comentarios.usuario, user.nombre_usuario "
+                . "FROM comentarios "
+                . "INNER JOIN user "
+                . "ON comentarios.usuario=user.id "
+                . "WHERE comentarios.articulo=$id");
+        $resultado = $query->getResultArray();
+        $db->close();
+        return $resultado;
+        //return $this->where('articulo', $id)->findAll();
     }
     public function listar_comentarios() {
         $db = \Config\Database::connect();
@@ -52,4 +61,7 @@ class CommentsModel extends Model{
         $db->close();
         return $afectados;        
     }
+    public function obtener_usuario_que_comento(){
+    echo "SELECT comentarios.id, comentarios.cuerpo, comentarios.created_at, comentarios.articulo, comentarios.usuario, user.nombre_usuario FROM comentarios INNER JOIN user ON comentarios.usuario = user.id WHERE comentarios.articulo=23";
+    }    
 }

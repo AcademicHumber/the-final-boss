@@ -56,3 +56,16 @@ CRITICAL - 2020-06-26 11:41:15 --> syntax error, unexpected ')', expecting ']'
 #4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2020-06-26 14:05:05 --> Undefined index: nombre
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Views\common\basicheader.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 90, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('common/basichea...', Array, true)
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Views\contenidos\articulos\article.php(2): view('common/basichea...', Array)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('contenidos/arti...', Array, true)
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Controllers\Content.php(137): view('contenidos/arti...', Array)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->articulo('23')
+#8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}

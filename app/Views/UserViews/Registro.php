@@ -1,6 +1,7 @@
 <!–FORMULARIO PARA AÑADIR USUARIO–>
 <?php
 echo view("common/basicheader", ["titulo" => "Registro"]);
+echo form_open("");
 ?>
 <section class="content-header">
     </section>
@@ -22,6 +23,7 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
         </div>
 
                 <div class="card-body">
+                    <h5> <?php echo $exito;  ?></h5>
                   <div class="form-group">
                     <label>Nombre de Usuario</label>
                     <input type="text" class="form-control" name="user[nombre_usuario]" id="nombre_usuario" placeholder="Enter username" required="1" value="<?php set_value('nombre_usuario')?>">
@@ -87,11 +89,10 @@ echo view("common/basicheader", ["titulo" => "Registro"]);
                       <option value="contribuidor">Contribuidor</option>
                     </select>
                    
-                  </div>
-                        <h5> <?php echo $exito;  ?></h5>
+                  </div>                        
                   </div>
                   <div class="form-group">
-                              <button type="submit" class="btn btn-dark">Crear Cuenta</button>
+                      <button type="submit" class="btn btn-dark">Crear Cuenta</button>
                   </div>
                 </div>
           </div>
