@@ -139,13 +139,14 @@ class Content extends BaseController{
     function verarticulos(){
         
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $articulos = $this->listar($this->instancia_articulos);
+        $articulos = $this->instancia_articulos->listar_articulos();
         $paginas = $this->listar($this->instancia_paginas);
         
         return view("contenidos/articulos/showListOfArticles", ["datos" => $articulos, "paginas" => $paginas]);
     }
     
     public function deleteArticle($id){
+       $this->instancia_comentarios->where('articulo',$id)->delete();
        $this->instancia_articulos->delete($id);       
        return redirect()->to(site_url("content/verarticulos"));
     }

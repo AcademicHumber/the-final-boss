@@ -51,10 +51,10 @@ if (!empty($lista)) {
         <td>
    <?php 
 
-   echo anchor("UserController/editar?id=" . $listar["id"], "Edit",["class"=>"badge badge-secondary"]); ?>
+   echo anchor("UserController/editar?id=" . $listar["id"], "Editar",["class"=>"badge badge-secondary"]); ?>
            </td>
            <td>
-    <?php echo anchor("UserController/borrar/" . $listar["id"], "Delete",["class"=>"badge badge-secondary"]); ?>
+    <?php echo anchor("UserController/borrar/" . $listar["id"], "Eliminar",["class"=>"badge badge-secondary"]); ?>
         </td>
 
     </tbody>

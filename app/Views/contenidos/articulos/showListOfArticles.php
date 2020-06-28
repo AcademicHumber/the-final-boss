@@ -31,9 +31,9 @@ if (!empty($datos)) {
     <tr>
         <!-----PREG si habrá autor y categoria--->
         <th>Título</th>
-        <th>Ver </th>
-        <th>Editar</th>
-        <th>Eliminar</th>
+        <th>Autor</th>
+        <th>Categoría</th>        
+        <th>Acciones</th>        
         <th>Fecha de creación</th>
     </tr>
     <?php
@@ -42,9 +42,11 @@ if (!empty($datos)) {
         <tbody>
 
         <td><?php echo $dato["titulo"] ?></td>
-        <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?></td>
-        <td><?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?></td>
-        <td><?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>
+        <td><?php echo $dato["nombre"] ?></td>
+        <td><?php echo $dato["nombre_cat"] ?></td>
+        <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?>  
+        <?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?>  
+        <?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>        
         <td><?php echo $dato["created_at"]?></td>
 
     </tbody>
@@ -57,7 +59,7 @@ if (!empty($datos)) {
 else 
 {
 ?>
-<h3>No hay usuarios registrados</h3>
+<h3>No se han escrito entradas aun, escribe una!</h3>
 <?php
 }
 ?>

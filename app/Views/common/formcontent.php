@@ -9,7 +9,8 @@ print_r($exito);
         <tr>
             <td><label>Titulo de la publicación</label></td>
             <td>                            
-                <?php
+                <?php                         
+                
                 //input hidden que mandara el id del articulo, estara vacio si es crear
                 //si esta vacio no afecta al momento de guardar y se crea un registro nuevo en la BD
                 echo form_hidden("cont[id]", $dato["id"]);
@@ -77,7 +78,10 @@ print_r($exito);
                 echo $errores["cuerpo"];                
                 echo "</div>";
                 echo "</td>";
-                }        
+                }
+                
+                //Se almacena en un hidden la informacion del ultimo usuario que trabajo con el documento
+                echo form_hidden("cont[usuario_creador]", $_SESSION["id"]);    
                 ?>
             </td>
         </tr>         
