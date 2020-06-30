@@ -5,7 +5,7 @@ class Blog extends Content
 	public function index()
 	{
            $paginas = $this->listar($this->instancia_paginas);
-           $articulos = $this->listar($this->instancia_articulos);
+           $articulos = $this->instancia_articulos->listar_articulos();
            
            return view("frontend/articulos", ["articulos" => $articulos, "paginas" => $paginas]);           
 	}

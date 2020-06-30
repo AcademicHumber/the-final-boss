@@ -68,7 +68,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
-      <span class="brand-text font-weight-light">Proyecto Final</span>
+      <span class="brand-text font-weight-light">CMS in CodeIgniter</span>
     </a>
 
     <!-- Sidebar -->

@@ -67,8 +67,9 @@ class UserController extends BaseController {
     }
 
     //metodo para registrar un nuevo usuario
-    public function registro() {
-
+    public function registro() {        
+        $this->comprobar_perfil();
+        
         helper("form");
         //Variables donde se cargaran los errores si es que hubiesen y exito
         $errores = [];
@@ -130,6 +131,7 @@ class UserController extends BaseController {
     }
 
     public function editar() {     
+        $this->comprobar_perfil();
         
         //se crea las variables para almacenar el éxito y los errores
         $errores = [];
@@ -167,7 +169,8 @@ class UserController extends BaseController {
         echo view('UserViews/editar', ["modificar" => $usuario, "exito" => $exito, "errores" => $errores, "paginas" => $listarPage]);
     }
 
-    public function borrar($id) {       
+    public function borrar($id) {
+        $this->comprobar_perfil();
 
         //se obtiene el metodo borrar del usuario model y se redirecciona este o no este el id de usuario
         //(Luego agregar mensaje de no se encontró el usuario_ OJO)
@@ -180,7 +183,7 @@ class UserController extends BaseController {
     }
 
     //metodo para ingresar un usuario previamente registrado
-    public function index() {
+    public function ingresar() {
 
         helper("form");
         //Variables donde se cargaran los errores si es que hubiesen y exito
@@ -293,7 +296,9 @@ class UserController extends BaseController {
         //se ejecuta la vista y se adicionan tambien las variables de exito y errores con lo que contengan
         return view('UserFrontend/RegistroFront', ["exito" => $exito, "errores" => $errores, "paginas" => $listarPage]);
     }
-
+    
+    //Funciones por implementar en el futuro
+    
     public function recuperarContra() {
         echo view('UserFrontend/RecupContra');
     }

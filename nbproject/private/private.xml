@@ -3,14 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Models/CommentsModel.php</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/frontend/frontendheader.php</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/frontend/frontendfooter.php</file>
             <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Controllers/Content.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/contenidos/comentarios/showListOfComments.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/UserViews/lista.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/contenidos/articulos/article.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Models/ContentModel.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/contenidos/articulos/showListOfArticles.php</file>
-            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Models/UsuarioModel.php</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/public/ruft/index.html</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/frontend/articulos.php</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Controllers/Blog.php</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/public/css/main.css</file>
+            <file>file:/C:/Users/ahft_/Documents/Tareas/Universidad/UDABOL/Investigacion%20Operativa/XAMPP/htdocs/the-final-boss/app/Views/common/basicheader.php</file>
         </group>
     </open-files>
 </project-private>

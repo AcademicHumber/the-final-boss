@@ -1,0 +1,3 @@
+CRITICAL - 2020-06-29 18:42:17 --> Cannot redeclare App\Controllers\UserController::Registro()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

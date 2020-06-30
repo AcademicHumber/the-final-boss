@@ -19,6 +19,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('adminlte'); ?>/dist/js/demo.js"></script>
 
+
 <script>
 
    CKEDITOR.replace( 'editor1' ,{           
