@@ -32,6 +32,6 @@ echo view("common/formheader", ["titulo" => "Editar artículo"])
     	</div>
     </div>
 </section>   
+
 <?php
-echo view("common/formfooter")
-?>
+echo view("common/formfooter");

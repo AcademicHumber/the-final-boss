@@ -4,45 +4,46 @@
 print_r($exito);
 echo form_open("");
 echo form_hidden("cont[id]", $dato["id"]);
-echo "<p>Nombre de la categoría:</p>";
+
+echo "<br>";
+echo "<p><strong>Nombre de la categoría</strong></p>";
+echo form_input("cont[nombre]", $dato["nombre"],['class'=> 'form-control', 'placeholder' => 'Category name']);
 // condicional para los errrores
 if (!empty($errores["nombre"])) {
-    ?>
-<?php
-    echo "<div class='text-danger'>";
+    echo "<div class='formerror text-danger'>";
+
     echo $errores["nombre"];
     echo "</div>";
     
 }
-echo form_input("cont[nombre]", $dato["nombre"]);
-echo "<br>";
 
-echo "<p>Slug de la categoría:</p>";
+echo '<br>';
+echo "<p><strong>Slug de la categoría:</strong></p>";
+echo form_input("cont[slug]", $dato["slug"], ['class'=> 'form-control', 'placeholder' => 'Category slug']);
+
+echo "<p class='text-muted'>El «slug» es la versión amigable de la URL para el nombre."; echo "<br>";
+echo " Suele estar en minúsculas y contiene solo letras, números y guiones.</p>";
+
+// condicional para los errrores
 if (!empty($errores["slug"])) {   
-    echo "<div class='text-danger'>";
+    echo "<div class='formerror text-danger'>";
     echo $errores["slug"];
     echo "</div>";
 }
-echo form_input("cont[slug]", $dato["slug"]);
+
 echo "<br>";
-echo "El «slug» es la versión amigable de la URL para el nombre."
- . " Suele estar en minúsculas y contiene solo letras, números y guiones.";
-echo "<br>";
+echo "<p><strong>Descripción de la categoria </strong></p>";
+echo form_textarea("cont[descripcion]", $dato["descripcion"],['class'=> 'form-control'], ["required" => 1]);
+
 // condicional para los errrores
 
-echo "<p> Descripción de la categoria </p>";
-if (!empty($errores["text-danger"])) {   
-    echo "<div class='formerror'>";
+if (!empty($errores["descripcion"])) { echo "<div class='formerror text-danger'>";
     echo $errores["descripcion"];
     echo "</div>";
 }
-echo form_textarea("cont[descripcion]", $dato["descripcion"], ["required" => 1]);
-echo "<br>";
-// condicional para los errrores
-
 echo "<br><br>";
-echo form_submit("", "Actualizar");
+echo form_submit("", "Actualizar", ['class'=> 'btn btn-dark']);
 echo "<br>";
 echo "<br>";
-echo anchor("content/vercategorias", "Ver todas las categorias");
-?>
+echo anchor("content/vercategorias", "Ver todas las categorias", ['class' => 'card-link']);
+

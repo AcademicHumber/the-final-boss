@@ -105,7 +105,9 @@ print_r($exito);
 <?php
 // Cerrar formulario
 echo form_close();
-echo anchor("content/verarticulos", "Ir a los articulos",["class"=>"badge badge-dark"]);
+
+echo anchor("content/verarticulos", "Ir a los articulos", ['class' => 'card-link']);
+
 /*echo "<pre>";
 print_r($_POST);
 print_r($dato);
