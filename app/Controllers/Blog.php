@@ -11,6 +11,8 @@ class Blog extends BaseController
            return view("frontend/articulos", ["articulos" => $articulos, "paginas" => $paginas]);           
 	}
 
-	
+        public function articulo($id){
+            
+        }
 
 }

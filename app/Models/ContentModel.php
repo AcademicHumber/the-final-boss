@@ -29,7 +29,7 @@ class ContentModel extends Model{
     //Reglas de validación
     protected $validationRules = [
         'titulo' => 'required|min_length[3]|max_length[40]',
-        'encabezado' => 'required|min_length[3]|max_length[50]',
+        'encabezado' => 'required|min_length[3]|max_length[300]',
         'cuerpo' => 'required|min_length[20]'        
     
         ];

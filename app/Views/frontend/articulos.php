@@ -130,10 +130,6 @@ echo view("frontend/frontendheader");
         </div>
     </div>
 </div>
-
-
-
-
 <?php
 echo view("frontend/frontendfooter");
 ?>
