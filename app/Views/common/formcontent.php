@@ -33,9 +33,9 @@ print_r($exito);
         </tr>
         <tr>
             <td><label>Encabezado de la publicación </label></td>
-            <td>
+            <td>               
                 <?php
-                echo form_input("cont[encabezado]", $dato["encabezado"], ["required" => 1]);
+                echo form_textarea("cont[encabezado]", $dato["encabezado"], ["style" => "height: 71px", "required" => 1]);
                 
                 // condicional para los errrores
                 if (!empty($errores["encabezado"])){

@@ -32,10 +32,7 @@ echo view("frontend/frontendheader");
                             <div class="post-meta">
                                 <div class="meta-head">
                                     <a href="#"><?php echo $dato["titulo"]?></a>
-                                </div>
-                                <div class="meta-head">
-                                    <a href="#"><?php echo $dato["encabezado"] ?></a>
-                                </div>
+                                </div>                                
                                 <div class="meta-details">
                                     <ul>
                                         <li>
@@ -60,16 +57,7 @@ echo view("frontend/frontendheader");
                                 </div>
                             </div>
                         </div>
-                        <p><?php
-                        // Condicionante para que se vea solo una
-                        // parte del cuerpo cuando este es muy largo
-
-                        if (strlen($dato["cuerpo"]) > 300) {
-                            echo substr($dato["cuerpo"], 0, 300) . "...";
-                        } else {
-                            echo $dato["cuerpo"];                            
-                        }
-                        ?></p>
+                        <p><?php echo $dato["encabezado"] ?></p>
                         <div class="post-btn">
                             <a href="<?php echo base_url("content/articulo/".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
                         </div>
@@ -83,57 +71,68 @@ echo view("frontend/frontendheader");
             </div>
         </div>   
 </section>
-<!-- Start Post Silder Area -->
-<section class="content-header">
-</section>
+<!-- End Post Silder Area -->
 
-<!-- Main content -->
-<section class="content">
-
-    <!-- Default box -->
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Artículos</h3>
-
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                    <i class="fas fa-minus"></i></button>
-            </div>
-        </div>
-
-        <div class="card-body">
-
-            <div class="caja" >
-
-                <?php
-                foreach ($articulos as $dato) {
-                    ?>
-                    <h3 style="line-height: 35px;"><?php echo $dato["titulo"] ?></h3>
-                    <h5 style="line-height: 35px;"><?php echo $dato["encabezado"] ?></h5>
-                    <div>
-                        <?php
-                        // Condicionante para que se vea solo una
-                        // parte del cuerpo cuando este es muy largo
-
-                        if (strlen($dato["cuerpo"]) > 500) {
-                            echo substr($dato["cuerpo"], 0, 500) . "...";
-                        } else {
-                            echo $dato["cuerpo"];
-                            echo "";
-                        }
-                        ?>
-                    </div> 
-
+<!-- Start main body Area -->
+<div class="main-body section-gap mt--30">
+    <div class="container box_1170">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8 post-list">
+                <section class="post-area">
                     <?php
-                    echo anchor("content/articulo/" . $dato["id"], "Ver más", ["class" => "badge badge-secondary"]);
-                    echo "<hr>";
-                }
-                ?>
-
+                    foreach ($articulos as $dato) {
+                        ?>
+                        <div class="single-post-item">
+                            <figure>
+                                <img class="post-img img-fluid" src="img/posts/p1.jpg" alt="">
+                            </figure>
+                            <h3>
+                                <a href="blog-details.html"><?php echo $dato["titulo"] ?></a>
+                            </h3>
+                            <p><?php echo $dato["encabezado"] ?></p>
+                            <a href="<?php echo base_url("blog/articulo/".$dato["id"]) ?>" class="primary-btn text-uppercase mt-15">continue Reading</a>
+                            <div class="post-box">
+                                <div class="d-flex">
+                                    <div>
+                                        <a href="#">
+                                            <img src="img/author/a1.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-meta">
+                                        <div class="meta-head">
+                                            <a href="#"><?php echo $dato["nombre"] ?></a>
+                                        </div>
+                                        <div class="meta-details">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="lnr lnr-calendar-full"></span>
+                                                        <?php echo $dato["created_at"] ?>
+                                                    </a>
+                                                </li>                            
+                                                <li>
+                                                    <a href="#">
+                                                        <span class="lnr lnr-star"></span>
+                                                        <?php echo $dato["nombre_cat"] ?>
+                                                    </a>
+                                                </li>                            
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                    </section>
             </div>
         </div>
     </div>
-</section>
+</div>
+
+
+
 
 <?php
 echo view("frontend/frontendfooter");

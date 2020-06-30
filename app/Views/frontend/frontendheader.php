@@ -49,11 +49,13 @@
 								<li><a href="">Categoría 3</a></li>
 							</ul>
 						</li>					
-						<li class="menu-has-children"><a href="">Pages</a>
+						<li class="menu-has-children"><a href="">Páginas</a>
 							<ul>
-								<li><a href="">Página 1</a></li>
-								<li><a href="">Página 2</a></li>
-								<li><a href="">Página 3</a></li>
+								<?php
+                                                                foreach ($paginas as $pagina){
+                                                                    echo "<li><a href=''>".$pagina["titulo"]."</a></li>";
+                                                                }
+                                                                ?>
 							</ul>
 						</li>						
 						<li><a href="">Contacto</a></li>
