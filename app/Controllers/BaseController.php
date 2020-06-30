@@ -71,6 +71,7 @@ class BaseController extends Controller
                      ];
                      $this->session->set($data);
                  }                
+                
                  
 	}
         
