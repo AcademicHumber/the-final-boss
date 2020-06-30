@@ -1,18 +1,18 @@
 <?php
 echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
 ?> 
-  
-<div class="caja">
 
-    <h1><?php echo "Categoría: ".$datos[0]["nombre"] ?></h1>    
-    
-      
+<section class="content-header"></section>
+<section class="content">
+<div class="card">
+    <div class="card-header">
+    <h1><?php echo "Categoría: ".$datos[0]["nombre"] ?></h1> 
     <h3>Articulos de la categoría</h3> 
+    </div>
+    <div class="card-body">
     <?php
     foreach ($datos as $dato) {
         ?>
-        
-            <hr>
             <h3><?php echo $dato["titulo"] ?></h3>
             <h4><?php echo $dato["encabezado"] ?></h4>
             <div>
@@ -29,14 +29,17 @@ echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
                 ?>
             </div> 
                 <?php
-                echo anchor("content/articulo/" . $dato["id"], "Ver más");
-           
+                echo '<h5>';
+                echo anchor("content/articulo/" . $dato["id"], "Ver más", ['class' => 'card-link']);
+                echo '</h5>';
             }
             //echo "post";
             //print_r($_POST);
             // print_r($datos);
             ?>
+    </div>
 </div>
+</section>
 <?php
 echo view("common/basicfooter")
 ?>

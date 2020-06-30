@@ -3,7 +3,7 @@ echo view("common/formheader", ["titulo" => "Editar categoría"])
 ?>
 <section class="container-fluid bg bg-white"> 
 <section class="content-header">
-<div class="col-md-6 card">
+<div class="col-md-10 card">
     <div class="card-header">
       <h1>Editar categoría</h1>
     </div>
