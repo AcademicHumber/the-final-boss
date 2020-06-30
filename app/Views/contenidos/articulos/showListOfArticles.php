@@ -10,7 +10,9 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Entradas</h3>
+          <div class="card-title">
+          <h4>Entradas</h4>
+        </div>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -29,9 +31,9 @@ if (!empty($datos)) {
     <tr>
         <!-----PREG si habrá autor y categoria--->
         <th>Título</th>
-        <th>Ver </th>
-        <th>Editar</th>
-        <th>Eliminar</th>
+        <th>Autor</th>
+        <th>Categoría</th>        
+        <th>Acciones</th>        
         <th>Fecha de creación</th>
     </tr>
     <?php
@@ -40,20 +42,24 @@ if (!empty($datos)) {
         <tbody>
 
         <td><?php echo $dato["titulo"] ?></td>
-        <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?></td>
-        <td><?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?></td>
-        <td><?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>
+        <td><?php echo $dato["nombre"] ?></td>
+        <td><?php echo $dato["nombre_cat"] ?></td>
+        <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?>  
+        <?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?>  
+        <?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>        
         <td><?php echo $dato["created_at"]?></td>
 
     </tbody>
        <?php
 }
 ?>
-</table>
+  </table>
 <?php  
-} else {
+} 
+else 
+{
 ?>
-<h3>No hay usuarios registrados</h3>
+<h3>No se han escrito entradas aun, escribe una!</h3>
 <?php
 }
 ?>

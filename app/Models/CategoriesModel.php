@@ -28,7 +28,8 @@ class CategoriesModel extends Model{
     protected $validationMessages = [       
         'nombre' => [            
             'max_length' => 'El nombre de categoría es muy largo',
-            'required' => 'El nombre es requerido'            
+            'required' => 'El nombre es requerido',
+            'is_unique' => 'El nombre de categoría tiene que ser único'
         ],
         'descripcion' => [            
             'required' => 'La descripción es requerida'            

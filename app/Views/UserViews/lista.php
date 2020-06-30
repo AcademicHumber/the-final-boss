@@ -10,7 +10,9 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Usuarios</h3>
+          <div class="card-title">
+          <h4>Usuarios</h4>
+        </div>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -49,10 +51,10 @@ if (!empty($lista)) {
         <td>
    <?php 
 
-   echo anchor("UserController/editar?id=" . $listar["id"], "Edit"); ?>
+   echo anchor("UserController/editar?id=" . $listar["id"], "Editar",["class"=>"badge badge-secondary"]); ?>
            </td>
            <td>
-    <?php echo anchor("UserController/borrar/" . $listar["id"], "Delete"); ?>
+    <?php echo anchor("UserController/borrar/" . $listar["id"], "Eliminar",["class"=>"badge badge-secondary"]); ?>
         </td>
 
     </tbody>

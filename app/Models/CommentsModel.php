@@ -33,16 +33,27 @@ class CommentsModel extends Model{
     ];
     
     public function comentarios_del_articulo($id) {
-        return $this->where('articulo', $id)->findAll();
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT comentarios.id, comentarios.cuerpo, comentarios.created_at, comentarios.articulo, comentarios.usuario, user.nombre_usuario "
+                . "FROM comentarios "
+                . "INNER JOIN user "
+                . "ON comentarios.usuario=user.id "
+                . "WHERE comentarios.articulo=$id");
+        $resultado = $query->getResultArray();
+        $db->close();
+        return $resultado;
+        //return $this->where('articulo', $id)->findAll();
     }
     public function listar_comentarios() {
         $db = \Config\Database::connect();
         // consulta para obtener los titulos de los articulos por comentario
         $query = $db->query( "SELECT comentarios.id, contenidos.titulo,
             comentarios.cuerpo, comentarios.created_at, comentarios.updated_at
-            , comentarios.usuario, comentarios.articulo
+            , comentarios.usuario, comentarios.articulo, user.nombre
                   FROM comentarios
-                  INNER JOIN contenidos ON comentarios.articulo=contenidos.id");
+                  INNER JOIN contenidos ON comentarios.articulo=contenidos.id 
+                  INNER JOIN user ON comentarios.usuario=user.id");
+        
         return $query->getResultArray();
     }
     public function actualizar_cuerpo($id, $cuerpo){
@@ -52,4 +63,7 @@ class CommentsModel extends Model{
         $db->close();
         return $afectados;        
     }
+    public function obtener_usuario_que_comento($id){
+    echo "SELECT comentarios.id, comentarios.cuerpo, comentarios.created_at, comentarios.articulo, comentarios.usuario, user.nombre_usuario FROM comentarios INNER JOIN user ON comentarios.usuario = user.id WHERE comentarios.articulo=$id";
+    }    
 }

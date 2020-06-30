@@ -33,15 +33,19 @@
                            </div> 
                        </div>                                               
                     </div>
+                    <?php
+                    /*
                     <div class="row">
                         <div class="col-sm-10">                           
-                                <?php
+                                
                                 echo "<br>";
                                 echo anchor("UserController/recuperarContra", "¿Olvidaste tu contraseña?");
-                                ?>                           
+                                                          
                         </div>
                     </div>
-                </div>
+                </div>                   
+                     */
+                ?>
                  <div class="card-footer">
                      <div class="row">
                          <div class="col">

@@ -60,6 +60,26 @@ class BaseController extends Controller
                  $this->instancia_paginas = new PagesModel();
                  $this->instancia_comentarios = new CommentsModel();
                  $this->instancia_categorias = new CategoriesModel();
+                 
+                 if (!isset($_SESSION["nombre"])){
+                     $data = [
+                        "id" => "",
+                        "username" => "",
+                        "nombre" => "",
+                        "correo" => "",
+                        "perfil" => ""
+                     ];
+                     $this->session->set($data);
+                 }                
+                 
 	}
+        
+     // Funcion que se encarga de evitar que los usuarios no autorizados
+        // entren al backend
+        public function comprobar_perfil(){            
+            if ($_SESSION["perfil"] == "" || $_SESSION["perfil"] == "suscriptor"){                
+                exit(view("UserViews/Login", ["exito" => ""]));
+            }
+        }
 
 }

@@ -1,0 +1,10 @@
+CRITICAL - 2020-06-30 10:05:41 --> Undefined index: Created_at
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Views\frontend\articulos.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 105, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('frontend/articu...', Array, true)
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Controllers\Blog.php(10): view('frontend/articu...', Array)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Blog->index()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

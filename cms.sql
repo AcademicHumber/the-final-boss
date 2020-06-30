@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2020 at 06:58 PM
+-- Generation Time: Jun 28, 2020 at 07:26 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -57,15 +57,8 @@ CREATE TABLE `comentarios` (
   `created_at` datetime NOT NULL COMMENT 'fecha de creación del comentario',
   `updated_at` datetime NOT NULL COMMENT 'Fecha y hora de actualización del comentario',
   `articulo` int(11) NOT NULL COMMENT 'Llave foránea que determina a que artículo pertenece el comentario',
-  `usuario` int(11) NOT NULL
+  `usuario` int(11) NOT NULL COMMENT 'Llave foranea al usuario que creo el articulo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `comentarios`
---
-
-INSERT INTO `comentarios` (`id`, `cuerpo`, `created_at`, `updated_at`, `articulo`, `usuario`) VALUES
-(18, 'ahora si funciona', '2020-06-22 21:30:03', '2020-06-22 21:30:03', 21, 1);
 
 -- --------------------------------------------------------
 
@@ -80,15 +73,9 @@ CREATE TABLE `contenidos` (
   `cuerpo` longtext NOT NULL COMMENT 'Cuerpo de la página',
   `created_at` datetime NOT NULL DEFAULT current_timestamp() COMMENT 'Fecha y hora de creacion del articulo',
   `updated_at` datetime NOT NULL DEFAULT current_timestamp() COMMENT 'Fecha y hora de actualización del articulo',
-  `categoria` int(11) NOT NULL
+  `categoria` int(11) NOT NULL,
+  `usuario_creador` int(11) NOT NULL COMMENT 'Llave foranea que apunta al creador del articulo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Tabla que almacena todos los articulos publicados.';
-
---
--- Dumping data for table `contenidos`
---
-
-INSERT INTO `contenidos` (`id`, `titulo`, `encabezado`, `cuerpo`, `created_at`, `updated_at`, `categoria`) VALUES
-(21, 'La historia', 'El encabezado ', '<p>The other way to set the validation message to fields by functions,</p>\r\n\r\n<p><code>setValidationMessage</code>(<em>$field</em>,&nbsp;<em>$fieldMessages</em>)</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Parameters:</th>\r\n			<td>\r\n			<ul>\r\n				<li><strong>$field</strong>&nbsp;(<em>string</em>) &ndash;</li>\r\n				<li><strong>$fieldMessages</strong>&nbsp;(<em>array</em>) &ndash;</li>\r\n			</ul>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>This function will set the field wise error messages.</p>\r\n\r\n<p>Usage example:</p>\r\n\r\n<pre>\r\n$fieldName = &#39;name&#39;;\r\n$fieldValidationMessage = [\r\n    &#39;required&#39; =&gt; &#39;Your name is required here&#39;,\r\n];\r\n$model-&gt;setValidationMessage($fieldName, $fieldValidationMessage);\r\n</pre>\r\n\r\n<p><code>setValidationMessages</code>(<em>$fieldMessages</em>)</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Parameters:</th>\r\n			<td>\r\n			<ul>\r\n				<li><strong>$fieldMessages</strong>&nbsp;(<em>array</em>) &ndash;</li>\r\n			</ul>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>This function will set the field messages.</p>\r\n\r\n<p>Usage example:</p>\r\n\r\n<pre>\r\n$fieldValidationMessage = [\r\n    &#39;name&#39; =&gt; [\r\n        &#39;required&#39;   =&gt; &#39;Your baby name is missing.&#39;,\r\n        &#39;min_length&#39; =&gt; &#39;Too short, man!&#39;,\r\n    ],\r\n];\r\n$model-&gt;setValidationMessages($fieldValidationMessage);\r\n</pre>\r\n\r\n<p>Now, whenever you call the&nbsp;<code>insert()</code>,&nbsp;<code>update()</code>, or&nbsp;<code>save()</code>&nbsp;methods, the data will be validated. If it fails, the model will return boolean&nbsp;<strong>false</strong>. You can use the&nbsp;<code>errors()</code>&nbsp;method to retrieve the validation errors:</p>\r\n\r\n<pre>\r\nif ($model-&gt;save($data) === false)\r\n{\r\n    return view(&#39;updateUser&#39;, [&#39;errors&#39; =&gt; $model-&gt;errors()];\r\n}\r\n</pre>\r\n\r\n<p>This returns an array with the field names and their associated errors that can be used to either show all of the errors at the top of the form, or to display them individually:</p>\r\n\r\n<pre>\r\n&lt;?php if (! empty($errors)) : ?&gt;\r\n    &lt;div class=&quot;alert alert-danger&quot;&gt;\r\n    &lt;?php foreach ($errors as $field =&gt; $error) : ?&gt;\r\n        &lt;p&gt;&lt;?= $error ?&gt;&lt;/p&gt;\r\n    &lt;?php endforeach ?&gt;\r\n    &lt;/div&gt;\r\n&lt;?php endif ?&gt;\r\n</pre>\r\n\r\n<p>If you&rsquo;d rather organize your rules and error messages within the Validation configuration file, you can do that and simply set&nbsp;<code>$validationRules</code>&nbsp;to the name of the validation rule group you created:</p>\r\n\n   ', '2020-06-22 17:11:01', '2020-06-22 17:11:01', 3);
 
 -- --------------------------------------------------------
 
@@ -120,7 +107,7 @@ INSERT INTO `paginas` (`id`, `titulo`, `encabezado`, `cuerpo`, `created_at`, `up
 --
 
 CREATE TABLE `user` (
-  `id` int(10) UNSIGNED NOT NULL COMMENT 'identificador de usuario',
+  `id` int(11) NOT NULL COMMENT 'identificador de usuario',
   `nombre_usuario` varchar(50) NOT NULL COMMENT 'username',
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
@@ -136,11 +123,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nombre_usuario`, `nombre`, `apellido`, `correo`, `contrasena`, `perfil`, `created_at`, `updated_at`) VALUES
-(64, 'Jeniffer', 'Jeniffer Alexi', 'Balcazar', 'jeniffer@gmail.com', '$2y$10$xfW0e1FWOmfS6dfL1Y4Ph.rGmQ.ylKpJyCi/NQsLmQrgYC6rmCzXu', 'editor', '2020-06-22 19:15:05', '2020-06-22 19:15:32'),
-(65, 'Dariana', 'Dariana', 'Martinez', 'dariana@gmail.com', '$2y$10$8RBWkF13XzSsF0Hd9W11he9v4J8vLyFosv97stbzhkrvV2KP.gWqm', 'administrador', '2020-06-22 19:15:20', '2020-06-22 19:15:20'),
-(66, 'Brisaa', 'Brisaa', 'Gutierrez', 'briza@gmail.com', '$2y$10$6fgYu0jorF9yNXqysyRAR.My3P1a4IrhPPMRR6v1FfudpR31LNhIO', 'suscriptor', '2020-06-22 19:17:30', '2020-06-22 19:17:30'),
-(67, 'Adrian', 'Adrian', 'Fernandez', 'adrian@gmail.com', '$2y$10$c9gIKdCq.vIvHzu7hd8KzetSmVJ.QuHlkNrvmHQem.y9Qaej5smru', 'suscriptor', '2020-06-22 19:19:49', '2020-06-22 19:19:49'),
-(68, 'admin', 'Adrian', 'carlisto', 'ahft_2000@hotmail.com', '$2y$10$LtMzHX85MVY1s.kpunL61epPbtdE0B5GgE6qQJtjIQ.qufZZ5.gDa', 'suscriptor', '2020-06-23 11:33:49', '2020-06-23 11:33:49');
+(74, 'usuariopromedio', 'sadsad', 'wqewqeqw', 'usuariopromedio@usuario.com', '$2y$10$qB8tUxrnFCnXwkA7HVUEAel15LhIOBbHpJXpozYHQZqtagZgtDa5y', 'administrador', '2020-06-27 11:20:30', '2020-06-27 11:20:30'),
+(75, 'Administrador', 'admin', 'admin', 'admin@admin.com', '$2y$10$CxPJbh0WqCekvAB11a0GaOMHp/DkteE9vNCkMbPiWTpHy4kCQIMva', 'administrador', '2020-06-27 11:25:52', '2020-06-27 11:25:52'),
+(76, 'suscriptor', 'sus', 'criptor', 'suscriptor@suscriptor.com', '$2y$10$iweoXTCX9H2mdZsHISEKkuH0n7LnNlMH/i9R8imPBk5KMskzJAc9y', 'suscriptor', '2020-06-27 14:55:18', '2020-06-27 14:55:18');
 
 --
 -- Indexes for dumped tables
@@ -157,14 +142,16 @@ ALTER TABLE `categorias`
 --
 ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `articulo_comentario` (`articulo`);
+  ADD KEY `articulo_comentario` (`articulo`),
+  ADD KEY `comentario_user` (`usuario`);
 
 --
 -- Indexes for table `contenidos`
 --
 ALTER TABLE `contenidos`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `foreign_category` (`categoria`);
+  ADD KEY `foreign_category` (`categoria`),
+  ADD KEY `usuario_articulo` (`usuario_creador`);
 
 --
 -- Indexes for table `paginas`
@@ -192,13 +179,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT for table `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único de cada comentario', AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único de cada comentario', AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `contenidos`
 --
 ALTER TABLE `contenidos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de contenido', AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador de contenido', AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `paginas`
@@ -210,7 +197,7 @@ ALTER TABLE `paginas`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'identificador de usuario', AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'identificador de usuario', AUTO_INCREMENT=77;
 
 --
 -- Constraints for dumped tables
@@ -220,13 +207,15 @@ ALTER TABLE `user`
 -- Constraints for table `comentarios`
 --
 ALTER TABLE `comentarios`
-  ADD CONSTRAINT `articulo_comentario` FOREIGN KEY (`articulo`) REFERENCES `contenidos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `articulo_comentario` FOREIGN KEY (`articulo`) REFERENCES `contenidos` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `comentario_user` FOREIGN KEY (`usuario`) REFERENCES `user` (`id`);
 
 --
 -- Constraints for table `contenidos`
 --
 ALTER TABLE `contenidos`
-  ADD CONSTRAINT `foreign_category` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`id`);
+  ADD CONSTRAINT `foreign_category` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `usuario_articulo` FOREIGN KEY (`usuario_creador`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

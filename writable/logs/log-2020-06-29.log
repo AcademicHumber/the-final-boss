@@ -1,3 +1,4 @@
+
 CRITICAL - 2020-06-29 22:09:03 --> Undefined index: nombre
 #0 C:\xampp\htdocs\the-final-boss\app\Views\common\formheader.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 85, Array)
 #1 C:\xampp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xampp\\htdocs...')
@@ -43,3 +44,4 @@ CRITICAL - 2020-06-29 23:31:14 --> syntax error, unexpected ')'
 #4 C:\xampp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+
