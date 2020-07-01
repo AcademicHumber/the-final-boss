@@ -59,8 +59,25 @@
                                                                 ?>
 							</ul>
 						</li>						
-						<li><a href="">Contacto</a></li>
+						<li><a href="">Contacto</a> ||</li>
+                                                <?php
+                                                if (empty($_SESSION["username"])){
+                                                    echo "<li><a href='".base_url("UserController/ingresar")."'>Iniciar Sesion</a></li>";
+                                                }
+                                                else{
+                                                    ?>
+                                                  <li class="menu-has-children"><a href=""><?php echo $_SESSION["username"]?></a>
+							<ul>
+                                                            <li><a href="<?php echo base_url("UserController/ingresar")?>">Salir</a></li>								
+							</ul>
+                                                    </li>  
+                                                <?php
+                                                }
+                                                ?>
+                                                
+                                                
 					</ul>
+                                    
 				</nav>
 			</div>
 		</div>

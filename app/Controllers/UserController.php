@@ -227,7 +227,7 @@ class UserController extends BaseController {
                 ];
                 $this->session->set($usuario);
                 //se redirecciona al frontend
-                return redirect()->to('frontend');
+                return redirect()->to(site_url('blog'));
             } else {
                 //sino se manda un mensaje de usuario no valido y los errores
                 $exito = "Usuario no válido";
@@ -241,14 +241,7 @@ class UserController extends BaseController {
         //se llama a la vista de login y se le pasa las variables de exito y error para las validaciones
         echo view('UserFrontend/loginFront', ["exito" => $exito, "errores" => $errores]);
     }
-
-    //metodo donde se redirecciona si el usuario ingresado en el login es válido
-    public function frontend() {
-        //cargar paginas para la vista
-        //$paginas = $this->listar($this->instancia_paginas);
-        //solo devuelve la vista del frontend
-        return view('UserFrontend/frontend');
-    }
+   
 
     //metodo para registrar un nuevo usuario
     public function registroFrontend() {

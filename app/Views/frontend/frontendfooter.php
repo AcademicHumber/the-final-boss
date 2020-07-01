@@ -20,7 +20,7 @@
                     
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget instafeed">
                     <h6 class="footer_title">Nosotros</h6>
                     <ul class="list instafeed d-flex flex-wrap">
@@ -31,15 +31,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget f_social_wd">
-                    <h6 class="footer_title">Redes Sociales</h6>
+                    <h6 class="footer_title">Encuentranos en github!</h6>
                     <p>Siguenos!</p>
-                    <div class="f_social">
-                        <a href="https://github.com/jenifferbalcazar"><i class="lnr lnr-star"></i>Jeniffer</a>
-                        <a href="https://github.com/Dariana-Martinez"><i class="lnr lnr-smile"></i>Dariana</a>
-                        <a href="https://github.com/NightFox020"><i class="lnr lnr-lighter"></i>Enrique</a>
-                        <a href="https://github.com/AcademicHumber"><i class="lnr lnr-rocket"></i>Humberto</a>
+                    <div class="f_social col-10">
+                        <a href="https://github.com/jenifferbalcazar"><i class="lnr lnr-star"></i>Jeniffer</a> 
+                        <a href="https://github.com/Dariana-Martinez"><i class="lnr lnr-smile"></i>Dariana</a> 
+                        <a href="https://github.com/NightFox020"><i class="lnr lnr-lighter"></i>Enrique</a> 
+                        <a href="https://github.com/AcademicHumber"><i class="lnr lnr-rocket"></i>Humberto</a> 
                     </div>
                 </div>
             </div>
