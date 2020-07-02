@@ -22,8 +22,26 @@ echo form_open("");
           </div>
         </div>
 
-                <div class="card-body">
-                    <h5> <?php echo $exito;  ?></h5>
+                <div class="card-body col-6">
+                  <?php
+                   if ($exito=="El usuario se registró correctamente") { ?>
+                         <p class="alert alert-success alert-dismissable" >
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <?php
+                                  echo $exito;
+                             }
+                             ?>
+                          </p>
+                      <?php 
+                      if ($exito=="Hubo problemas para modificar al usuario"){
+                          ?>
+                            <p class="alert alert-danger alert-dismissable" >
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <?php
+                                  echo $exito;
+                             }
+                             ?>
+                          </p>
                   <div class="form-group">
                     <label>Nombre de Usuario</label>
                     <input type="text" class="form-control" name="user[nombre_usuario]" id="nombre_usuario" placeholder="Enter username" required="1" value="<?php set_value('nombre_usuario')?>">
@@ -89,11 +107,13 @@ echo form_open("");
                       <option value="contribuidor">Contribuidor</option>
                     </select>
                    
-                  </div>                        
-                  </div>
-                  <div class="form-group">
+                  </div> 
+                  <br>     
+                     <div class="form-group">
                       <button type="submit" class="btn btn-dark">Crear Cuenta</button>
+                  </div>                  
                   </div>
+               
                 </div>
           </div>
 

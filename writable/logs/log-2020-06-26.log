@@ -1,3 +1,4 @@
+
 CRITICAL - 2020-06-26 10:37:19 --> Undefined index: nombre
 #0 C:\xamppp\htdocs\the-final-boss\app\Views\common\basicheader.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xamppp\\htdoc...', 84, Array)
 #1 C:\xamppp\htdocs\the-final-boss\system\View\View.php(246): include('C:\\xamppp\\htdoc...')
@@ -68,4 +69,5 @@ CRITICAL - 2020-06-26 14:05:05 --> Undefined index: nombre
 #8 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
 #9 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+
 #11 {main}

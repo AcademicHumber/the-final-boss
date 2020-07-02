@@ -21,7 +21,7 @@ class ContentModel extends Model{
     protected $useSoftDeletes = false;
     
     //Campos habilitados para su escritura en la tabla
-    protected $allowedFields = ["id", "titulo", "encabezado", "cuerpo", "categoria"];
+    protected $allowedFields = ["id", "titulo", "encabezado", "cuerpo", "categoria", "usuario_creador"];
     
     //Configurar si queremos que se agreguen los campos "creado a:" y "actualizado a: " para los horarios (opcional)
     protected $useTimestamps = true;
@@ -29,7 +29,7 @@ class ContentModel extends Model{
     //Reglas de validación
     protected $validationRules = [
         'titulo' => 'required|min_length[3]|max_length[40]',
-        'encabezado' => 'required|min_length[3]|max_length[50]',
+        'encabezado' => 'required|min_length[3]|max_length[300]',
         'cuerpo' => 'required|min_length[20]'        
     
         ];
@@ -66,5 +66,16 @@ class ContentModel extends Model{
     //Configurar el saltar la validacion (opcional, por defecto viene en false)
     protected $skipValidation = false; 
     
+    public function listar_articulos() {
+        $db = \Config\Database::connect();
+        // consulta para obtener los titulos de los articulos por comentario
+        $query = $db->query( "SELECT contenidos.id, contenidos.titulo,
+            contenidos.cuerpo, contenidos.created_at, contenidos.updated_at
+            , contenidos.usuario_creador, contenidos.encabezado, user.nombre, categorias.nombre AS nombre_cat
+                  FROM contenidos
+                  INNER JOIN user ON contenidos.usuario_creador=user.id
+                  INNER JOIN categorias ON contenidos.categoria=categorias.id");
+        return $query->getResultArray();
+    }
     
 }

@@ -1,6 +1,7 @@
 <?php
 echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
 ?> 
+
   <section class="content-header">
     </section>
 
@@ -25,6 +26,7 @@ echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
 
         <div class="card-body" style="line-height: 30px;">
    
+
     <?php
     foreach ($datos as $dato) {
         ?>
@@ -44,15 +46,18 @@ echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
                 ?>
             </div> 
                 <?php
-                echo anchor("content/articulo/" . $dato["id"], "Ver más", ["class"=>"badge badge-light"]);
-                echo "<hr>";
-           
+
+                echo '<h5>';
+                echo anchor("content/articulo/" . $dato["id"], "Ver más",["class"=>"badge badge-secondary"]);
+                echo '</h5>';
+
             }
     
             ?>
-       
-        </div>
+
     </div>
+</div>
+
 </section>
 <?php
 echo view("common/basicfooter")

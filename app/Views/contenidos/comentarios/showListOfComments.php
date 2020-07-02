@@ -26,8 +26,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion de Comentarios"])
  ?>
 
  <table class="table table-head-fixed text-nowrap table-md">
-    <tr>
-        <!-----PREG si habrá autor y categoria--->
+    <tr>        
         <th>Autor</th>
         <th>Comentario</th>
         <th>Acciones</th>
@@ -38,7 +37,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion de Comentarios"])
     foreach ($datos as $dato){
         ?>
        <tbody>
-            <td><?php  echo $dato["usuario"] ?></td>
+            <td><?php  echo $dato["nombre"] ?></td>
             <td><?php  echo "<p>".$dato["cuerpo"]."</p>"; ?></td>
             <td><?php  echo "<p><a class='badge badge-light' href='articulo/".$dato["articulo"]."'>Ver</a> "
                     . " <a class='badge badge-light' href='editComment/".$dato["id"]."'>Editar</a> "

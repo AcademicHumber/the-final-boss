@@ -1,0 +1,7 @@
+CRITICAL - 2020-07-01 16:53:55 --> syntax error, unexpected ']'
+#0 C:\xamppp\htdocs\the-final-boss\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('content/crearCa...')
+#1 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(789): CodeIgniter\Router\Router->handle('content/crearCa...')
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

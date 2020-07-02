@@ -81,7 +81,7 @@ form textarea {
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
-form input[type="password"]focus,
+form input[type="password"]:focus,
 form textarea:focus{
 	border: 2px solid blue;
 	padding: 15px;

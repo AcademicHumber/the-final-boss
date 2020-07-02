@@ -37,7 +37,7 @@ class Content extends BaseController{
            //Comprobamos el resultado
            if ($guardar){
                // Mesaje de éxito
-               $exito = "Se guardo todo correctamente";
+               $exito = "Se guardó todo correctamente";
            }
            else{
                // Mesnaje de error
@@ -77,6 +77,8 @@ class Content extends BaseController{
     /*--------------------SECCIÓN ARTICULOS-----------------*/ 
     
     function crearArticulo(){
+        $this->comprobar_perfil();
+        
         $datos = [
             "id" => "",
             "titulo" => "",
@@ -95,7 +97,9 @@ class Content extends BaseController{
                                          "paginas" => $paginas]); 
     }
     
-    function editArticulo($id){        
+    function editArticulo($id){
+        $this->comprobar_perfil();
+        
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_articulos, $exito, $errors);
@@ -113,7 +117,8 @@ class Content extends BaseController{
                                          "categorias" => $categorias,
                                          "paginas" => $paginas]); 
     }
-    function articulo($id){
+    function articulo($id){        
+        
         //Procesar comentarios nuevos
         $exito = "";
         $errors = "";
@@ -137,15 +142,19 @@ class Content extends BaseController{
                                                     "paginas" => $paginas]);
     }
     function verarticulos(){
+        $this->comprobar_perfil();
         
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
-        $articulos = $this->listar($this->instancia_articulos);
+        $articulos = $this->instancia_articulos->listar_articulos();
         $paginas = $this->listar($this->instancia_paginas);
         
         return view("contenidos/articulos/showListOfArticles", ["datos" => $articulos, "paginas" => $paginas]);
     }
     
     public function deleteArticle($id){
+        $this->comprobar_perfil();
+        
+       $this->instancia_comentarios->where('articulo',$id)->delete();
        $this->instancia_articulos->delete($id);       
        return redirect()->to(site_url("content/verarticulos"));
     }
@@ -156,6 +165,8 @@ class Content extends BaseController{
     /*--------------------- SECCIÓN PÄGINAS--------------------------*/
     
     function crearPagina(){
+        $this->comprobar_perfil();
+        
         $datos = [
             "id" => "",
             "titulo" => "",
@@ -171,7 +182,9 @@ class Content extends BaseController{
                                          "dato" => $datos,
                                          "paginas" => $paginas]); 
     }    
-    function editPagina($id){        
+    function editPagina($id){
+        $this->comprobar_perfil();
+        
         $errors = [];
         $exito = ""; 
         $this->guardar($this->instancia_paginas, $exito, $errors);
@@ -185,17 +198,22 @@ class Content extends BaseController{
                                            "dato" => $datos,
                                            "paginas" => $paginas]);
     }
-    function pagina($id){        
+    function pagina($id){
+        
         $pagina = $this->instancia_paginas->find($id);
         if (is_null($pagina)) return redirect ()->to (site_url ("content/verpaginas"));
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/paginas/page", ["dato" => $pagina, "paginas" => $paginas]);
     }    
     public function deletePage($id){
+        $this->comprobar_perfil();
+        
         $this->instancia_paginas->delete($id);        
         return redirect()->to(site_url("content/verpaginas"));
     }
-    function verpaginas(){        
+    function verpaginas(){
+        $this->comprobar_perfil();
+        
         // Utilizamos la funcion listar para obtener todos los datos de la tabla        
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/paginas/showListOfPages", ["datos" => $paginas, "paginas" => $paginas]);
@@ -207,6 +225,8 @@ class Content extends BaseController{
     /*--------------------- SECCIÓN COMENTARIOS ------------------------*/
     
     public function vercomentarios(){
+        $this->comprobar_perfil();
+        
         // Funcion personalizada para obtener el nombre del articulo al que pertenece cada comment     
         $comentarios = $this->instancia_comentarios->listar_comentarios();
         $paginas = $this->listar($this->instancia_paginas);       
@@ -214,6 +234,8 @@ class Content extends BaseController{
         return view("contenidos/comentarios/showListOfComments", ["datos" => $comentarios,"paginas" => $paginas]);
     }
     public function editComment($id){
+        $this->comprobar_perfil();
+        
         $errors = [];
         $exito = ""; 
         if ($this->request->getMethod()=="post"){
@@ -241,6 +263,8 @@ class Content extends BaseController{
                                                            "paginas" => $paginas]);
     }
     public function deleteComment($id){
+        $this->comprobar_perfil();
+        
        $this->instancia_comentarios->delete($id);       
        return redirect()->to(site_url("content/vercomentarios"));
     }
@@ -251,6 +275,8 @@ class Content extends BaseController{
     /*---------------------- SECCIÓN CATEGORÍAS ------------------------*/
     
     public function crearCategoria(){
+        $this->comprobar_perfil();
+        
         $datos = [
             "id" => "",
             "nombre" => "",
@@ -267,10 +293,22 @@ class Content extends BaseController{
                                          "dato" => $datos,
                                          "paginas" => $paginas]); 
     }
-    function editCategory($id){        
+    function editCategory($id){      
+        $this->comprobar_perfil();
+        
         $errors = [];
         $exito = ""; 
-        $this->guardar($this->instancia_categorias, $exito, $errors);
+        if ($this->request->getMethod() == "post"){
+            $data['descripcion'] = $_POST["cont"]["descripcion"];
+            if ($this->instancia_categorias->update($id,$data)){
+                $exito = "Actualizado correctamente";
+             }
+             else{
+                 $exito = "Hubieron errores al actualizar";
+                 $error = $this->instancia_categorias->errors();
+             }
+        }
+        
         //Cargar la pagina actualizada o a actualizar
         $datos = $this->instancia_categorias->find($id);  
         if (is_null($datos)) return redirect ()->to (site_url ("content/vercategorias"));
@@ -281,13 +319,17 @@ class Content extends BaseController{
                                            "dato" => $datos,
                                           "paginas" => $paginas]);
     }
-    public function vercategorias(){           
+    public function vercategorias(){
+        $this->comprobar_perfil();
+        
         $categorias = $this->listar($this->instancia_categorias);     
         //cargar paginas para la vista
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/categorias/showListOfCategories", ["datos" => $categorias, "paginas" => $paginas]);
     }
     public function deleteCategory($id){
+       $this->comprobar_perfil();
+        
        $this->instancia_categorias->delete($id);       
        return redirect()->to(site_url("content/vercategorias"));
     }

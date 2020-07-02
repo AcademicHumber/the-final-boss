@@ -2,17 +2,17 @@
                 
                 <div class="card-body">                            
 
-                    <div class="form-group row">
+                    <div class="form-group row-fluid">
                     <!-- /.card-header -->
 
 
                     <?php if ($exito == "Usuario no válido") { ?>
-                        <p class=" alert alert-danger text-white " style="text-align: center; ">
+                        <p class="alert alert-danger alert-dismissable" >
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
                             <?php
                             echo $exito;
                         }
-                        ?>
-
+                          ?>
                     </p>
 
                    </div>
@@ -33,15 +33,19 @@
                            </div> 
                        </div>                                               
                     </div>
+                    <?php
+                    /*
                     <div class="row">
                         <div class="col-sm-10">                           
-                                <?php
+                                
                                 echo "<br>";
                                 echo anchor("UserController/recuperarContra", "¿Olvidaste tu contraseña?");
-                                ?>                           
+                                                          
                         </div>
                     </div>
-                </div>
+                </div>                   
+                     */
+                ?>
                  <div class="card-footer">
                      <div class="row">
                          <div class="col">

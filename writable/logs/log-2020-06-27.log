@@ -1,3 +1,4 @@
+
 CRITICAL - 2020-06-27 14:44:53 --> Undefined index: nombre
 #0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Views\common\formheader.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 85, Array)
 #1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
@@ -101,3 +102,4 @@ CRITICAL - 2020-06-27 15:29:47 --> Undefined variable: _SESSION
 #4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+
