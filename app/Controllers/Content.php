@@ -37,7 +37,7 @@ class Content extends BaseController{
            //Comprobamos el resultado
            if ($guardar){
                // Mesaje de éxito
-               $exito = "Se guardo todo correctamente";
+               $exito = "Se guardó todo correctamente";
            }
            else{
                // Mesnaje de error
@@ -299,7 +299,7 @@ class Content extends BaseController{
         $errors = [];
         $exito = ""; 
         if ($this->request->getMethod() == "post"){
-            $data = ['descripcion' => $_POST["cont"]["descripcion"]];
+            $data['descripcion'] = $_POST["cont"]["descripcion"];
             if ($this->instancia_categorias->update($id,$data)){
                 $exito = "Actualizado correctamente";
              }

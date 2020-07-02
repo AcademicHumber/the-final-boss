@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+CRITICAL - 2020-06-28 09:14:50 --> Cannot add or update a child row: a foreign key constraint fails (`cms`.`contenidos`, CONSTRAINT `usuario_articulo` FOREIGN KEY (`usuario_creador`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 C:\xamppp\htdocs\the-final-boss\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `co...')
+#1 C:\xamppp\htdocs\the-final-boss\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xamppp\htdocs\the-final-boss\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xamppp\htdocs\the-final-boss\system\Database\BaseBuilder.php(2234): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xamppp\htdocs\the-final-boss\system\Model.php(729): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xamppp\htdocs\the-final-boss\system\Model.php(557): CodeIgniter\Model->insert(Array, false)
+#6 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(35): CodeIgniter\Model->save(Array)
+#7 C:\xamppp\htdocs\the-final-boss\app\Controllers\Content.php(88): App\Controllers\Content->guardar(Object(App\Models\ContentModel), '', Array)
+#8 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->crearArticulo()
+#9 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#10 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#12 {main}
+=======
 CRITICAL - 2020-06-28 16:38:14 --> Cannot add or update a child row: a foreign key constraint fails (`cms`.`contenidos`, CONSTRAINT `usuario_articulo` FOREIGN KEY (`usuario_creador`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
 #0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `co...')
 #1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
@@ -58,3 +74,4 @@ CRITICAL - 2020-06-28 17:20:35 --> Deletes are not allowed unless they contain a
 #4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+>>>>>>> a9781091bcb42993b837b978e30d58d07633bb9a

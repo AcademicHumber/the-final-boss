@@ -2,10 +2,26 @@
 echo form_open_multipart("");
 
 // Comprobamos errores o exito en la consulta, luego de ejecutarla
-print_r($exito);
-?>  
-<br>
-<br>
+
+if ($exito=="Se guardó todo correctamente") { ?>
+     <p class="alert alert-success alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+<?php 
+if ($exito=="Hubieron errores al guardar"){
+    ?>
+      <p class="alert alert-danger alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+
 <table>
     <tr>
         <td><label>Titulo de la página   </label> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;</td>    
@@ -18,8 +34,7 @@ print_r($exito);
                 echo form_input("cont[titulo]", $dato["titulo"], ["class"=>"form-control col-12", "required" => 1]);
                 ?>
             </td>
-                </tr>
-            </table>
+        </tr>
                 <?php
                 // condicional para los errrores
                 if (!empty($errores["titulo"])){
@@ -30,8 +45,6 @@ print_r($exito);
                 echo "</td>";
                 }
                 ?> 
- <br>       
-<table>
     <tr>
         <td><label>Encabezado de la página</label>&nbsp;&nbsp;&nbsp;&nbsp;</td>
         <td>
@@ -39,7 +52,7 @@ print_r($exito);
                 echo form_input("cont[encabezado]", $dato["encabezado"], ["class"=>"form-control","required" => 1]); ?>
         </td>
         </tr> 
-        </table>    
+          
                 <?php
                 // condicional para los errrores
                 if (!empty($errores["encabezado"])){
@@ -50,10 +63,11 @@ print_r($exito);
                 echo "</td>";
                 }
                 ?>
-        <br>
-<label>Cuerpo de la página</label>
-                <textarea name="cont[cuerpo]" id="editor1"><?php echo $dato["cuerpo"]; ?></textarea>
-                
+      <tr>
+      <td><label>Cuerpo de la página</label></td>
+         <td> <textarea name="cont[cuerpo]" id="editor1"><?php echo $dato["cuerpo"]; ?></textarea></td>
+     </tr> 
+        
                 <?php
                 
                 // condicional para los errrores
@@ -65,6 +79,7 @@ print_r($exito);
                 echo "</td>";
                 }        
                 ?>
+                 </table> 
                 <br>
                 <?php
                 if (!empty($dato["titulo"])){
@@ -79,7 +94,7 @@ print_r($exito);
 // Cerrar formulario
 echo form_close();
 
-echo anchor("Content/verpaginas", "Ir a las paginas");
+echo anchor("Content/verpaginas", "Ir a las paginas", ['class'=> 'badge badge-dark']);
 /*echo "<pre>";
 print_r($_POST);
 print_r($dato);

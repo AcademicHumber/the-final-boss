@@ -48,7 +48,7 @@ echo view("common/basicheader", ["titulo"=> "Categoría: ".$datos[0]["nombre"]])
                 <?php
 
                 echo '<h5>';
-                echo anchor("content/articulo/" . $dato["id"], "Ver más", ['class' => 'card-link']);
+                echo anchor("content/articulo/" . $dato["id"], "Ver más",["class"=>"badge badge-secondary"]);
                 echo '</h5>';
 
             }

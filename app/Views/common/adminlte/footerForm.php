@@ -2,17 +2,17 @@
                 
                 <div class="card-body">                            
 
-                    <div class="form-group row">
+                    <div class="form-group row-fluid">
                     <!-- /.card-header -->
 
 
                     <?php if ($exito == "Usuario no válido") { ?>
-                        <p class=" alert alert-danger text-white " style="text-align: center; ">
+                        <p class="alert alert-danger alert-dismissable" >
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
                             <?php
                             echo $exito;
                         }
-                        ?>
-
+                          ?>
                     </p>
 
                    </div>

@@ -1,5 +1,5 @@
 <?php
-echo view("common/formheader", ["titulo" => $dato["titulo"]])
+echo view("common/basicheader", ["titulo" => $dato["titulo"]])
 ?>
 <section class="container-fluid bg-white">
   <section class="content">
@@ -13,8 +13,8 @@ echo view("common/formheader", ["titulo" => $dato["titulo"]])
         <div class="w-50">
 <?php
 echo '<h5>';
-echo anchor("content/verpaginas", "Ver todas las paginas", ['class'=>'d-flex justify-content-center']);
-echo view("common/formfooter");
+echo anchor("content/verpaginas", "Ver todas las paginas", ['class'=>'d-flex justify-content-center text-dark']);
+echo view("common/basicfooter");
 echo '</h5>';
 ?>  </div>
 </div>

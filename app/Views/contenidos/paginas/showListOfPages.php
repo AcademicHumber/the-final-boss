@@ -6,7 +6,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion"])
     <div class="card">
         <div class="card-header">
           <h1>Páginas</h1>
-          <a href="crearPagina" class="card-link">Crear nueva pagina</a>
+          <a href="crearPagina" class="badge badge-light">Crear nueva pagina</a>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fas fa-minus"></i></button>

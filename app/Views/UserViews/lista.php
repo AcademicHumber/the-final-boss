@@ -27,7 +27,7 @@
 if (!empty($lista)) {
 
 ?>
-<table class="table table-head-fixed text-nowrap table-hover  table-md">
+<table class="table table-head-fixed text-nowrap table-hover  table-md  ">
     <tr>
         <th>Nombre de Usuario</th>
         <th>Nombre</th>
@@ -62,6 +62,7 @@ if (!empty($lista)) {
 }
 ?>
 </table>
+
 <?php  
 } else {
 ?>

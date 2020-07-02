@@ -8,7 +8,7 @@ echo view("common/basicheader", ["titulo"=> "Edicion"])
     <div class="card">
         <div class="card-header">
             <h1>Categorías</h1>
-            <a href="crearCategoria" class="card-link">Crear nueva categoria</a>
+            <a href="crearCategoria" class="badge badge-light">Crear nueva categoria</a>
             <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fas fa-minus"></i></button>
@@ -25,8 +25,8 @@ echo view("common/basicheader", ["titulo"=> "Edicion"])
             <p class="card-text"><?php echo $dato["descripcion"]?></p>
             <p class="card-link text-primary">
                 <?php
-                echo " <a href='editCategory/".$dato["id"]."'>Editar</a> - ";
-                echo " <a href='deleteCategory/".$dato["id"]."'>Eliminar</a></p>"; 
+                echo " <a class='badge badge-light' href='editCategory/".$dato["id"]."'>Editar</a> - ";
+                echo " <a class='badge badge-light' href='deleteCategory/".$dato["id"]."'>Eliminar</a></p>"; 
                 ?>
             </p> 
             <p class="card-text text-muted"><strong>Fecha de creación: </strong><?php echo $dato["created_at"] ?></p>

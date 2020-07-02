@@ -9,7 +9,8 @@
   
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+   <!-- include libraries for the editor -->        
+   <script src="<?php echo base_url('ckeditor/ckeditor.js') ?>"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url('adminlte'); ?>/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->

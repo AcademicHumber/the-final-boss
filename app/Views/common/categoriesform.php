@@ -1,8 +1,46 @@
 <?php
 
 // Comprobamos errores o exito en la consulta, luego de ejecutarla
-print_r($exito);
+
 echo form_open("");
+if ($exito=="Actualizado correctamente") { ?>
+     <p class="alert alert-success alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+<?php 
+if ($exito=="Hubieron errores al actualizar"){
+    ?>
+      <p class="alert alert-danger alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>   
+ <?php  
+ if ($exito=="Se guardó todo correctamente") { ?>
+     <p class="alert alert-success alert-dismissable" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+<?php 
+if ($exito=="Hubieron errores al guardar"){
+    ?>
+      <p class="alert alert-danger alert-dismissable" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+ <?php
 echo form_hidden("cont[id]", $dato["id"]);
 
 echo "<br>";
@@ -45,5 +83,5 @@ echo "<br><br>";
 echo form_submit("", "Actualizar", ['class'=> 'btn btn-dark']);
 echo "<br>";
 echo "<br>";
-echo anchor("content/vercategorias", "Ver todas las categorias", ['class' => 'card-link']);
+echo anchor("content/vercategorias", "Ver todas las categorias", ['class' => 'badge badge-dark']);
 

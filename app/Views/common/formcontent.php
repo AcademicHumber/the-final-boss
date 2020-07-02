@@ -2,8 +2,27 @@
 echo form_open_multipart("");
 
 // Comprobamos errores o exito en la consulta, luego de ejecutarla
-print_r($exito);
-?>            
+
+if ($exito=="Se guardó todo correctamente") { ?>
+     <p class="alert alert-success alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+<?php 
+if ($exito=="Hubieron errores al guardar"){
+    ?>
+      <p class="alert alert-danger alert-dismissable col-6" >
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <?php
+            echo $exito;
+       }
+       ?>
+    </p>
+
+                      
 <table style="line-height: 35px;">              
     <tbody>                    
         <tr>
@@ -63,10 +82,8 @@ print_r($exito);
         </tr>
         <tr>
             <td><label>Cuerpo de la publicación</label></td>
-        </tr>    
-        <tr>
-            <td></td>
-            <td>
+
+                 <td>
                 <textarea name="cont[cuerpo]" id="editor1"><?php echo $dato["cuerpo"]; ?></textarea>
                 
                 <?php
@@ -106,7 +123,7 @@ print_r($exito);
 // Cerrar formulario
 echo form_close();
 
-echo anchor("content/verarticulos", "Ir a los articulos", ['class' => 'card-link']);
+echo anchor("content/verarticulos", "Ir a los articulos", ['class' => 'badge badge-dark']);
 
 /*echo "<pre>";
 print_r($_POST);

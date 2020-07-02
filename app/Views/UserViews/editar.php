@@ -1,5 +1,6 @@
 <?php
 echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
+   echo form_open_multipart('');
 ?>
  <section class="content-header">
     </section>
@@ -19,10 +20,27 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-                <div class="card-body">
-                   <?php
-                  echo form_open_multipart('');
-                  ?>
+                <div class="card-body col-6">
+                  <?php
+                     if ($exito=="El usuario se modificó correctamente") { ?>
+                         <p class="alert alert-success alert-dismissable" >
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <?php
+                                  echo $exito;
+                             }
+                             ?>
+                          </p>
+                      <?php 
+                      if ($exito=="Hubo problemas para registrar al usuario"){
+                          ?>
+                            <p class="alert alert-danger alert-dismissable" >
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                              <?php
+                                  echo $exito;
+                             }
+                             ?>
+                          </p>
+               
                   <div class="form-group">
                     <label>Nombre de Usuario</label>
                     <input type="text" class="form-control" name="user[nombre_usuario]" placeholder="Enter username" required="1" disabled="1" value="<?php echo $modificar["nombre_usuario"] ?>">
@@ -75,11 +93,11 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
                         ?>
                    
                   </div>
-                                   <h5> <?php echo $exito;  ?></h5>
-                  </div>
-                  <div class="form-group">
+                <div class="form-group">
                               <button type="submit" class="btn btn-dark">Editar</button>
                   </div>
+                  </div>
+                
           </div>
 
 </section>
