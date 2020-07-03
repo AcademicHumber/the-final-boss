@@ -67,6 +67,25 @@ if ($exito=="Hubieron errores al guardar"){
                 ?> 
                 
             </td>
+        </tr>    
+        <tr>
+            <td><label>Imagen principal de la publicación </label> <br>
+                <label>(Sugerido: 700x340)</label></td>
+            <td>                
+                <?php               
+                echo form_upload("img_principal", "", ["accept"=>"image/png, image/jpeg"]);
+                
+                // condicional para los errrores
+                if (!empty($errores["encabezado"])){
+                echo "<td>";
+                echo "<div class='formerror'>";                
+                echo $errores["encabezado"];                
+                echo "</div>";
+                echo "</td>";
+                }
+                ?> 
+                
+            </td>
         </tr>
         <tr>
             <td><label>Categoría de la publicación </label></td>

@@ -1,0 +1,18 @@
+CRITICAL - 2020-07-03 11:41:25 --> Undefined index: img_principal
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Controllers\Content.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 92, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Controllers\Content.php(127): App\Controllers\Content->guardar_imagen_principal()
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Content->editArticulo('33')
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Content))
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-03 12:15:29 --> Undefined index: perfil
+#0 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Views\frontend\articulos.php(98): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\ahft_\\...', 98, Array)
+#1 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\View\View.php(246): include('C:\\Users\\ahft_\\...')
+#2 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\Common.php(1087): CodeIgniter\View\View->render('frontend/articu...', Array, true)
+#3 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\app\Controllers\Blog.php(10): view('frontend/articu...', Array)
+#4 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Blog->index()
+#5 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+#6 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ahft_\Documents\Tareas\Universidad\UDABOL\Investigacion Operativa\XAMPP\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

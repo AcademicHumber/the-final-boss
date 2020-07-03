@@ -56,13 +56,13 @@ class Content extends BaseController{
         if ($img = $this->request->getFile("upload")){
          $newName = $img->getRandomName();
         // public/images
-        $destination_dir = FCPATH."images";                   
+        $destination_dir = FCPATH."media_images";                   
         $img->move($destination_dir ,$newName);       
         // generar respuesta
         $repuesta = [
             "uploaded" => 1,
             "filename" => $newName,
-            "url" => base_url("images/".$newName)
+            "url" => base_url("media_images/".$newName)
             ];
         }else{
           $repuesta = [
@@ -72,6 +72,26 @@ class Content extends BaseController{
          ]];  
         }         
         return $this->response->setJSON($repuesta);        
+    }
+    
+    private function guardar_imagen_principal(){
+        if ($this->request->getMethod() == 'post'){
+          if ($img = $this->request->getFile("img_principal")){
+            $newname = $_POST["cont"]["titulo"]."_img.".$img->getExtension();
+            //public/topimgs
+            $destination_dir = FCPATH."topimgs";
+            
+            //eliminar la imagen si existe
+            if (is_file($destination_dir."/".$newname)) {
+               unlink($destination_dir."/".$newname);
+            }
+            
+            $img->move($destination_dir, $newname);            
+            //Guardamos la ruta en post para que se guarde en la bd
+            $_POST["cont"]["img_principal"] = base_url("topimgs/".$newname);            
+            }  
+        }
+        
     }
     
     /*--------------------SECCIÓN ARTICULOS-----------------*/ 
@@ -86,7 +106,8 @@ class Content extends BaseController{
             "cuerpo" => ""
         ];
         $errors = [];
-        $exito = ""; 
+        $exito = "";
+        $this->guardar_imagen_principal();
         $this->guardar($this->instancia_articulos, $exito, $errors);
         $categorias = $this->listar($this->instancia_categorias);
         $paginas = $this->listar($this->instancia_paginas);
@@ -101,7 +122,8 @@ class Content extends BaseController{
         $this->comprobar_perfil();
         
         $errors = [];
-        $exito = ""; 
+        $exito = "";
+        $this->guardar_imagen_principal();
         $this->guardar($this->instancia_articulos, $exito, $errors);
         //Cargar el articulo actualizado o a actualizar
         $datos = $this->instancia_articulos->find($id);

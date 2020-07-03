@@ -84,18 +84,18 @@ echo view("frontend/frontendheader");
                         ?>
                         <div class="single-post-item">
                             <figure>
-                                <img class="post-img img-fluid" src="img/posts/p1.jpg" alt="">
+                                <img class="post-img img-fluid" src="<?php echo $dato["img_principal"] ?>" alt="Imagen principal">
                             </figure>
                             <h3>
-                                <a href="blog-details.html"><?php echo $dato["titulo"] ?></a>
+                                <a href=""><?php echo $dato["titulo"] ?></a>
                             </h3>
                             <p><?php echo $dato["encabezado"] ?></p>
-                            <a href="<?php echo base_url("blog/articulo/".$dato["id"]) ?>" class="primary-btn text-uppercase mt-15">continue Reading</a>
+                            <a href="" class="primary-btn text-uppercase mt-15">continue Reading</a>
                             <div class="post-box">
                                 <div class="d-flex">
                                     <div>
                                         <a href="#">
-                                            <img src="img/author/a1.png" alt="">
+                                            <img src="<?php echo base_url("profiles/".$dato["perfil"].".PNG") ?>" alt="Imagen autor">
                                         </a>
                                     </div>
                                     <div class="post-meta">
