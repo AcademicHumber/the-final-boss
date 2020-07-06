@@ -14,9 +14,6 @@ class Blog extends BaseController
         return $lista;
     }
 
-        public function articulo($id){
-            
-        }
 
      public function pagina($id){
         

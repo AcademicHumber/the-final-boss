@@ -59,7 +59,7 @@ echo view("frontend/frontendheader");
                         </div>
                         <p><?php echo $dato["encabezado"] ?></p>
                         <div class="post-btn">
-                            <a href="<?php echo base_url("blog/articulos".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
+                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
                         </div>
                     </div>
                     <?php

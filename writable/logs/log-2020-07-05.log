@@ -3671,3 +3671,9 @@ CRITICAL - 2020-07-05 19:55:57 --> syntax error, unexpected '=', expecting ')'
 #4 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2020-07-05 20:09:59 --> Call to undefined method App\Controllers\Blog::listar()
+#0 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(914): App\Controllers\Blog->articulos('51')
+#1 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Blog))
+#2 C:\xamppp\htdocs\the-final-boss\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xamppp\htdocs\the-final-boss\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
