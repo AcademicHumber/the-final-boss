@@ -51,5 +51,16 @@ class CategoriesModel extends Model{
         $db->close();
         return $afectados; 
     }
+
+    
+    public function actualizar_cat($id){
+        $db = \Config\Database::connect();
+        $query = $db->query("UPDATE contenidos SET contenidos.categoria=1 WHERE contenidos.categoria=$id");
+        $afectados = $db->affectedRows();
+        $db->close();
+        return $afectados;        
+    }
+
     
 }
+

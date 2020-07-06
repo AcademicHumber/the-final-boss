@@ -24,8 +24,7 @@ class UsuarioModel extends Model {
             "apellido" => "required|min_length[3]|max_length[255]",
             "correo" => "required|min_length[6]|max_length[50]|valid_email|is_unique[user.correo]",
             "contrasena" => "required|min_length[5]|max_length[255]",
-            "contrasena_confir" => "required|matches[contrasena]",
-            "perfil" => "min_length[5]|max_length[255]",
+            "contrasena_confir" => "required|matches[contrasena]"
         ];
         $this->validationMessages = [
             "nombre_usuario" => [
@@ -83,5 +82,6 @@ class UsuarioModel extends Model {
         $query = $this->db->query("SELECT * FROM `user` WHERE `correo`=:correo: ", ["correo" => $correo]);
         return $query->getRowArray();
     }
+
 
 }

@@ -172,9 +172,11 @@ class UserController extends BaseController {
     public function borrar($id) {
         $this->comprobar_perfil();
 
+         $this->instancia_comentarios->borrar_coment($id);
         //se obtiene el metodo borrar del usuario model y se redirecciona este o no este el id de usuario
         //(Luego agregar mensaje de no se encontró el usuario_ OJO)
         if ($this->instancia_usuarios->borrar($id)) {
+ 
             return redirect()->to(site_url('UserController/listar'));
         } else {
 

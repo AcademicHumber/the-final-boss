@@ -1,5 +1,5 @@
 <?php
-echo view("common/basicheader", ["titulo"=> "Edicion"])
+echo view("common/basicheader", ["titulo"=> "Páginas"])
 ?>
 <section class="content-header"></section>
 <section class="content">

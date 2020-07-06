@@ -59,7 +59,7 @@ echo view("frontend/frontendheader");
                         </div>
                         <p><?php echo $dato["encabezado"] ?></p>
                         <div class="post-btn">
-                            <a href="<?php echo base_url("content/articulo/".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
+                            <a href="<?php echo base_url("blog/articulos".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
                         </div>
                     </div>
                     <?php
@@ -90,7 +90,7 @@ echo view("frontend/frontendheader");
                                 <a href=""><?php echo $dato["titulo"] ?></a>
                             </h3>
                             <p><?php echo $dato["encabezado"] ?></p>
-                            <a href="" class="primary-btn text-uppercase mt-15">continue Reading</a>
+                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase mt-15">continue Reading</a>
                             <div class="post-box">
                                 <div class="d-flex">
                                     <div>

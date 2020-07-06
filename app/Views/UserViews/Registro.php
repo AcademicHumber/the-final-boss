@@ -33,7 +33,7 @@ echo form_open("");
                              ?>
                           </p>
                       <?php 
-                      if ($exito=="Hubo problemas para modificar al usuario"){
+                      if ($exito=="Hubo problemas para registrar al usuario"){
                           ?>
                             <p class="alert alert-danger alert-dismissable" >
                             <button type="button" class="close" data-dismiss="alert">&times;</button>
