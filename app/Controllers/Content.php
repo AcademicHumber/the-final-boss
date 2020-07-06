@@ -317,7 +317,6 @@ class Content extends BaseController{
     }
     function editCategory($id){      
         $this->comprobar_perfil();
-        
         $errors = [];
         $exito = ""; 
         if ($this->request->getMethod() == "post"){
@@ -344,15 +343,18 @@ class Content extends BaseController{
     public function vercategorias(){
         $this->comprobar_perfil();
         
-        $categorias = $this->listar($this->instancia_categorias);     
+        $categorias = $this->listar($this->instancia_categorias);  
         //cargar paginas para la vista
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/categorias/showListOfCategories", ["datos" => $categorias, "paginas" => $paginas]);
     }
     public function deleteCategory($id){
        $this->comprobar_perfil();
+       $categorias = $this->instancia_categorias->find($id);
+       $this->instancia_categorias->actualizar_cat($id, $categorias['id']);
+       $this->instancia_categorias->delete($id); 
+       
         
-       $this->instancia_categorias->delete($id);       
        return redirect()->to(site_url("content/vercategorias"));
     }
     public function categoria($slug){
@@ -366,8 +368,5 @@ class Content extends BaseController{
     
     /*-------------------FIN SECCIÓN CATEGORÍAS ------------------------*/
     
-    
-    
-        
-
+   
 }

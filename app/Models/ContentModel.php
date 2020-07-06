@@ -78,5 +78,7 @@ class ContentModel extends Model{
                   ORDER BY contenidos.created_at DESC");
         return $query->getResultArray();
     }
+
+      
     
 }

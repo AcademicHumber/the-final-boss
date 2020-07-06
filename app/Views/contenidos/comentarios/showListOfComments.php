@@ -1,5 +1,5 @@
 <?php
-echo view("common/basicheader", ["titulo"=> "Edicion de Comentarios"])
+echo view("common/basicheader", ["titulo"=> "Comentarios"])
 ?>
 <section class="content-header">
     </section>

@@ -81,14 +81,15 @@ class Contacto extends BaseController
 
         $errores = "";
         $enviado = "";
-
+        $paginas = $this->instancia_paginas->findAll();
         if($this->request->getMethod()=="post"){
             $this -> validarEmail($errores, $enviado);
         }
 
-        return view('contacto/form_contacto', ["errores" => $errores, "enviado" => $enviado]);
+        return view('frontend/contactos', ["errores" => $errores, "enviado" => $enviado, "paginas" => $paginas]);
         
     }
+
 
     
 

@@ -65,5 +65,24 @@ class CommentsModel extends Model{
     }
     public function obtener_usuario_que_comento($id){
     echo "SELECT comentarios.id, comentarios.cuerpo, comentarios.created_at, comentarios.articulo, comentarios.usuario, user.nombre_usuario FROM comentarios INNER JOIN user ON comentarios.usuario = user.id WHERE comentarios.articulo=$id";
-    }    
+    }   
+    public function borrar_coment($id){
+         $db = \Config\Database::connect();
+        // consulta para obtener los titulos de los articulos por comentario
+        $query = $db->query( "DELETE FROM comentarios WHERE comentarios.usuario = $id ");
+            if (null !== 'contenidos.usuario_creador') {
+                $this->borrar_articulo($id);
+            }
+        $affected_rows = $db->affectedRows();
+        return ($affected_rows > 0);
+
+    }
+    public function borrar_articulo($id){
+       $db = \Config\Database::connect();
+        // consulta para obtener los titulos de los articulos por comentario
+        $query = $db->query( "DELETE FROM contenidos WHERE contenidos.usuario_creador = $id");
+        $affected_rows = $db->affectedRows();
+        return ($affected_rows > 0);
+    }
+    
 }

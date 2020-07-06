@@ -30,6 +30,7 @@
         <link rel="stylesheet" href="<?php echo base_url("css/animate.min.css");?>">
         <link rel="stylesheet" href="<?php echo base_url("css/owl.carousel.css");?>">
         <link rel="stylesheet" href="<?php echo base_url("css/main.css");?>">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 
 <body>
@@ -45,21 +46,23 @@
 						<li class="menu-active"><a href="<?php echo base_url("blog");?>">Home</a></li>
 						<li class="menu-has-children"><a href="">Categorías</a>
 							<ul>
-								<li><a href="">Categoría 1</a></li>
-								<li><a href="">Categoría 2</a></li>
-								<li><a href="">Categoría 3</a></li>
+			                 	
+                                
 							</ul>
 						</li>					
 						<li class="menu-has-children"><a href="">Páginas</a>
 							<ul>
 								<?php
-                                                                foreach ($paginas as $pagina){
-                                                                    echo "<li><a href=''>".$pagina["titulo"]."</a></li>";
-                                                                }
-                                                                ?>
+                                 foreach ($paginas as $pagina){
+                                 ?>
+                                   
+                                       <li>  <a href="<?php echo base_url("blog/pagina/".$pagina["id"])?>"><?php echo $pagina["titulo"]?></a></li>
+                                       <?php
+                                    }
+                                ?>
 							</ul>
 						</li>						
-						<li><a href="">Contacto</a> ||</li>
+						<li><a href="contacto">Contacto</a> ||</li>
                                                 <?php
                                                 if (empty($_SESSION["username"])){
                                                     echo "<li><a href='".base_url("UserController/ingresar")."'>Iniciar Sesion</a></li>";
