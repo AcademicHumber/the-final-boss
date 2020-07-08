@@ -1,8 +1,12 @@
 
 <!-- start footer Area -->
-<footer class="footer-area section-gap">
+
+<footer class="footer-area ">
     <div class="container box_1170">
+        <br>
+        <br>
         <div class="row">
+
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
                     <h6 class="footer_title">Sobre Nosotros</h6>
@@ -24,10 +28,10 @@
                 <div class="single-footer-widget instafeed">
                     <h6 class="footer_title">Nosotros</h6>
                     <ul class="list instafeed d-flex flex-wrap">
-                        <li><img src="img/i1.jpg" alt=""></li>
-                        <li><img src="img/i2.jpg" alt=""></li>
-                        <li><img src="img/i3.jpg" alt=""></li>
-                        <li><img src="img/i4.jpg" alt=""></li>                       
+                        <li><img src=<?php echo base_url('img/i1.jpg');?>></li>
+                        <li><img src=<?php echo base_url('img/i2.jpg');?>></li>
+                        <li><img src=<?php echo base_url('img/i3.jpg');?>></li>
+                        <li><img src=<?php echo base_url('img/i4.jpg');?>></li>                       
                     </ul>
                 </div>
             </div>
@@ -48,6 +52,7 @@
             <p class="col-lg-12 footer-text text-center">
                 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
         </div>
+         <br>
     </div>
 </footer>
 <!-- End footer Area -->

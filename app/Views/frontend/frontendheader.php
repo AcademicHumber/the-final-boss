@@ -46,7 +46,7 @@
 						<li class="menu-active"><a href="<?php echo base_url("blog");?>">Home</a></li>
 						<li class="menu-has-children"><a href="">Categorías</a>
 							<ul>
-			                 	
+			              
                                 
 							</ul>
 						</li>					

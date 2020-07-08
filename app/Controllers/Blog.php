@@ -6,8 +6,9 @@ class Blog extends BaseController
 	public function index()
 	{		
            $paginas = $this->instancia_paginas->findAll();
+           $categorias = $this->instancia_categorias->findAll();
            $articulos = $this->instancia_articulos->listar_articulos();         
-           return view("frontend/articulos", ["articulos" => $articulos, "paginas" => $paginas]);           
+           return view("frontend/articulos", ["articulos" => $articulos, "paginas" => $paginas, "categorias" => $categorias ]);           
 	}
 	  protected function listar($instancia) {        
         $lista = $instancia->findAll();
@@ -20,7 +21,7 @@ class Blog extends BaseController
         $pagina = $this->instancia_paginas->find($id);
         if (is_null($pagina)) return redirect ()->to (site_url ("blog"));
         $paginas = $this->listar($this->instancia_paginas);
-        return view("frontend/paginas", ["dato" => $pagina, "paginas" => $paginas] );
+        return view("frontend/pagina", ["dato" => $pagina, "paginas" => $paginas] );
     }    
      
   public function articulos($id){    
@@ -31,6 +32,8 @@ class Blog extends BaseController
         
         //cargar articulo
         $articulo = $this->instancia_articulos->find($id);
+        //
+        $articulo_user = $this->instancia_articulos->listar_articulos();
         if(is_null($articulo)){
             return redirect()->to(site_url("blog"));
         }
@@ -41,10 +44,12 @@ class Blog extends BaseController
         //Cargar paginas
         $paginas = $this->listar($this->instancia_paginas);
                       
-        return view("frontend/un_articulo", ["dato" => $articulo,
+        return view("frontend/un_article", ["dato" => $articulo,
                                                     "comentarios" => $comentarios,
                                                     "categorias" => $categorias,
-                                                    "paginas" => $paginas]);
+                                                    "paginas" => $paginas,
+                                                    "dato_user"=>$articulo_user,
+                                                    "error"=>$errors]);
     }
        public function guardar($instancia, &$exito, &$errors) {              
         
@@ -52,14 +57,14 @@ class Blog extends BaseController
            // juntamos todo lo que viene en una sola variable
             $content = $_POST["cont"];            
            // Insertamos los datos a la BD, utilizando la funcion insert del modelo
-           $guardar = $instancia->save($content);
+            $guardar = $instancia->save($content);
            
            //Comprobamos el resultado
-           if ($guardar){
+            if ($guardar){
                // Mesaje de éxito
                $exito = "Se guardó todo correctamente";
            }
-           else{
+            else{
                // Mesnaje de error
                $exito = "Hubieron errores al guardar";
                // Guardamos los errores que hubieron
@@ -67,8 +72,8 @@ class Blog extends BaseController
            }
            
         }        
-    }   
-        
+    }  
 
+        
 
 }
