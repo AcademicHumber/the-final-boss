@@ -40,7 +40,7 @@ if (!empty($datos)) {
     foreach ($datos as $dato) {
         ?>
         <tbody>
-
+        
         <td><?php echo $dato["titulo"] ?></td>
         <td><?php echo $dato["nombre"] ?></td>
         <td><?php echo $dato["nombre_cat"] ?></td>

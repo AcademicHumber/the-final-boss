@@ -84,7 +84,7 @@ echo view("frontend/frontendheader");
                         ?>
                         <div class="single-post-item">
                             <figure>
-                                <img class="post-img img-fluid" src="<?php echo $dato["img_principal"] ?>" alt="Imagen principal">
+                                <img class="post-img img-fluid" src="<?php echo $dato["img_principal"] ?>" alt="Imagen principal" width=680 height=330>
                             </figure>
                             <h3>
                                 <a href=""><?php echo $dato["titulo"] ?></a>
