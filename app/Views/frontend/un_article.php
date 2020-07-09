@@ -38,10 +38,10 @@ echo view('frontend/frontendheader');
                                 // Este if es por si borraron la categoria pero no la publicacion, para evitar bugs xd
                                 if (!empty($opciones[$dato["categoria"]])){ 
                                     // En el texto va el nombre y en la url va el slug
-                                    echo anchor("content/categoria/".$opciones[$dato["categoria"]]["slug"],$opciones[$dato["categoria"]]["nombre"]);
+                                    echo anchor("blog/categorias/".$opciones[$dato["categoria"]]["slug"],$opciones[$dato["categoria"]]["nombre"]);
                                 }
                                 else{
-                                    echo anchor("content/categoria/sin-categoria","Sin CAtegoría");
+                                    echo anchor("blog/categorias/sin-categoria","Sin Categoría");
                                 }
                                 ?>
                                    </div>

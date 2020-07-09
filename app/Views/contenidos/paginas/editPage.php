@@ -1,5 +1,5 @@
 <?php
-echo view("common/formheader", ["titulo" => "Editar página"])
+echo view("common/basicheader", ["titulo" => "Editar página"])
 ?> 
 <section class="container-fluid bg bg-white"> 
 <section class="content-header">
@@ -19,5 +19,5 @@ echo view("common/formheader", ["titulo" => "Editar página"])
 </section>
 </section> 
 <?php
-echo view("common/formfooter")
+echo view("common/basicfooter")
 ?>

@@ -72,7 +72,6 @@ class Contacto extends BaseController
 	}
 
 
-
     }
     
     public function index()
@@ -82,11 +81,12 @@ class Contacto extends BaseController
         $errores = "";
         $enviado = "";
         $paginas = $this->instancia_paginas->findAll();
+        $categorias = $this->instancia_categorias->findAll();
         if($this->request->getMethod()=="post"){
             $this -> validarEmail($errores, $enviado);
         }
 
-        return view('frontend/contactos', ["errores" => $errores, "enviado" => $enviado, "paginas" => $paginas]);
+        return view('frontend/contacto', ["errores" => $errores, "enviado" => $enviado, "paginas" => $paginas,"categorias"=>$categorias]);
         
     }
 
