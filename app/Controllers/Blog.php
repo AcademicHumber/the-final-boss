@@ -25,10 +25,7 @@ class Blog extends BaseController
     }    
      
   public function articulos($id){    
-  	     helper("form");
-         $exito = "";
-        $errors = "";
-        $this->guardar($this->instancia_comentarios, $exito, $errors);     
+  	helper("form");       
         
         //cargar articulo
         $articulo = $this->instancia_articulos->find($id);
@@ -45,13 +42,23 @@ class Blog extends BaseController
         $paginas = $this->listar($this->instancia_paginas);
                       
         return view("frontend/un_article", ["dato" => $articulo,
-                                                    "comentarios" => $comentarios,
-                                                    "categorias" => $categorias,
-                                                    "paginas" => $paginas,
-                                                    "dato_user"=>$articulo_user,
-                                                    "error"=>$errors]);
+                                            "comentarios" => $comentarios,
+                                            "categorias" => $categorias,
+                                            "paginas" => $paginas,
+                                            "dato_user"=>$articulo_user]);
     }
-       public function guardar($instancia, &$exito, &$errors) {              
+    public function guardar_comment(){
+        $exito = "";
+        $errors = "";
+        $this->guardar($this->instancia_comentarios, $exito, $errors);
+        return redirect()->to(site_url("blog/articulos/".$_POST["cont"]["articulo"]));
+    }
+    public function deleteComment($id, $articulo){        
+       $this->instancia_comentarios->delete($id);       
+       return redirect()->to(site_url("blog/articulos/".$articulo));
+    }
+    
+    public function guardar($instancia, &$exito, &$errors) {              
         
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable

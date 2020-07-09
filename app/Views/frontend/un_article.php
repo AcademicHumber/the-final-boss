@@ -88,12 +88,22 @@ echo view('frontend/frontendheader');
                                         <p class="comment">
                                            <?php echo $comentario["cuerpo"];?>
                                         </p>
-                                    </div>
+                                        <?php
+                                                // Condicion para que solo el usuario que creo el comentario pueda eliminarlo
+                                                if ($_SESSION["id"] == $comentario["usuario"]) {
+                                                    ?>
+                                                    <div>
+                                                    <?php echo anchor("blog/deleteComment/" . $comentario["id"]."/".$dato["id"], "Eliminar", ["class" => "btn btn-dark btn-sm"]); ?>
+                                                    </div>
+        <?php } ?>
+                                            </div>
+                                    
                                 </div>
                             </div>                           
                                  <?php endforeach; } ?>
                         </div>
                     </div>
+                    <?php if (!empty($_SESSION["id"])){?>
                     <div class="row">
                         <div class="col-lg-6">
                                <div class="comment-form">
@@ -103,7 +113,7 @@ echo view('frontend/frontendheader');
       
                             <div class="form-group">
                             <?php 
-                                echo form_open("");  
+                                echo form_open(base_url("Blog/guardar_comment"));  
                                 // un hidden que llevara el id del articulo
                                 echo form_hidden("cont[articulo]",$dato["id"]);
                                 // hidden que llevara el id del usuario
@@ -124,6 +134,7 @@ echo view('frontend/frontendheader');
                     </div>
                  
                 </div>
+                    <?php }?>
             </div>
         </div>
     </section>

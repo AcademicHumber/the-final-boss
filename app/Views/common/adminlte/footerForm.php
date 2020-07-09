@@ -49,7 +49,7 @@
                  <div class="card-footer">
                      <div class="row">
                          <div class="col">
-                            <button type="submit" class="btn btn-info">Sign in</button>
+                            <button type="submit" class="btn btn-primary">Ingresar</button>                            
                         </div>
                     </div>
                 </div>
@@ -73,5 +73,6 @@
                 bsCustomFileInput.init();
             });
         </script>
+        
     </body>
 </html>
