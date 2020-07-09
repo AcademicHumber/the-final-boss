@@ -88,7 +88,7 @@ class Content extends BaseController{
             
             $img->move($destination_dir, $newname);            
             //Guardamos la ruta en post para que se guarde en la bd
-            $_POST["cont"]["img_principal"] = base_url("topimgs/".$newname);            
+            $_POST["cont"]["img_principal"] = "topimgs/".$newname;            
             }  
         }
         

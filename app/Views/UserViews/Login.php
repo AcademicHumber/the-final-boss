@@ -8,7 +8,6 @@ echo form_open_multipart('UserController/login',
    
 echo view("common/adminlte/footerForm", ["titulo" => "Login"]);
 
-
 ?>
 
 

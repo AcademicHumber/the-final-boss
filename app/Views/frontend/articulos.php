@@ -31,27 +31,27 @@ echo view("frontend/frontendheader");
                              </div>
                             <div class="post-meta">
                                 <div class="meta-head">
-                                    <a href="#"><?php echo $dato["titulo"]?></a>
+                                    <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>"><?php echo $dato["titulo"]?></a>
                                 </div>                                
                                 <div class="meta-details">
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            
                                                 <span class="lnr lnr-user"></span>
                                                 <?php echo $dato["nombre"] ?>
-                                            </a>
+                                           
                                         </li>
                                         <li>
-                                            <a href="#">
+                                           
                                                 <span class="lnr lnr-calendar-full"></span>
                                                 <?php echo $dato["created_at"] ?>
-                                            </a>
+                                          
                                         </li>                                        
                                         <li>
-                                            <a href="#">
+                                            
                                                 <span class="lnr lnr-star"></span>
                                                 <?php echo $dato["nombre_cat"] ?>
-                                            </a>
+                                         
                                         </li>                                        
                                     </ul>
                                 </div>
@@ -84,37 +84,37 @@ echo view("frontend/frontendheader");
                         ?>
                         <div class="single-post-item">
                             <figure>
-                                <img class="post-img img-fluid" src="<?php echo $dato["img_principal"] ?>" alt="Imagen principal" width=680 height=330>
+                                <img class="post-img img-fluid" src="<?php echo base_url($dato["img_principal"]) ?>" alt="Imagen principal" width=680 height=330>
                             </figure>
                             <h3>
-                                <a href=""><?php echo $dato["titulo"] ?></a>
+                                <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>"><?php echo $dato["titulo"] ?></a>
                             </h3>
                             <p><?php echo $dato["encabezado"] ?></p>
                             <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase mt-15">continue Reading</a>
                             <div class="post-box">
                                 <div class="d-flex">
                                     <div>
-                                        <a href="#">
+                                        
                                             <img src="<?php echo base_url("profiles/".$dato["perfil"].".PNG") ?>" alt="Imagen autor">
-                                        </a>
+                                        
                                     </div>
                                     <div class="post-meta">
                                         <div class="meta-head">
-                                            <a href="#"><?php echo $dato["nombre"] ?></a>
+                                            <?php echo $dato["nombre"] ?>
                                         </div>
                                         <div class="meta-details">
                                             <ul>
                                                 <li>
-                                                    <a href="#">
+                                                    
                                                         <span class="lnr lnr-calendar-full"></span>
                                                         <?php echo $dato["created_at"] ?>
-                                                    </a>
+                                                    
                                                 </li>                            
                                                 <li>
-                                                    <a href="#">
+                                                   
                                                         <span class="lnr lnr-star"></span>
                                                         <?php echo $dato["nombre_cat"] ?>
-                                                    </a>
+                                                   
                                                 </li>                            
                                             </ul>
                                         </div>
