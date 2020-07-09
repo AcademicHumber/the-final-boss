@@ -17,23 +17,35 @@ class Blog extends BaseController
 
 
      public function pagina($id){
-        
         $pagina = $this->instancia_paginas->find($id);
-        if (is_null($pagina)) return redirect ()->to (site_url ("blog"));
+        $categorias = $this->instancia_categorias->findAll();
+             if (is_null($pagina)) return redirect ()->to (site_url ("blog"));
         $paginas = $this->listar($this->instancia_paginas);
-        return view("frontend/pagina", ["dato" => $pagina, "paginas" => $paginas] );
-    }    
-     
+        return view("frontend/pagina", ["dato" => $pagina, "paginas" => $paginas, "categorias"=>$categorias] );
+    }   
+
+       public function categorias($slug){
+       $categorias = $this->instancia_categorias->findAll();
+       $datos = $this->instancia_categorias->articulos_por_categoria($slug);
+              if (is_null($datos)) return redirect ()->to (site_url ("blog"));
+       //cargar paginas para la vista
+       $paginas = $this->listar($this->instancia_paginas);
+       return view("frontend/categorias",
+                    ["dato" => $datos, "paginas" => $paginas,"categorias"=>$categorias]);
+    }
+
   public function articulos($id){    
+
   	helper("form");       
         
+
         //cargar articulo
         $articulo = $this->instancia_articulos->find($id);
         //
         $articulo_user = $this->instancia_articulos->listar_articulos();
-        if(is_null($articulo)){
-            return redirect()->to(site_url("blog"));
-        }
+          if(is_null($articulo)){
+              return redirect()->to(site_url("blog"));
+          }
         //cargar categorias
         $categorias = $this->listar($this->instancia_categorias); 
         //cargar comentarios para el articulo
@@ -67,16 +79,16 @@ class Blog extends BaseController
             $guardar = $instancia->save($content);
            
            //Comprobamos el resultado
-            if ($guardar){
-               // Mesaje de éxito
-               $exito = "Se guardó todo correctamente";
-           }
-            else{
-               // Mesnaje de error
-               $exito = "Hubieron errores al guardar";
-               // Guardamos los errores que hubieron
-               $errors = $instancia->errors();
-           }
+              if ($guardar){
+                 // Mesaje de éxito
+                 $exito = "Se guardó todo correctamente";
+             }
+              else{
+                 // Mesnaje de error
+                 $exito = "Hubieron errores al guardar";
+                 // Guardamos los errores que hubieron
+                 $errors = $instancia->errors();
+             }
            
         }        
     }  

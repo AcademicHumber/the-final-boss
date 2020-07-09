@@ -46,7 +46,14 @@
 						<li class="menu-active"><a href="<?php echo base_url("blog");?>">Home</a></li>
 						<li class="menu-has-children"><a href="">Categorías</a>
 							<ul>
-			              
+			                  	<?php
+                                 foreach ($categorias as $categoria){
+                                 ?>
+                                   
+                                       <li>  <a href="<?php echo base_url("blog/categorias/".$categoria["slug"])?>"><?php echo $categoria["nombre"]?></a></li>
+                                       <?php
+                                    }
+                                ?>
                                 
 							</ul>
 						</li>					
@@ -62,7 +69,7 @@
                                 ?>
 							</ul>
 						</li>						
-						<li><a href="contacto">Contacto</a> ||</li>
+						<li><a href="<?php echo base_url("contacto")?>">Contacto</a> ||</li>
                                                 <?php
                                                 if (empty($_SESSION["username"])){
                                                     echo "<li><a href='".base_url("UserController/ingresar")."'>Iniciar Sesion</a></li>";

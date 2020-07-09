@@ -90,6 +90,38 @@ a:hover {
   margin: 0;
   padding: 60px; }
 
+
+
+
+
+.social{
+    position: fixed;
+    left: -40px;
+    top: 520px;
+}
+.social ul{
+    list-style: none;
+}
+.social a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    z-index: 0;
+    transition: 0.1s ease;
+}
+
+.fa-facebook-messenger{
+    background: #0084ff;
+}
+.fa-whatsapp{
+    background: #25d366;
+}
+.social a:hover{
+    padding: 10px 25px;
+}
+
+
 /**
  *  Typography
  *
