@@ -17,9 +17,6 @@ class ContentModel extends Model{
     //Varible que define como la base de datos nos entrega informacion (opcional)
     protected $returnType = "array";
     
-    //Configurar la eliminación de archivos (opcional)
-    protected $useSoftDeletes = false;
-    
     //Campos habilitados para su escritura en la tabla
     protected $allowedFields = ["id", "titulo", "img_principal", "encabezado", "cuerpo", "categoria", "usuario_creador"];
     

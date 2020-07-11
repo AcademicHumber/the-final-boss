@@ -54,7 +54,7 @@ if (!empty($lista)) {
    echo anchor("UserController/editar?id=" . $listar["id"], "Editar",["class"=>"badge badge-secondary"]); ?>
            </td>
            <td>
-    <?php echo anchor("UserController/borrar/" . $listar["id"], "Eliminar",["class"=>"badge badge-secondary"]); ?>
+    <?php echo anchor("UserController/borrar/" . $listar["id"], "Eliminar",["class"=>"badge badge-secondary", "onclick" => "return confirmar();"]); ?>
         </td>
 
     </tbody>

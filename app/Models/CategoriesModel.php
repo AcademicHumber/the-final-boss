@@ -41,7 +41,8 @@ class CategoriesModel extends Model{
         ]
     ];
     
-    protected $skipvalidation= false;
+    protected $useTimestamps = true;   
+    
     
     public function articulos_por_categoria($slug){
         $db = \Config\Database::connect();

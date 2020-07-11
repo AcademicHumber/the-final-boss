@@ -28,5 +28,18 @@
 
 </script>
 
+      <script type="text/javascript">
+        function confirmar(){
+          if (confirm("¿Está seguro que desea eliminar?")) {
+            alert("Eliminado")
+            return true;
+          }
+          else
+          {
+            alert("No se eliminó")
+            return false;
+          }
+        }
+      </script>
 </body>
 </html>

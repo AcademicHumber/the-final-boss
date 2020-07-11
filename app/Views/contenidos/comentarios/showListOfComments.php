@@ -41,7 +41,7 @@ echo view("common/basicheader", ["titulo"=> "Comentarios"])
             <td><?php  echo "<p>".$dato["cuerpo"]."</p>"; ?></td>
             <td><?php  echo "<p><a class='badge badge-light' href='articulo/".$dato["articulo"]."'>Ver</a> "
                     . " <a class='badge badge-light' href='editComment/".$dato["id"]."'>Editar</a> "
-                    . " <a class='badge badge-light' href='deleteComment/".$dato["id"]."'>Eliminar</a></p>"; ?></td>
+                    . " <a class='badge badge-light' href='deleteComment/".$dato["id"]."' onclick=' return confirmar();''>Eliminar</a></p>"; ?></td>
             <td><?php echo "<p>".$dato["titulo"]."</p>"; ?></td>
             <td><?php echo $dato["created_at"] ?></td>
          <tbody>

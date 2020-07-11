@@ -62,7 +62,7 @@ class Content extends BaseController{
         $repuesta = [
             "uploaded" => 1,
             "filename" => $newName,
-            "url" => base_url("media_images/".$newName)
+            "url" => base_url('media_images/'.$newName)
             ];
         }else{
           $repuesta = [
@@ -76,8 +76,13 @@ class Content extends BaseController{
     
     private function guardar_imagen_principal(){
         if ($this->request->getMethod() == 'post'){
+          
           if ($img = $this->request->getFile("img_principal")){
-            $newname = $_POST["cont"]["titulo"]."_img.".$img->getExtension();
+             //comprobamos si la imagen no esta vacia
+              if (!empty($img) 
+                && $img->getError()==0
+                && $img->getSize()>0) {
+             $newname = $_POST["cont"]["titulo"]."_img.".$img->getExtension();
             //public/topimgs
             $destination_dir = FCPATH."topimgs";
             
@@ -90,6 +95,8 @@ class Content extends BaseController{
             //Guardamos la ruta en post para que se guarde en la bd
             $_POST["cont"]["img_principal"] = "topimgs/".$newname;            
             }  
+        }
+        
         }
         
     }
@@ -367,6 +374,29 @@ class Content extends BaseController{
     }
     
     /*-------------------FIN SECCIÓN CATEGORÍAS ------------------------*/
+    
+    /*-------------------SECCIÓN IMAGENES ------------------------*/
+    
+    function admin_imgs(){
+        $this->comprobar_perfil();
+        
+        $topimgs = scandir(FCPATH."topimgs");
+        $media_images = scandir(FCPATH."media_images");
+        
+        return view("contenidos/imagenes",["topimgs" => $topimgs, "media_images" => $media_images]);
+    }
+    
+    function deletetopimg($img){
+        unlink(FCPATH."topimgs/".$img);
+        return redirect()->to(site_url("content/admin_imgs"));
+    }
+    
+    function deletemediaimg($img){
+        unlink(FCPATH."media_images/".$img);
+        return redirect()->to(site_url("content/admin_imgs"));
+    }
+    
+    /*-------------------FIN SECCIÓN IMAGENES ------------------------*/
     
    
 }

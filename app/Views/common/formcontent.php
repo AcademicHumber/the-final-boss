@@ -94,8 +94,8 @@ if ($exito=="Hubieron errores al guardar"){
                 // crear el arreglo relacionando ids y nombres de categorias
                 foreach ($categorias as $categoria){
                     $opciones[$categoria["id"]] = $categoria["nombre"];
-                }
-                echo form_dropdown("cont[categoria]",$opciones, "1");                  
+                }                
+                echo form_dropdown("cont[categoria]",$opciones, !empty($dato["categoria"])? $dato["categoria"] : "1");                  
                 ?>
             </td>
         </tr>

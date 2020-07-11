@@ -26,7 +26,7 @@ echo view('frontend/frontendheader');
                     <div class="main_blog_details ">
                         <br>
                         <h4 class="text-center"><?php echo $dato["encabezado"] ?></h4>
-                          <img class="img-thumbnail mx-auto d-block" src="<?php echo $dato['img_principal'] ?>" alt="Imagen principal" width=500 height=300><br>
+                          <img class="img-thumbnail mx-auto d-block" src="<?php echo base_url($dato['img_principal']) ?>" alt="Imagen principal" width=500 height=300><br>
                         <div class="user_details">
                             <div class="float-left">
                                  <?php
@@ -64,9 +64,9 @@ echo view('frontend/frontendheader');
                             </div>
 
                         </div>
-                                                  
-                        <p><?php echo $dato["cuerpo"] ?></p>
-
+                          <div class="col-12">
+                             <?php echo $dato["cuerpo"]?>
+                          </div>  
                     </div>
                     <div class="comments-area">
                         <h4>Comentarios</h4>

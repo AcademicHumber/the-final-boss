@@ -24,9 +24,12 @@ echo view("common/basicheader", ["titulo"=> "Categorías"])
             <p class="card-title"><strong>Descripción:</strong></p>
             <p class="card-text"><?php echo $dato["descripcion"]?></p>
             <p class="card-link text-primary">
+                
                 <?php
+                if ($dato["nombre"] != "Sin Categoría"){
                 echo " <a class='badge badge-light' href='editCategory/".$dato["id"]."'>Editar</a> - ";
-                echo " <a class='badge badge-light' href='deleteCategory/".$dato["id"]."'>Eliminar</a></p>"; 
+                echo " <a class='badge badge-light' href='deleteCategory/".$dato["id"]."'onclick=' return confirmar();''>Eliminar</a></p>";  
+                }
                 ?>
             </p> 
             <p class="card-text text-muted"><strong>Fecha de creación: </strong><?php echo $dato["created_at"] ?></p>

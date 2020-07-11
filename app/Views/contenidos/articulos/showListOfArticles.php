@@ -12,6 +12,7 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
         <div class="card-header">
           <div class="card-title">
           <h4>Entradas</h4>
+          <a class='badge badge-light' href='crearArticulo'>Crear Nueva Entrada</a>  
         </div>
 
           <div class="card-tools">
@@ -23,10 +24,11 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
         <div class="card-body">
 
 
-<?php 
+<?php
+ 
 if (!empty($datos)) {
-
 ?>
+            
 <table class="table table-head-fixed text-nowrap table-md">
     <tr>
         <!-----PREG si habrá autor y categoria--->
@@ -46,7 +48,7 @@ if (!empty($datos)) {
         <td><?php echo $dato["nombre_cat"] ?></td>
         <td><?php echo "<a class='badge badge-light' href='articulo/".$dato["id"]."'>Ver</a>"?>  
         <?php echo "<a class='badge badge-light' href='editArticulo/".$dato["id"]."'>Editar</a>" ?>  
-        <?php echo " <a class='badge badge-light' href='deleteArticle/".$dato["id"]."'>Eliminar</a>" ?></td>        
+        <?php echo "<a class='badge badge-light' href='deleteArticle/".$dato["id"]."' onclick=' return confirmar();''>Eliminar</a>" ?></td>        
         <td><?php echo $dato["created_at"]?></td>
 
     </tbody>
