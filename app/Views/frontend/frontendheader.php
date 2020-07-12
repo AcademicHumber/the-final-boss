@@ -39,7 +39,7 @@
 		<div class="container box_1170 main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html"><img src="" alt=" Hacer un logo :v" title="" /></a>
+					<a href="<?php echo base_url("blog");?>"><img src="<?php echo base_url('img/logocms.png');?>" width=35 height=35></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
