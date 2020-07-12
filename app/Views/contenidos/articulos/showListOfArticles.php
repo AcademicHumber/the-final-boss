@@ -9,6 +9,7 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
 
       <!-- Default box -->
       <div class="card">
+      <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
           <h4>Entradas</h4>
@@ -20,16 +21,17 @@ echo view("common/basicheader", ["titulo"=> "Articulos"])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+     </div>
+      <div class="table-responsive-sm table-responsive-md table-responsive-lg">
         <div class="card-body">
-
+   
 
 <?php
  
 if (!empty($datos)) {
 ?>
             
-<table class="table table-head-fixed text-nowrap table-md">
+<table class="table  table-responsive-sm table-responsive-md table-head-fixed text-nowrap table-md">
     <tr>
         <!-----PREG si habrá autor y categoria--->
         <th>Título</th>
@@ -67,7 +69,7 @@ else
 ?>
 
         </div>
-
+   </div>
     </div>
 
 </section>

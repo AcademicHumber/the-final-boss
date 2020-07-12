@@ -8,7 +8,8 @@
     <section class="content">
 
       <!-- Default box -->
-      <div class="card">
+    <div class="card">
+      <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
           <h4>Usuarios</h4>
@@ -19,7 +20,7 @@
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+        </div>
         <div class="card-body">
            <?php
 //echo anchor("UserController/Registro", "Registra un usuario");
@@ -27,7 +28,8 @@
 if (!empty($lista)) {
 
 ?>
-<table class="table table-head-fixed text-nowrap table-hover  table-md  ">
+<table class="table table-responsive-sm
+table-responsive-md table-responsive-lg table-responsive-xl table-head-fixed text-nowrap table-hover">
     <tr>
         <th>Nombre de Usuario</th>
         <th>Nombre</th>

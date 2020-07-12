@@ -10,6 +10,7 @@ echo view("common/basicheader", ["titulo" => "Crear artículo"])
 
       <!-- Default box -->
       <div class="card">
+      <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
           <h4>Crear Artículo</h4>
@@ -20,7 +21,8 @@ echo view("common/basicheader", ["titulo" => "Crear artículo"])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+        </div>
+        <div class="table-responsive-sm table-responsive-md table-responsive-lg">
         <div class="card-body">
 <div>
     <?php
@@ -29,6 +31,7 @@ echo view("common/basicheader", ["titulo" => "Crear artículo"])
 
 			</div>  
 		</div>
+  </div>
     </div>
 </section>   
 

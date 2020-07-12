@@ -9,6 +9,7 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
 
       <!-- Default box -->
       <div class="card">
+        <div class="table-responsive-sm">
         <div class="card-header">
          <div class="card-title">
           <h4>Artículos</h4>
@@ -19,10 +20,10 @@ echo view("common/basicheader", ["titulo" => $dato["titulo"]])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+        </div>
         <div class="card-body">
 
-<div class="caja">  
+<div class="caja table-responsive-sm ">  
     <h2><?php echo $dato["encabezado"] ?></h2>
     <h4><?php
     // la variable opciones se volvera un arreglo que tiene el nombre y el slug de cada categoria

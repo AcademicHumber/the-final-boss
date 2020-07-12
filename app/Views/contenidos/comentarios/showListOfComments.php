@@ -9,7 +9,8 @@ echo view("common/basicheader", ["titulo"=> "Comentarios"])
 
       <!-- Default box -->
       <div class="card">
-        <div class="card-header">
+        <div class="table-responsive-sm">
+        <div class="card-header ">
           <div class="card-title">
           <h4>Comentarios</h4>
         </div>
@@ -19,13 +20,13 @@ echo view("common/basicheader", ["titulo"=> "Comentarios"])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+     </div>
 
 
 <?php if (!empty($datos)) {
  ?>
 
- <table class="table table-head-fixed text-nowrap table-md">
+ <table class="table table-responsive-sm  table-responsive-md table-head-fixed text-nowrap ">
     <tr>        
         <th>Autor</th>
         <th>Comentario</th>

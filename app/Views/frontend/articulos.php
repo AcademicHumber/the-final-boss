@@ -84,7 +84,7 @@ echo view("frontend/frontendheader");
                         ?>
                         <div class="single-post-item">
                             <figure>
-                                <img class="post-img img-fluid" width="670" height="320" src="<?php echo base_url($dato["img_principal"]) ?>" alt="Imagen principal" width=680 height=330>
+                                <img class="post-img " src="<?php echo base_url($dato["img_principal"]) ?>" alt="Imagen principal" width=680 height=330 >
                             </figure>
                             <h3>
                                 <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>"><?php echo $dato["titulo"] ?></a>

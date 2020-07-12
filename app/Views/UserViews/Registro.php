@@ -11,6 +11,7 @@ echo form_open("");
 
       <!-- Default box -->
       <div class="card">
+       <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
           <h4>Registrar Usuario</h4>
@@ -21,7 +22,8 @@ echo form_open("");
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+        </div> 
+            <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                 <div class="card-body col-6">
                   <?php
                    if ($exito=="El usuario se registró correctamente") { ?>
@@ -113,7 +115,7 @@ echo form_open("");
                       <button type="submit" class="btn btn-dark">Crear Cuenta</button>
                   </div>                  
                   </div>
-               
+                 </div>
                 </div>
           </div>
 
