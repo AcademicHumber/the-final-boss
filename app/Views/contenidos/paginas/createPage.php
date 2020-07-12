@@ -9,9 +9,10 @@ echo view("common/basicheader", ["titulo" => "Crear página"])
 
       <!-- Default box -->
       <div class="card">
+        <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
-          <h4>Crear Artículo</h4>
+          <h4>Crear Página</h4>
         </div>
 
           <div class="card-tools">
@@ -19,7 +20,8 @@ echo view("common/basicheader", ["titulo" => "Crear página"])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
-
+         </div>
+        <div class="table-responsive-sm table-responsive-md table-responsive-lg">
         <div class="card-body">
 <div>
     <?php
@@ -28,6 +30,7 @@ echo view("common/basicheader", ["titulo" => "Crear página"])
 
             </div>  
         </div>
+      </div>
     </div>
 </section> 
 <?php

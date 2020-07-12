@@ -6,6 +6,7 @@ echo view("common/basicheader", ["titulo"=> "Categorías"])
     </section>
 <section class="content">
     <div class="card">
+    <div class="table-responsive-sm">
         <div class="card-header">
             <h1>Categorías</h1>
             <a href="crearCategoria" class="badge badge-light">Crear nueva categoria</a>
@@ -14,6 +15,8 @@ echo view("common/basicheader", ["titulo"=> "Categorías"])
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
+    </div>
+    <div class="table-responsive-sm table-responsive-md">
          <div class="card-body">
     <?php
     foreach ($datos as $dato){
@@ -38,6 +41,7 @@ echo view("common/basicheader", ["titulo"=> "Categorías"])
     <?php
     }
     ?>
+    </div>
     </div>
     </div>
   </section>

@@ -10,6 +10,7 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
 
       <!-- Default box -->
       <div class="card">
+        <div class="table-responsive-sm">
         <div class="card-header">
           <div class="card-title">
           <h4>Editar Usuario</h4>
@@ -20,6 +21,8 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
+      </div>
+           <div class="table-responsive-sm table-responsive-md table-responsive-lg">
                 <div class="card-body col-6">
                   <?php
                      if ($exito=="El usuario se modificó correctamente") { ?>
@@ -97,7 +100,7 @@ echo view("common/basicheader", ["titulo" => "Editar Usuario"]);
                               <button type="submit" class="btn btn-dark">Editar</button>
                   </div>
                   </div>
-                
+                </div>
           </div>
 
 </section>

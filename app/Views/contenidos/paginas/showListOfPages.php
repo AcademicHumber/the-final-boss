@@ -4,16 +4,18 @@ echo view("common/basicheader", ["titulo"=> "Páginas"])
 <section class="content-header"></section>
 <section class="content">
     <div class="card">
+     <div class="table-responsive-sm">
         <div class="card-header">
           <h1>Páginas</h1>
           <a href="crearPagina" class="badge badge-light">Crear nueva pagina</a>
-          <div class="card-tools">
+          <div class="card-tools ">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
               <i class="fas fa-minus"></i></button>
           </div>
         </div>
+      </div>
         <div class="card-body">
-            <table class="table table-head-fixed text-nowrap table-md">
+            <table class="table table-responsive-sm table-head-fixed text-nowrap ">
                 <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Ver</th>

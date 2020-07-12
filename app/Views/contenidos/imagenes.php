@@ -9,6 +9,7 @@ echo view("common/basicheader", ["titulo" => "Imagenes"])
 
     <!-- Default box -->
     <div class="card">
+    <div class="table-responsive-sm">
         <div class="card-header">
             <div class="card-title">
                 <h4>Administrador de Imagenes</h4>          
@@ -19,7 +20,7 @@ echo view("common/basicheader", ["titulo" => "Imagenes"])
                     <i class="fas fa-minus"></i></button>
             </div>
         </div>
-
+      </div>
         <div class="card-body">
             <h5>Imagenes principales</h5>
             <hr>
