@@ -46,7 +46,7 @@ class CategoriesModel extends Model{
     
     public function articulos_por_categoria($slug){
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT contenidos.id, contenidos.titulo, contenidos.encabezado, contenidos.cuerpo, categorias.nombre "
+        $query = $db->query("SELECT contenidos.id, contenidos.titulo, contenidos.img_principal, contenidos.encabezado, contenidos.cuerpo, categorias.nombre "
                 . "FROM categorias INNER JOIN contenidos ON categorias.id=contenidos.categoria WHERE categorias.slug='$slug'");
         $afectados = $query->getResultArray();
         $db->close();

@@ -36,6 +36,7 @@ echo view("common/basicheader", ["titulo" => "Imagenes"])
                                 <?php echo "<a class='badge badge-light ' href='".base_url("content/deletetopimg/". $img)."' onclick=' return confirmar();''>Eliminar</a>" ?>
                             </div>
                         </div>
+            <hr>
 
                         <?php
                     }
@@ -57,11 +58,13 @@ echo view("common/basicheader", ["titulo" => "Imagenes"])
                         <?php
                     }
                 }
+                
                 ?>
+    <hr>    
 
                 <?php
             } else {
-                
+                echo "No hay imagenes";
             }
             ?>
 

@@ -80,7 +80,7 @@ if (!empty($errores["descripcion"])) { echo "<div class='formerror text-danger'>
     echo "</div>";
 }
 echo "<br><br>";
-echo form_submit("", "Actualizar", ['class'=> 'btn btn-dark']);
+echo form_submit("", "Guardar", ['class'=> 'btn btn-dark']);
 echo "<br>";
 echo "<br>";
 echo anchor("content/vercategorias", "Ver todas las categorias", ['class' => 'badge badge-dark']);

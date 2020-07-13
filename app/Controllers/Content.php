@@ -26,7 +26,7 @@ class Content extends BaseController{
     // Funcion que se encarga de guardar y actualizar con el metodo save del modelo
     //recibimos las 2 ultimas variables por referencia 
     
-    public function guardar($instancia, &$exito, &$errors) {              
+    public function guardar($instancia, &$exito, &$errors, &$datos) {              
         
         if ($this->request->getMethod() == "post"){
            // juntamos todo lo que viene en una sola variable
@@ -44,6 +44,7 @@ class Content extends BaseController{
                $exito = "Hubieron errores al guardar";
                // Guardamos los errores que hubieron
                $errors = $instancia->errors();
+               $datos = $content;
            }
            
         }        
@@ -82,14 +83,9 @@ class Content extends BaseController{
               if (!empty($img) 
                 && $img->getError()==0
                 && $img->getSize()>0) {
-             $newname = $_POST["cont"]["titulo"]."_img.".$img->getExtension();
+             $newname = $img->getRandomName();
             //public/topimgs
             $destination_dir = FCPATH."topimgs";
-            
-            //eliminar la imagen si existe
-            if (is_file($destination_dir."/".$newname)) {
-               unlink($destination_dir."/".$newname);
-            }
             
             $img->move($destination_dir, $newname);            
             //Guardamos la ruta en post para que se guarde en la bd
@@ -115,7 +111,7 @@ class Content extends BaseController{
         $errors = [];
         $exito = "";
         $this->guardar_imagen_principal();
-        $this->guardar($this->instancia_articulos, $exito, $errors);
+        $this->guardar($this->instancia_articulos, $exito, $errors, $datos);
         $categorias = $this->listar($this->instancia_categorias);
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/articulos/createArticle", ["exito" => $exito,
@@ -130,8 +126,9 @@ class Content extends BaseController{
         
         $errors = [];
         $exito = "";
+        $datos = "";
         $this->guardar_imagen_principal();
-        $this->guardar($this->instancia_articulos, $exito, $errors);
+        $this->guardar($this->instancia_articulos, $exito, $errors, $datos);
         //Cargar el articulo actualizado o a actualizar
         $datos = $this->instancia_articulos->find($id);
         //Si el id no existe $datos=NULL, entonces se redirige 
@@ -151,7 +148,8 @@ class Content extends BaseController{
         //Procesar comentarios nuevos
         $exito = "";
         $errors = "";
-        $this->guardar($this->instancia_comentarios, $exito, $errors); 
+        $datos = "";
+        $this->guardar($this->instancia_comentarios, $exito, $errors, $datos); 
         
         //cargar articulo
         $articulo = $this->instancia_articulos->find($id);
@@ -203,8 +201,8 @@ class Content extends BaseController{
             "cuerpo" => ""
         ];
         $errors = [];
-        $exito = ""; 
-        $this->guardar($this->instancia_paginas,$exito,$errors);
+        $exito = "";         
+        $this->guardar($this->instancia_paginas,$exito,$errors, $datos);
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/paginas/createPage", ["exito" => $exito,
                                          "errores" => $errors,
@@ -216,7 +214,8 @@ class Content extends BaseController{
         
         $errors = [];
         $exito = ""; 
-        $this->guardar($this->instancia_paginas, $exito, $errors);
+        $datos = "";
+        $this->guardar($this->instancia_paginas, $exito, $errors, $datos);
         //Cargar la pagina actualizada o a actualizar
         $datos = $this->instancia_paginas->find($id);  
         if (is_null($datos)) return redirect ()->to (site_url ("content/verpaginas"));
@@ -314,7 +313,7 @@ class Content extends BaseController{
         ];
         $errors = [];
         $exito = ""; 
-        $this->guardar($this->instancia_categorias,$exito,$errors);
+        $this->guardar($this->instancia_categorias,$exito,$errors, $datos);
         //cargar paginas para la vista
         $paginas = $this->listar($this->instancia_paginas);
         return view("contenidos/categorias/createCategory", ["exito" => $exito,
@@ -325,7 +324,7 @@ class Content extends BaseController{
     function editCategory($id){      
         $this->comprobar_perfil();
         $errors = [];
-        $exito = ""; 
+        $exito = "";        
         if ($this->request->getMethod() == "post"){
             $data['descripcion'] = $_POST["cont"]["descripcion"];
             if ($this->instancia_categorias->update($id,$data)){

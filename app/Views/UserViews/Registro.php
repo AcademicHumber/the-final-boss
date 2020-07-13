@@ -103,10 +103,8 @@ echo form_open("");
                   <div class="form-group">
                     <label>Perfil</label>
                     <select name="user[perfil]" class="form-control">
-                      <option value="administrador">Administrador</option>
-                      <option value="editor">Editor</option>
-                      <option value="autor">Autor</option>
-                      <option value="contribuidor">Contribuidor</option>
+                      <option value="administrador">Administrador</option>                      
+                      <option value="suscriptor">Suscriptor</option>                      
                     </select>
                    
                   </div> 

@@ -33,6 +33,15 @@ echo view("common/basicheader", ["titulo" => "Crear página"])
       </div>
     </div>
 </section> 
+    <script>
+
+   CKEDITOR.replace( 'editor1' ,{           
+       filebrowserUploadUrl: '<?php echo base_url("content/procesar_imagen")?>',
+       filebrowserWindowWidth: '1000',
+       filebrowserWindowHeight: '700'
+   });    
+
+</script>
 <?php
 echo view("common/basicfooter")
 ?>

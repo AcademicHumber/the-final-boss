@@ -26,12 +26,13 @@ class Blog extends BaseController
 
        public function categorias($slug){
        $categorias = $this->instancia_categorias->findAll();
+       $nombre_cat = $this->instancia_categorias->where("slug", $slug)->find();
        $datos = $this->instancia_categorias->articulos_por_categoria($slug);
-              if (is_null($datos)) return redirect ()->to (site_url ("blog"));
+       if (is_null($datos)) return redirect ()->to (site_url ("blog"));
        //cargar paginas para la vista
        $paginas = $this->listar($this->instancia_paginas);
        return view("frontend/categorias",
-                    ["dato" => $datos, "paginas" => $paginas,"categorias"=>$categorias]);
+                    ["dato" => $datos, "paginas" => $paginas,"categorias"=>$categorias, "nombre_cat" => $nombre_cat]);
     }
 
   public function articulos($id){    

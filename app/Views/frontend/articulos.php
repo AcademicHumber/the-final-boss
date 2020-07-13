@@ -6,9 +6,9 @@ echo view("frontend/frontendheader");
     <div class="container box_1170">
         <div class="row fullscreen d-flex align-items-center justify-content-center">
             <div class="banner-content text-center col-lg-8">
-                <h1>
-                    El blog más famoso del oeste :v
-                </h1>
+                <span class="display-1 titulo">
+                    Set of Words
+                </span>
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@ echo view("frontend/frontendheader");
                         </div>
                         <p><?php echo $dato["encabezado"] ?></p>
                         <div class="post-btn">
-                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase">Read More</a>
+                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase">Leer Más</a>
                         </div>
                     </div>
                     <?php
@@ -90,7 +90,7 @@ echo view("frontend/frontendheader");
                                 <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>"><?php echo $dato["titulo"] ?></a>
                             </h3>
                             <p><?php echo $dato["encabezado"] ?></p>
-                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase mt-15">continue Reading</a>
+                            <a href="<?php echo base_url("blog/articulos/".$dato["id"])?>" class="primary-btn text-uppercase mt-15">Seguir Leyendo</a>
                             <div class="post-box">
                                 <div class="d-flex">
                                     <div>

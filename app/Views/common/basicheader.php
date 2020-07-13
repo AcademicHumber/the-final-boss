@@ -13,13 +13,10 @@
    <script src="<?php echo base_url('ckeditor/ckeditor.js') ?>"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url('adminlte'); ?>/plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="<?php echo base_url('adminlte'); ?>/https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="<?php echo base_url('adminlte'); ?>/dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="<?php echo base_url('adminlte'); ?>/https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
+ </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
@@ -59,7 +56,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
-      <span class="brand-text font-weight-light text-center">CMS in CodeIgniter</span>
+      <span class="brand-text font-weight-light text-center">Set of Words</span>
     </a>
 
     <!-- Sidebar -->

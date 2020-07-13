@@ -18,15 +18,6 @@
 <script src="<?php echo base_url('adminlte'); ?>/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('adminlte'); ?>/dist/js/demo.js"></script>
-<script>
-
-   CKEDITOR.replace( 'editor1' ,{           
-       filebrowserUploadUrl: '<?php echo base_url("content/procesar_imagen")?>',
-       filebrowserWindowWidth: '1000',
-       filebrowserWindowHeight: '700'
-   });    
-
-</script>
 
       <script type="text/javascript">
         function confirmar(){

@@ -1,6 +1,9 @@
 
                 
-                <div class="card-body">                            
+                <div class="card-body"> 
+                    <?php
+                    echo anchor("", "ir a la pantalla principal", ["class" => ""]);
+                    ?>
 
                     <div class="form-group row-fluid">
                     <!-- /.card-header -->
@@ -32,20 +35,7 @@
                                <span class="fas fa-lock"></span>
                            </div> 
                        </div>                                               
-                    </div>
-                    <?php
-                    /*
-                    <div class="row">
-                        <div class="col-sm-10">                           
-                                
-                                echo "<br>";
-                                echo anchor("UserController/recuperarContra", "¿Olvidaste tu contraseña?");
-                                                          
-                        </div>
-                    </div>
-                </div>                   
-                     */
-                ?>
+                    </div>                    
                  <div class="card-footer">
                      <div class="row">
                          <div class="col">

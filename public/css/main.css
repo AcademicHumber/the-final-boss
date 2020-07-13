@@ -42,6 +42,11 @@
   color: #777777;
   font-weight: 300; }
 
+.titulo{
+    color: white;
+    font-size: 120px;
+    font-family: Impact;
+}
 body {
   color: #777777;
   font-family: "Roboto", sans-serif;
