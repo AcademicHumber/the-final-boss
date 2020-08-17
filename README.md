@@ -1,6 +1,6 @@
-# Proyecto Final
+# Blog con su respectivo CMS
 
-## CMS estilo wordpress
+## Características
 
 	- Entradas (titulo, contenido, categorías, comentarios)
     	- Páginas (titulo, contenido)
@@ -10,7 +10,7 @@
     	- CodeIgniter (version 3 o 4)
 	- Envíos de correos electrónicos (Por ejemplo en el uso de un formulario de contacto)
 
-### Integrantes
+### Desarrollado por:
 
 	-Jeniffer Balcazar
 	-Dariana Martinez
